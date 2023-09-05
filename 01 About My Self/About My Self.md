@@ -5,7 +5,7 @@
 <details>
 <summary>Self Introduction</summary>
 
-### Self Introduction
+#### Self Introduction
 
 First of all,
 
@@ -13,9 +13,9 @@ Thank you sir,  for given this opportunity to introduce my self,
 
 I'm Praveen Ande.
 
-I am from Dr. B. R. Ambedkar Konaseema district in Andhra Pradesh state,currently I am in Hyderabad.  
+I am from Dr. B. R. Ambedkar Konaseema district in Andhra Pradesh state, currently I am in Hyderabad.  
 
-I completed my B.Tech in the stream of **Mechanical Engineering** from *SRINIVASA INSTITUTE OF ENGINEERING & TECHNOLOGY* Amalapuram
+I completed my B.Tech in the stream of **Mechanical Engineering** from *SRINIVASA INSTITUTE OF ENGINEERING & TECHNOLOGY* Amalapuram.
 
 Work Experience:
 
@@ -28,13 +28,16 @@ so I completed an Industry Ready Certification course in Full-stack Development 
 
 During my full-stack training, I learned various technologies:
 
-So I have hands-on experience on Mern stack technologies,
 
 On the **frontend** side, I learned HTML, CSS, Bootstrap, JavaScript, and React.
 
 On the **backend** side, I acquired knowledge in Node.js, Express.js, SQLite, and Python.
 
 I also gained experience in using Git and GitHub for version control.
+
+
+So I have hands-on experience on Mern stack technologies,
+
 
 Projects:
 
@@ -56,7 +59,7 @@ Thank you sir.
 <details>
 <summary>Achievements</summary>
 
-### Achievements
+#### Achievements
 
 One of my biggest achievements is completing a 100-days code challenge successfully. As part of that, I participated coding consistently every day for 100 days.
 
@@ -66,7 +69,7 @@ One of my biggest achievements is completing a 100-days code challenge successfu
 <details>
 <summary>Hobbies</summary>
 
-### Hobbies
+#### Hobbies
 
 I am playing Chess.
 
@@ -79,7 +82,7 @@ My Favorite channel is Akshay Saini.
 <details>
 <summary>Strengths</summary>
 
-### Strengths 
+#### Strengths 
 
 I have good Problem-solving skills.  
 Instead of spending time worrying about the problem, I try to understand the root cause of the problem and then try to solve it.
@@ -95,7 +98,7 @@ I am friendly and can mingle with people easily. I can collaborate with people a
 <details>
 <summary>Why Should I hire You?</summary>
 
-### Hire 
+#### Hire 
 
 with my strenghts, I think I can fulfill my responsibilities as a employee in your company.
 
@@ -104,7 +107,7 @@ with my strenghts, I think I can fulfill my responsibilities as a employee in yo
 <details>
 <summary>Weakness</summary>
 
-### Weakness 
+#### Weakness 
 
 I get sad when my plans don't work. It takes some time for me to get back to normal.  
 
@@ -115,7 +118,7 @@ Spending more time paying too much attention to details.
 <details>
 <summary>Feature Goals</summary>
 
-### Feature Goals 
+#### Feature Goals 
 
 ##### Short-term goal
 I want to become an expert in my role at your company.
@@ -129,7 +132,7 @@ I want to contribute to the company's growth.
 <details>
 <summary>Low CGPA</summary>
 
-### Low CGPA
+#### Low CGPA
 
 I got 63% in my B.tech
 
@@ -140,7 +143,7 @@ I got 63% in my B.tech
 <details>
 <summary>Career Switch</summary>
 
-### Career Switch
+#### Career Switch
 
 There is scope for more growth in IT.
 I want to do more challenging work.
@@ -157,8 +160,7 @@ That's why I think IT is the right field for me.
 <details>
 <summary>Family</summary>
 
-### Family
-
+#### Family
 
 My father is a farmer.
 My mother is a housewife.
