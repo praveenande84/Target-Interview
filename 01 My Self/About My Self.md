@@ -8,7 +8,7 @@
 ### Self Introduction
 
 First of all,  
-Thank you sir, for given this opportunity to introduce my self,  
+Thank you sir, for giving this wonderful opportunity to introduce my self,  
 ##### `Bio`
 I'm Praveen Ande.
 
@@ -21,8 +21,7 @@ After My Graduation, I worked at JAY ENGINEERING WORKS company in Chennai as a Q
 
 * In this role, I handled CNC machines and Control the dimensions of machining parts by modifying the CNC programs.
 
-I have a strong interest in learning programming languages, 
-so I completed an Industry Ready Certification course in Full-stack Development with MERN specilization from Nxtwave.   
+I have a strong interest in learning programming languages, so I completed an Industry Ready Certification course in Full-stack Development with a MERN specialization from Nxtwave.  
 
 ##### `Skills`
 
@@ -41,13 +40,12 @@ So I have hands-on experience on Mern stack technologies,
 
 ##### `Projects`
 
-during my fullstack training I have built many projects, like todoApp, wikipedia search Application, Instagram clone.  
+during my fullstack training I have built many projects, like todoApp, wikipedia search Application, Instagram clone ...etc
 
-My favourite project is Instagram Clone It is developed by React JS
 
 currently I am learning MongoDB database...
 
-This is all about me.
+This is all about me sir.
 
 If you want to know more about me, I am very happy to share with you.
 
