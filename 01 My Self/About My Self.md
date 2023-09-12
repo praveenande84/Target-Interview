@@ -51,9 +51,11 @@ If you want to know more about me, I am very happy to share with you.
 
 Thank you sir.
 
----
+
 
 </details>
+
+---
 
 
 <details>
@@ -65,6 +67,7 @@ One of my biggest achievements is completing a 100-days code challenge successfu
 
 </details>
 
+---
 
 <details>
 <summary>Hobbies</summary>
@@ -78,6 +81,8 @@ I follow many technology-related channels on youtube.
 My Favorite channel is Akshay Saini.
 
 </details>
+
+---
 
 <details>
 <summary>Strengths</summary>
@@ -95,6 +100,8 @@ I am friendly and can mingle with people easily. I can collaborate with people a
 
 </details>
 
+---
+
 <details>
 <summary>Why Should I hire You?</summary>
 
@@ -103,6 +110,8 @@ I am friendly and can mingle with people easily. I can collaborate with people a
 with my strenghts, I think I can fulfill my responsibilities as a employee in your company.
 
 </details>
+
+---
 
 <details>
 <summary>Weakness</summary>
@@ -114,6 +123,8 @@ I get sad when my plans don't work. It takes some time for me to get back to nor
 Spending more time paying too much attention to details.
 
 </details>
+
+---
 
 <details>
 <summary>Feature Goals</summary>
@@ -128,6 +139,8 @@ I want to contribute to the company's growth.
 
 </details>
 
+---
+
 
 <details>
 <summary>Low CGPA</summary>
@@ -138,7 +151,7 @@ I got 63% in my B.tech
 
 </details>
 
-
+---
 
 <details>
 <summary>Career Switch</summary>
@@ -156,6 +169,7 @@ That's why I think IT is the right field for me.
 
 </details>
 
+---
 
 <details>
 <summary>Family</summary>
@@ -169,12 +183,12 @@ I have two siblings, My both elder sisters are married.
 
 </details>
 
-
+---
 
 <details>
 <summary>Work Experience</summary>
 
-### Work Experience
+#### Work Experience
 
 
 Do you have any work Experience ?
@@ -186,7 +200,7 @@ like static, responsive and Dynamic websites.
 
 </details>
 
-
+---
 
 
 

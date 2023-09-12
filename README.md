@@ -1,2 +1,9 @@
 # Target-Interview
-My Interview Preparation material available here...
+---
+
+1. My Self
+2. Project
+3. Theory
+4. Technical
+
+---
