@@ -5,26 +5,26 @@
 <details>
 <summary>Self Introduction</summary>
 
-#### Self Introduction
+### Self Introduction
 
-First of all,
-
-Thank you sir,  for given this opportunity to introduce my self,  
-
+First of all,  
+Thank you sir, for given this opportunity to introduce my self,  
+##### `Bio`
 I'm Praveen Ande.
 
 I am from Dr. B. R. Ambedkar Konaseema district in Andhra Pradesh state, currently I am in Hyderabad.  
 
-I completed my B.Tech in the stream of **Mechanical Engineering** from *SRINIVASA INSTITUTE OF ENGINEERING & TECHNOLOGY* Amalapuram.
+I have completed my B.Tech in the stream of **Mechanical Engineering** from *SRINIVASA INSTITUTE OF ENGINEERING & TECHNOLOGY* Amalapuram.
 
-Work Experience:
-
+##### `My Journey`
 After My Graduation, I worked at JAY ENGINEERING WORKS company in Chennai as a Quality Control Engineer & CNC Programmer.   
 
-In this role, I handled CNC machines and Control the dimensions of machining parts by modifying the CNC programs.
+* In this role, I handled CNC machines and Control the dimensions of machining parts by modifying the CNC programs.
 
 I have a strong interest in learning programming languages, 
-so I completed an Industry Ready Certification course in Full-stack Development from Nxtwave.   
+so I completed an Industry Ready Certification course in Full-stack Development with MERN specilization from Nxtwave.   
+
+##### `Skills`
 
 During my full-stack training, I learned various technologies:
 
@@ -39,19 +39,19 @@ I also gained experience in using Git and GitHub for version control.
 So I have hands-on experience on Mern stack technologies,
 
 
-Projects:
+##### `Projects`
 
-during my fullstack training I have built many projects, like todoApp, wikipedia search Application, Instagram clone.
+during my fullstack training I have built many projects, like todoApp, wikipedia search Application, Instagram clone.  
 
-currently I am learning MongoDB database....
+My favourite project is Instagram Clone It is developed by React JS
+
+currently I am learning MongoDB database...
 
 This is all about me.
 
 If you want to know more about me, I am very happy to share with you.
 
 Thank you sir.
-
-
 
 </details>
 
