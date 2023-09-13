@@ -41,9 +41,9 @@
 ##### **HTML** document Structure  
 
 An **HTML** document consists of three parts :
-  1. First Line containing HTML version information.
-  2. head part -> html page configuration information
-  3. body part -> displaying content
+  1. DOCTYPE -> First Line containing HTML version information.
+  2. Head Part -> html page configuration information. Head tag is for browser reading purpose
+  3. Body part -> displaying content. Body tag is for client reading purpose
 
 ```HTML
 <!DOCTYPE html>
@@ -52,10 +52,22 @@ An **HTML** document consists of three parts :
     Metadata elements
   </head>
   <body>
-    Document Content
+    content of webpage
   </body>
 </html>
 ```
+
+* **DOCKTYPE**  
+  The doctype declaration tells the type/version of the HTML document to the browser.
+
+* **Head Part**  
+  The HTML head element is the container for the elements which provide extra information about the document (metadata).  
+  It describes the properties of the document such as title, character set, style sheets, scripts, etc.
+
+* **Body Part**  
+  The HTML body element defines the main content of an HTML document that displays on the web page.
+
+  It contains text content, paragraphs, headings, images, tables, links, videos, ...etc.
 
 ##### Element Syntax 
 Element consist of a start tag, content, and end tag.
@@ -69,114 +81,83 @@ Element consist of a start tag, content, and end tag.
 <tag attributeName="attributeValue">Content</tag>
 ```
 
-</details>
 
----
----
----
----
----
----
----
-
-
-
-<details>
-<summary>Introduction</summary>
-
-```HTML
-<!DOCTYPE html><!--document type-->
-
-<html><!--html page start-->
-
-<head><!--head tag is for browser reading purpose-->
-<title>html syntax comment</title><!--title tag is for title of the web page-->
-</head><!--head tag end-->
-
-<body><!--body tag is for client reading purpose-->
-
-<center><h1>html</h1></center><!--content of webpage-->
-
-
-</body><!--body tag end-->
-
-</html><!--html page end-->
-
-```
-
-##### Uses of HTML
-
+##### Uses of **HTML**
 * **Structuring web pages**  
    we can define the headings, paragraphs, and other contents of a web page.
 * **Creating Hyperlinks**  
    we can navigate within the HTML document, to other web pages.
 * **Embedding images and videos**  
-   we can embed images and videos in the HTML document      
+   we can embed images and videos in the HTML document.
+
+##### Advantages & Disadvantages of **HTML** 
+* we can create only Static Web pages with HTML alone.
+* By Combining HTML with CSS, we can create Responsive web pages.
+* By Combining HTML with JavaScript, we can create dynamic web pages.
 
 
+##### Difference between HTML and HTML5
+HTML5 is more complete and easier than HTML4, it has lots of new tags like `<header>, <footer>, <navy>, <Audio>, <video>, <main>` ...etc.  
+It also supports graphics. In the following image, we have described all the essential terms related to HTML and HTML5
 </details>
 
----
-
-
 <details>
-<summary>Webpage</summary>
+<summary>Elements</summary>
 
-**Can we design dynamic web pages using HTML**  
-No, we can't design dynamic web pages with HTML alone.
+### Elements
 
-By Combining HTML with JavaScript, we can create dynamic web pages.  
+In general, HTML elements can be divide into two categories.
+1. Block-Level Elements
+2. Inline Elements
 
-
-**What is the use of doctype**  
-The doctype declaration tells the type/version of the HTML document to the browser.
-
-This ensures that the HTML document is rendered in different browsers in the same and expected way.
-
-```Javascript
-<!DOCTYPE html>
-<html>
-  <head></head>
-  <body>
-    <h1>Tourism</h1>
-  </body>
-</html>
+##### Block-Level Elements
+These elements always start in a new line and take up the full width available. So, an HTML Block-Level element occupies the entire horizontal space of its parent element.
+```HTML 
+<h1>Heading</h1>
 ```
 
-**What is nested HTML**  
+* h1
+* p
+* div
+
+##### In-Line Elements
+These elements do not start in a new line and only take up as much width as necessary.
+```HTML
+<p>I am <a href="http://www.google.com">Google</a> link</p>
+```
+
+
+
+##### Nested **HTML**
 HTML elements can be nested.
 
 It means that the HTML element can be placed inside another HTML element.
 
-```Javascript
+```HTML
 <div>
-  <h1>Tourism</h1>
-  <p>Plan your trip.</p>
+  <h1>Heading</h1>
+  <p>I am pragraph.</p>
 </div>
 ```
 </details>
 
----
+</details>
 
+---
+---
+---
+---
+---
+---
+---
 
 <details>
 <summary>HTML Elements</summary>
 
-### HTML Elements
-
-##### body Element
-The HTML body element defines the main content of an HTML document that displays on the web page.
-
-It can contain text content, paragraphs, headings, images, tables, links, videos, etc.
-
-
-##### Commonly used HTML elements
-h1, p, br, hr, a, img, div, span
-
 ##### use of anchor element
 We use the HTML anchor elements to navigate to other web resources or a specific HTML element within the HTML document. They are also called as Hyperlinks/ Links.
 
-```Javascript
+```HTML
 <a href="URL">Content</a>
 ```
 
@@ -189,7 +170,7 @@ HTML headings are defined with the h1 to h6 elements.
 * The HTML h6 element defines the least important heading of an HTML document.
 
 
-```Javascript 
+```HTML 
 <h1>heading</h1>
 <h2>heading</h2>
 <h3>heading</h3>
@@ -234,10 +215,6 @@ It can contain scripting statements, or it points to an external script file thr
 ```Javacsript
 <script src="counter.js"></script>
 ```
-
-##### head Element
-The HTML head element is the container for the elements which provide extra information about the document (metadata).  
-It describes the properties of the document such as title, character set, style sheets, scripts, etc.
 
 
 ##### How to add line breaks to an HTML paragraph element?
