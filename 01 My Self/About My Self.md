@@ -21,7 +21,7 @@ After My Graduation, I worked at JAY ENGINEERING WORKS company in Chennai as a Q
 
 * In this role, I handled CNC machines and Control the dimensions of machining parts by modifying the CNC programs.
 
-I have a strong interest in learning programming languages, so I completed an Industry Ready Certification course in Full-stack Development with a MERN specialization from Nxtwave.  
+I have a strong interest in learning programming languages, so I completed an Industry Ready Certification course in Full-stack Development with MERN specialization from Nxtwave.  
 
 ##### `Skills`
 
@@ -42,7 +42,6 @@ So I have hands-on experience on Mern stack technologies,
 
 during my fullstack training I have built many projects, like todoApp, wikipedia search Application, Instagram clone ...etc
 
-
 currently I am learning MongoDB database...
 
 This is all about me sir.
@@ -56,16 +55,6 @@ Thank you sir.
 ---
 
 
-<details>
-<summary>Achievements</summary>
-
-#### Achievements
-
-One of my biggest achievements is completing a 100-days code challenge successfully. As part of that, I participated coding consistently every day for 100 days.
-
-</details>
-
----
 
 <details>
 <summary>Hobbies</summary>
@@ -79,6 +68,19 @@ I follow many technology-related channels on youtube.
 My Favorite channel is Akshay Saini.
 
 </details>
+
+---
+
+<details>
+<summary>Achievements</summary>
+
+#### Achievements
+
+One of my biggest achievements is completing a 100-days code challenge successfully. As part of that, I participated coding consistently every day for 100 days.
+
+</details>
+
+
 
 ---
 
