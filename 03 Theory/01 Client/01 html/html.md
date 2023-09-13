@@ -1,49 +1,51 @@
-### html
+# HTML
 
 <details>
 <summary>Introduction</summary>
 
-#### Introduction
+### Introduction
+**HTML** stands for **Hypertext Markup Language**
 
-**HTML** stands for **Hypertext Markup Language**.  
-HTML is used to create Web pages.
-
-It describes the structure of a Web page.
-It consists of HTML elements that tell the browser how to display the content.
-
-##### Element Syntax  
-Element consist of a start tag, content, and end tag.
-
-```javascript
-<tag>Content</tag>
-```
-
-##### Types of Tags
-* **Paired Tags**  
-  Paired tags consist of two tags, the first one is called a start tag and the second one is called an end tag.
-
-```javascript
-<h1>Heading</h1>
-<p>Paragraph</p>
-```
-
-* **Unpaired Tags**  
- Unpaired tags do not have an end tag. They are also known as empty tags.
-
-```javascript
-<img src="image.png"/>
- <br/>
-```
+##### About HTML
+* **HTML** stands for **Hypertext Markup Language**  
+* **HTML** is used to create static web pages.
+* Text Editor is the software for **HTML** coding.
+* **HTML** file save with extension `.html`
 
 
-##### HTML document Structure
-An HTML document generally consists of three parts:
+##### HTML coding
 
-A line containing HTML version information.
-A declarative head element.
-A body, which contains the document's actual content.
+**HTML** coding is a `Tag` based coding.
 
-```javascript
+###### **HTML** Tags are two types  
+    1. Container Tag : It has start Tag & End Tag.
+    2. Empty Tag : It does not have an end tag.
+
+`Container Tag`
+   ```HTML
+    <h1>Heading</h1>
+    <p>Paragraph</p>
+   ``` 
+
+`Empty Tag`
+ ```HTML
+   <img src="image.png"/>
+   <br/>
+   <hr/>
+   ``` 
+
+* Attributes are used to give extra information to the html element.
+
+* **HTML** elements tell the browser that how to display the content.
+
+##### **HTML** document Structure  
+
+An **HTML** document consists of three parts :
+  1. First Line containing HTML version information.
+  2. head part -> html page configuration information
+  3. body part -> displaying content
+
+```HTML
 <!DOCTYPE html>
 <html>
   <head>
@@ -53,6 +55,53 @@ A body, which contains the document's actual content.
     Document Content
   </body>
 </html>
+```
+
+##### Element Syntax 
+Element consist of a start tag, content, and end tag.
+
+```HTML
+<tag>Content</tag>
+```
+
+##### Attribute syntax
+```HTML 
+<tag attributeName="attributeValue">Content</tag>
+```
+
+</details>
+
+---
+---
+---
+---
+---
+---
+---
+
+
+
+<details>
+<summary>Introduction</summary>
+
+```HTML
+<!DOCTYPE html><!--document type-->
+
+<html><!--html page start-->
+
+<head><!--head tag is for browser reading purpose-->
+<title>html syntax comment</title><!--title tag is for title of the web page-->
+</head><!--head tag end-->
+
+<body><!--body tag is for client reading purpose-->
+
+<center><h1>html</h1></center><!--content of webpage-->
+
+
+</body><!--body tag end-->
+
+</html><!--html page end-->
+
 ```
 
 ##### Uses of HTML
@@ -371,7 +420,7 @@ The HTML attributes provide additional information about HTML elements.
 They are always specified in the start tag.  
 They usually come in name/value pairs like: name="value"  
 Examples: src, style, alt, etc.
-</details>
+
 
 
 ##### Difference between id & class
@@ -415,6 +464,8 @@ It is generally used to instruct a computer to perform certain actions on an inp
 
 HTML is a markup language that is used to describe the structure and layout of web pages.  
 It is generally used to format the output (How to appear on a website).  	
+
+</details>
 
 ---
 
@@ -500,3 +551,6 @@ The HTML option element should be inside the HTML select element for defining op
 <summary>More Interview Questions</summary>
 
 </details>
+
+
+---
