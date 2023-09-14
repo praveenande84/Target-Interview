@@ -99,6 +99,20 @@ Element consist of a start tag, content, and end tag.
 ##### Difference between HTML and HTML5
 HTML5 is more complete and easier than HTML4, it has lots of new tags like `<header>, <footer>, <navy>, <Audio>, <video>, <main>` ...etc.  
 It also supports graphics. In the following image, we have described all the essential terms related to HTML and HTML5
+
+
+##### HTML version
+HTML5 is the latest version of HTML.
+
+In HTML5 version, they added new features,
+* audio and video elements
+* semantic elements like header, nav, aside, main, footer ...etc.
+
+**`HTML5`**  
+```HTML
+<!DOCTYPE html>
+```
+
 </details>
 
 ---
@@ -316,12 +330,99 @@ The HTML `hr` element inserts a horizontal line and helps to separate the conten
 <hr/>
 ```
 
+##### Form
+The HTML form element can be used to create HTML forms.  The form is used to collect the user inputs.
+It contains different types of form elements. 
+
+* input
+* label
+* select
+* textarea
+* button
+* fieldset
+* legend
+* option
+
+```HTML 
+<form action="/submit_data.php">
+  <label>Enter your name: </label>
+  <input type="text" name="name" />
+  <label>Enter Mobile number </label>
+  <input type="number" name="mobile_no" />
+  <input type="submit" value="Submit" />
+</form>
+```
+
+##### details
+It has two states:
+
+* open: We can see the additional information.
+* close: We can't see the additional information. We can see only the summary.
+```HTML
+<details>
+  <summary>Details</summary>
+  Something small enough to escape casual notice.
+</details>
+```
+
+##### picture 
+
+The HTML picture element is a container to provide multiple alternative sources for the HTML img element. It is useful in different display/device scenarios.
+
+It can contain zero or more source elements and one HTML img element.
+
+```HTML 
+<picture>
+  <source
+    media="(min-width:650px)"
+    srcset="image-1"
+  />
+  
+  <source
+    media="(min-width:465px)"
+    srcset="image-2"
+  />
+  
+  <img
+    src="image-3"
+    alt="historical places"
+  />
+  
+</picture>
+```
+
+* The HTML srcset attribute specifies the alternative source/ path of the img element.
+* The HTML media attribute specifies the media query. CSS properties will be applied based on the device type and media features like min-width, etc.
+
+##### iframe
+Some of the uses of HTML iframe element are:
+
+* We can embed HTML documents within the current HTML document
+* We can embed videos within the current HTML document, etc.
+
+
 </details>
 
 <details>
 <summary>Important Elements</summary>
 
 ### Important Elements
+
+##### html 
+The HTML element defines the root of an HTML document.
+
+It is a container for all the other HTML elements.
+
+```HTML
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <h1>Heading</h1>
+    <p>I am Paragraph</p>
+  </body>
+</html>
+```
 
 ##### **script** element
 We use the HTML **script** element to embed the **JavaScript** code to HTML file.
@@ -338,12 +439,68 @@ We can embed external javascript file with **src** attribute in script Tag.
 <script src="external-javascript.js"></script>
 ```
 
+##### style
+
+The HTML **style** element contains style information for an HTML document. It contains CSS, which is applied to the contents of the HTML document.
+
+```HTML 
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      h1 {
+        color: red;
+      }
+      p {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Heading</h1>
+    <p>I am Paragraph</p>
+  </body>
+</html>
+```
+
 ##### HTML link element 
 We use the HTML link element to link the HTML and CSS files.
 
 ```HTML 
 <link rel="stylesheet" href="styles.css">
 ```
+
+##### select
+we can choose any one option.
+
+```HTML
+<label for="color">Choose a color</label>
+<select name="cars" id="color">
+  <option value="green">Green</option>
+  <option value="yellow">Yellow</option>
+  <option value="red">Red</option>
+</select>
+```
+
+```HTML
+<label for="color">Choose a color</label>
+<select name="cars" id="color">
+  <option value="green" selected>Green</option>
+  <option value="yellow">Yellow</option>
+  <option value="red">Red</option>
+</select>
+```
+
+```HTML
+<label for="color">Choose a color</label>
+<select name="cars" id="color" multiple>
+  <option value="green">Green</option>
+  <option value="yellow">Yellow</option>
+  <option value="red">Red</option>
+</select>
+```
+
+
 
 </details>
 
@@ -386,7 +543,6 @@ The HTML target Attribute specifies where to open the linked web resource.
 <a href="http://www.google.com" target="_blank">Google</a>
 ```
 
-
 ##### href
 The HTML **href** attribute is the most important attribute of the HTML anchor element.
  
@@ -408,6 +564,22 @@ The HTML id attribute specifies a unique id for an HTML element. The value of th
 * It is also used by JavaScript to access and manipulate the HTML elements with the specific id.
 
 
+#### Boolean Attributes
+
+##### required attribute
+
+The HTML required attribute is a boolean attribute.
+
+If present, it specifies that an input field must be filled out before submitting the form.
+
+```HTML
+<form>
+  <label for="username">Username</label>
+  <input type="text" id="username" name="username" required />
+  <input type="submit" />
+</form>
+```
+
 </details>
 
 <details>
@@ -420,9 +592,30 @@ The HTML span element is an inline element, which should contain only other inli
 
 So as span is an inline element and p is a block-level element, we can't use the p element inside a span element.
 
+##### differences between HTML semantic and non-semantic elements?
+
+###### semantic* 
+semantic elements have the meaning.  
+They describe the content they contain.   
+the HTML semantic elements describe the meaning of content in between the start and end tags.
+
+###### non-semantic
+non-semantic elements don't have the meaning.  
+They can contain anything.  
+Examples: `div` and `span`.
 
 
-##### 
+##### What are the uses of Semantic HTML?
+
+* **Accessibility**   
+  It makes web pages accessible for mobile devices and people with disabilities as well. This is because screen readers and browsers can understand the code better.
+
+* **Search Engine Optimization**  
+  It improves the website Search Engine Optimization Rankings which increases the number of people that visit our webpage.
+
+* **Easy to Understand**  
+   It makes our code more readable and easier to understand.  
+
 </details>
 
 <details>
@@ -448,37 +641,6 @@ So as span is an inline element and p is a block-level element, we can't use the
 
 <details>
 <summary>HTML Forms & Tables</summary>
-
-#### HTML Forms & Tables
-
-##### Explain HTML form element?
-
-The HTML form element can be used to create HTML forms. It is a container that can contain different types of elements like,
-
-* input
-* label
-* select
-* textarea
-* button
-* fieldset
-* legend
-* data list
-* output
-* option
-* optgroup, etc.
-
-##### What are forms and how to create forms in HTML?
-The form is used to collect the user inputs. HTML provides a form element to create forms.  
-
-```Javascrip 
-<form action="/submit_data.php">
-  <label>Enter your name: </label>
-  <input type="text" name="name" />
-  <label>Enter Mobile number </label>
-  <input type="number" name="mobile_no" />
-  <input type="submit" value="Submit" />
-</form>
-```
 
 ##### What is checkbox and how to use checkbox?
 To define a Checkbox, We need to specify the HTML type attribute with the value checkbox for an HTML input element.
@@ -585,7 +747,7 @@ The HTML type attribute specifies the type/format of the media resource(e.g. vid
 
 ##### HTML iframe element
 
-```Javascript
+```HTML
 <iframe src="https://www.youtube.com/embed/y881t8ilMyc"></iframe>
 ```
 The HTML src attribute specifies the URL/path of the video.
@@ -614,332 +776,6 @@ Video controls include:
 <video controls>
   <source src="movie.mp4" type="video/mp4" />
 </video>
-```
-
-
-##### What is the use of an HTML iframe element?
-Some of the uses of HTML iframe element are:
-
-* We can embed HTML documents within the current HTML document
-* We can embed videos within the current HTML document, etc.
-
-
-##### What is an HTML picture element?
-
-
-The HTML picture element is a container to provide multiple alternative sources for the HTML img element. It is useful in different display/device scenarios.
-
-It can contain zero or more source elements and one HTML img element.
-
-```HTML 
-<picture>
-  <source
-    media="(min-width:650px)"
-    srcset="
-      https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/goldentemple1-img.png
-    "
-  />
-  
-  <source
-    media="(min-width:465px)"
-    srcset="
-      https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/mysore-palace1-img.png
-    "
-  />
-  
-  <img
-    src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/varanasi1-img.png"
-    alt="historical places"
-  />
-  
-</picture>
-```
-
-* The HTML srcset attribute specifies the alternative source/ path of the img element.
-* The HTML media attribute specifies the media query. CSS properties will be applied based on the device type and media features like min-width, etc.
-
-##### What are HTML Semantic Elements?
-
-The word semantic means relating to meaning in language. 
-
-So, the HTML semantic elements describe the meaning of content in between the start and end tags.
-
-There are around a hundred semantic elements. Some of them are:
-
-**Header element**  
-
-The HTML header element defines the container of introductory information or navigation links of an HTML document.
-
-Generally, it contains heading elements, search form, logos, etc.
-
-```HTML
-<header>
-  <h1>HTML Semantic Elements</h1>
-</header>
-```
-
-**Nav element**
-
-The HTML nav element defines the section of navigation links. 
-
-```HTML
-<nav>
-  <ol>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#profile">Profile</a></li>
-    <li><a href="#contacts">Contacts</a></li>
-  </ol>
-</nav>
-```
-
-**Main element**
-
-The HTML main element defines the main content of an HTML document.
-
-```HTML
-<header>HTML</header>
-
-<main>
-  <p>HTML Stands for HyperText Markup Language.</p>
-  <p>It describes the structure of a Web page and consists of HTML elements that tell the browser how to display the content.</p>
-</main>
-```
-
-**Article element**
-
-The HTML article element defines the complete part of an HTML document which is independent and reusable.
-
-It can be used to represent a magazine, newspaper article, blog entry or any other independent item of content.
-
-```HTML
-<article>
-  <h1>HTML</h1>
-  <p>HTML Stands for HyperText Markup Language. It describes the structure of a Web page.<p>
-</article>
-
-<article>
-  <h1>CSS</h1>
-  <p>CSS Stands for Cascading Style Sheets. It describes the styles for the HTML documents, including design, layout, etc. </p>
-</article>
-```
-
-**Section element**
-
-The HTML section element defines the generic section of an HTML document.
-
-It is generally used to group content that has a heading.  
-
-The HTML section and HTML article elements are conceptually similar and interchangeable. But the HTML section element differs from article element because it isn’t necessarily self-contained (complete).
-
-```HTML
-<section>
-  <h1>Uses of HTML</h1>
-  <ul>
-    <li>Structuring web pages</li>
-    <li>Creating Hyperlinks</li>
-    <li>Embedding images and videos</li>
-  </ul>
-</section>
-```
-
-**Aside element**
-
-The HTML aside element defines the portion of an HTML document whose content is only indirectly related to the HTML document's main content.
-
-It specifies the content of less importance.
-
-It is generally used to represent sidebars or call-out boxes.
-
-```HTML
-<article>
-  <h1>HTML</h1>
-  <p>HTML Stands for HyperText Markup Language. It describes the structure of a Web page.<p>
-</article>
-
-<aside>
-  <h1>Website</h1>
-  <p>Website is a collection of webpages.</p>
-</aside>
-```
-
-
-**Footer element**
-
-The HTML footer element defines the footer of a page or section.
-
-It generally contains information about the author of the section, copyright data, or links to related documents.
-
-
-```HTML
-<footer>
-  <p>Email me at rahul@gmail.com</p>
-</footer>
-```
-
-##### What are the uses of Semantic HTML?
-
-Some of the uses of Semantic HTML are:
-
-Accessibility: It makes web pages accessible for mobile devices and people with disabilities as well. This is because screen readers and browsers can understand the code better.
-
-Search Engine Optimization: It improves the website Search Engine Optimization Rankings which increases the number of people that visit our webpage.
-
-Easy to Understand: It makes our code more readable and easier to understand.
-
-##### What are HTML non-semantic elements?
-
-The HTML non-semantic elements don't have any meaning.
-
-Examples: div and span.
-
-We cannot exactly find out the type of content within the given element unlike semantic elements like h1, p, etc.
-
-
-##### What are the differences between HTML semantic and non-semantic elements?
-
-
-**semantic**  
-semantic elements have the meaning.  
-They describe the content they contain.  
-
-**non-semantic**
-non-semantic elements don't have the meaning.  
-They can contain anything.  
-
-
-##### What are Global attributes?
-Global attributes are attributes common to all HTML elements.
-
-They can be used on all elements, though they may not affect some elements.
-
-Examples: class, id, title, etc.
-
-##### What are HTML selected and multiple attributes?  
-**Selected Attribute**:
-
-It is a boolean attribute. It specifies that an option should be pre-selected when the page loads.
-
-```HTML
-<option value="Active" selected>Active</option>
-```
-
-**Multiple Attribute**:
-It is a boolean attribute. It specifies whether the user is allowed to provide more than one value in an input field.
-
-It can be used in the HTML select element.
-
-```HTML
-<label for="cars">Choose a car:</label>
-<select name="cars" id="cars" multiple>
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi</option>
-</select>
-```
-
-##### What is an HTML required attribute
-
-The HTML required attribute is a boolean attribute.
-
-If present, it specifies that an input field must be filled out before submitting the form.
-
-```HTML
-<form>
-  <label for="username">Username:</label>
-  <input type="text" id="username" name="username" required />
-  <input type="submit" />
-</form>
-```
-
-##### What is an HTML html element?
-The HTML html element defines the root of an HTML document.
-
-It is a container for all the other HTML elements.
-
-```HTML
-<!DOCTYPE html>
-<html>
-  <head></head>
-  <body>
-    <h1>Tourism</h1>
-    <p>Plan your trip wherever you want to go</p>
-  </body>
-</html>
-```
-
-##### What is an HTML style element?
-
-The HTML style element contains style information for an HTML document, or part of an HTML document. It contains CSS, which is applied to the contents of the HTML document.
-
-```HTML 
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      h1 {
-        color: red;
-      }
-      p {
-        color: blue;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Tourism</h1>
-    <p>Plan your trip</p>
-  </body>
-</html>
-```
-
-##### What is an HTML details element?
-
-The HTML details element defines a disclosure widget where we can see the additional information.
-
-It has two states:
-
-* open: We can see the additional information.
-* close: We can't see the additional information. We can see only the summary.
-```HTML
-<details>
-  <summary>Details</summary>
-  Something small enough to escape casual notice.
-</details>
-```
-
-The summary element defines the label or summary.
-
-##### Why HTML 5 is best compared to old versions?
-
-HTML 5 is the latest version of HTML.
-
-Some of the new features added in HTML5 that make it better than HTML are:
-
-* audio and video elements
-* semantic elements like header, footer, figure, figcaption, nav, etc.
-* placeholder attribute
-* progress element, etc.
-
-##### What are the different doctypes in HTML?
-
-Some of the doctype declarations for different versions of HTML are:
-
-**HTML5:**  
-```HTML
-<!DOCTYPE html>
-```
-
-**HTML4.01: (Strict doctype - Doesn't allow deprecated and presentation elements like font, etc.)**  
-
-
-```HTML
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-```
-
-
-**HTML4.01: (Transitional doctype - Allows deprecated and presentation elements like font, etc.)**  
-```HTML
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 ```
 
 </details>
