@@ -12,7 +12,6 @@
 * Text Editor is the software for **HTML** coding.
 * **HTML** file save with extension `.html`
 
-
 ##### HTML coding
 
 **HTML** coding is a `Tag` based coding.
@@ -39,7 +38,6 @@
 * **HTML** elements tell the browser that how to display the content.
 
 ##### **HTML** document Structure  
-
 
 ```HTML
 <!DOCTYPE html>
@@ -80,13 +78,12 @@ Element consist of a **start tag**, **content**, and **end tag**.
 <tag attributeName="attributeValue">Content</tag>
 ```
 
-
 ##### Uses of **HTML**
 * **Structuring web pages**  
    we can define the headings, paragraphs, and other contents of a web page.
 * **Creating Hyperlinks**  
    we can navigate to within the HTML document or other web pages.
-* **Embedding images and videos**  
+* **Embedding images , audio and videos**  
    we can embed images, audios and videos in the HTML document.
 
 ##### Advantages & Disadvantages of **HTML** 
@@ -122,8 +119,8 @@ In HTML5 version, they added new features,
 
 ###### **HTML** Tags are two types  
 
-  1. Container Tag : It has start Tag & End Tag.
-  2. Empty Tag : It does not have an End tag.
+  1. **Container Tag** : It has start Tag & End Tag.
+  2. **Empty Tag** : It does not have an End tag.
 
 In general, HTML elements can be divide into two categories.
 1. Block-Level Elements
@@ -188,10 +185,9 @@ It means that the HTML element can be placed inside another HTML element.
 ---
 
 <details>
-<summary>Elements Explanation</summary>
+<summary>Structuring</summary>
 
-### Elements Explanation
-
+### Structure
 
 ##### Heading Elements
 HTML defines six levels of headings.  
@@ -214,7 +210,8 @@ The HTML Paragraph Element defines the paragraph of an HTML document.
 ```
 
 ##### Line Break
-The HTML `br` element is used to add a line break to an HTML paragraph element. It breaks the text and continue it in the next line.The HTML br element is a void element.
+The HTML `br` element helps to break the text and continue it in the next line.  
+The HTML br element is a void element.
 
 ```HTML
 <p>
@@ -223,6 +220,16 @@ The HTML `br` element is used to add a line break to an HTML paragraph element. 
   Up above the world so high, <br />
   Like a diamond in the sky.
 </p>
+```
+
+##### Horizontal line
+The HTML `hr` element inserts a horizontal line and helps to separate the content.
+
+```HTML 
+<h1>Heading</h1>
+<hr/>
+
+<p>I am Paragraph</p>
 ```
 
 ##### Block-Level Container Tags
@@ -279,80 +286,10 @@ understanding and applaying css easily.
 ##### In-Line Container Tags
 These are Inline elements
 
-###### Span:
-
+  `Span`  
 apply some styles for a particular character , word , group of words.  
-content comes side by side.  
+content comes side by side. 
 
-##### Media Elements
-
-###### Display Image
-We can display images on the web page using the HTML img element.
-
-src specifies the path to the image.
-
-alt specifies an alternate text for the image.
-```HTML 
-<img src="IMAGE_URL" alt="image" />
-```
-
-##### Links
-We can use hyperlinks to text as well as images, buttons, etc.
-
-###### Anchor Element
-We use the HTML anchor element to navigate to other web resources or a specific element within the HTML document.. They are also called as Hyperlinks/ Links.
-
-```HTML
-<a href="link"> Link Text </a>
-<a href="link"> <button>Click Here</button> </a>
-<a href="link"> <img src="image.png" /> </a>
-```
-
-##### List
-There are mainly two types of lists in HTML  
-1. Ordered List
-2. Unordered List
-
-###### Ordered List
-  It is created using the `ol` element. 
-  It is a collection of related items.  
-  Ordered list follows the Sequence Order. 
-
-##### Unordered List
- It is created using the `ul` element. 
- It is a collection of related items.   
- Unordered list does not follows the any Sequence Order. 
-
-
-##### Horizontal line
-The HTML `hr` element inserts a horizontal line and helps to separate the content.
-
-```HTML 
-<hr/>
-```
-
-##### Form
-The HTML form element can be used to create HTML forms.  The form is used to collect the user inputs.
-It contains different types of form elements. 
-
-* input
-* label
-* select
-* textarea
-* button
-* fieldset
-* legend
-* option
-
-```HTML 
-<form action="/submit_data.php">
-  <label>Enter your name: </label>
-  <input type="text" name="name" />
-  <label>Enter Mobile number </label>
-  <input type="number" name="mobile_no" />
-  <input type="submit" value="Submit" />
-</form>
-```
 
 ##### details
 It has two states:
@@ -364,6 +301,54 @@ It has two states:
   <summary>Details</summary>
   Something small enough to escape casual notice.
 </details>
+```
+
+
+
+* The HTML srcset attribute specifies the alternative source/ path of the img element.
+* The HTML media attribute specifies the media query. CSS properties will be applied based on the device type and media features like min-width, etc.
+
+
+
+</details>
+
+---
+
+<details>
+<summary>Hyperlinks</summary>
+
+### Hyperlinks
+
+We can create hyperlinks to text as well as images, buttons, ...etc.
+
+##### Anchor Element
+hyperlink is used to navigate directly to other page or specific part of the given page.  
+We use the HTML anchor element to navigate to other web resources or a specific element within the HTML document.  
+They are also called as Hyperlinks/ Links.
+
+```HTML
+<a href="link"> Link Text </a>
+<a href="link"> <button>Click Here</button> </a>
+<a href="link"> <img src="image.png" /> </a>
+```
+
+</details>
+
+---
+
+<details>
+<summary>Embeding</summary>
+
+### Embeding
+
+###### Display Image
+We can display images on the web page using the HTML img element.
+
+`src` specifies the path to the image.
+
+alt specifies an alternate text for the image.
+```HTML 
+<img src="IMAGE_URL" alt="image" />
 ```
 
 ##### picture 
@@ -391,9 +376,6 @@ It can contain zero or more source elements and one HTML img element.
   
 </picture>
 ```
-
-* The HTML srcset attribute specifies the alternative source/ path of the img element.
-* The HTML media attribute specifies the media query. CSS properties will be applied based on the device type and media features like min-width, etc.
 
 ##### iframe
 Some of the uses of HTML iframe element are:
@@ -459,7 +441,149 @@ It is commonly used to give the same media content in multiple file formats for 
 
 The HTML src attribute of the source element specifies the URL/path of the media resource.
 
+
 </details>
+
+--- 
+
+<details>
+<summary>List</summary>
+
+### List
+
+There are mainly two types of lists in HTML  
+1. Ordered List
+2. Unordered List
+
+##### Unordered List
+ It is created using the `ul` element. 
+ It is a collection of related items.   
+ Unordered list does not follows the any Sequence Order. 
+
+```HTML 
+<ul>
+    <li>html</li>
+    <li>css</li>
+    <li>bootstrap</li>
+    <li>javascript</li>
+    <li>react</li>
+</ul>
+```
+
+###### Ordered List
+  It is created using the `ol` element. 
+  It is a collection of related items.  
+  Ordered list follows the Sequence Order. 
+
+```HTML 
+<ol>
+    <li>html</li>
+    <li>css</li>
+    <li>bootstrap</li>
+    <li>javascript</li>
+    <li>react</li>
+</ol>
+```
+
+</details>
+
+---
+
+<details>
+
+<summary>Table</summary>
+
+### Table
+
+```
+thead => tr , th
+tbody => tr , td
+tfoot => tr , td
+```
+
+`table = table rows + table data`
+
+</details>
+
+---
+
+<details>
+<summary>Forms</summary>
+
+### Form
+
+##### Form
+The HTML form element can be used to create HTML forms.  The form is used to collect the user inputs.
+It contains different types of form elements. 
+
+* input
+* label
+* select
+* textarea
+* button
+* fieldset
+* legend
+* option
+
+```HTML 
+<form action="/submit_data.php">
+  <label>Enter your name: </label>
+  <input type="text" name="name" />
+  <label>Enter Mobile number </label>
+  <input type="number" name="mobile_no" />
+  <input type="submit" value="Submit" />
+</form>
+```
+
+
+##### input
+`input` element creates interactive controls to accept the data from the user.
+
+Different types of inputs:  
+* text
+* password
+* radio
+* checkbox
+* date 
+
+`Textbox & Password`
+
+```HTML 
+    <input type="text" placeholder="text box"/>
+    <input type="password" placeholder="password box"/>
+```
+
+`Radio Buttons`
+```HTML 
+<input type="radio" id="genderMale" value="Male" name="gender"> Male
+<input type="radio" id="genderFemale" value="Female" name="gender"> Female
+```
+
+`Dropdown`
+```HTML 
+<select>
+  <option value="one">One</option>
+  <option value="two">Two</option>
+  <option value="three">Three</option>
+  <option value="four">Four</option>
+  <option value="five">Five</option>
+</select>
+```
+
+`Textarea`
+```HTML 
+<textarea rows="8" cols="55"></textarea>
+```
+
+`Checkbox`
+```HTML 
+ <input id="myCheckbox" type="checkbox" placeholder="text box"/>
+    <label for="myCheckbox">Checkbox</label>
+```
+
+
+</details>
+
 
 ---
 
