@@ -18,8 +18,8 @@
 **HTML** coding is a `Tag` based coding.
 
 ###### **HTML** Tags are two types  
-    1. Container Tag : It has start Tag & End Tag.
-    2. Empty Tag : It does not have an end tag.
+  1. **Container Tag** : It has start Tag & End Tag.
+  2. **Empty Tag** : It does not have an end tag.
 
 `Container Tag`
    ```HTML
@@ -40,10 +40,6 @@
 
 ##### **HTML** document Structure  
 
-An **HTML** document consists of three parts :
-  1. DOCTYPE -> First Line containing HTML version information.
-  2. Head Part -> `HTML` page configuration information. Head tag is for **Browser reading** purpose
-  3. Body part -> displaying content. Body tag is for **Client reading** purpose
 
 ```HTML
 <!DOCTYPE html>
@@ -57,20 +53,23 @@ An **HTML** document consists of three parts :
 </html>
 ```
 
-* **DOCKTYPE**  
-  The doctype declaration tells the type/version of the HTML document to the browser.
+An **HTML** document consists of three parts :
+
+* **DOCTYPE**  
+  The **DOCTYPE** declaration tells the type/version of the HTML document to the browser.
 
 * **Head Part**  
-  The HTML head element is the container for the elements which provide extra information about the document (metadata).  
-  It describes the properties of the document such as title, character set, style sheets, scripts, etc.
+  `HTML` page configuration information.   
+  Head tag is for **Browser reading** purpose.   
+  It describes the properties of the document such as title, character set, style sheets, scripts, ...etc.
 
 * **Body Part**  
-  The HTML body element defines the main content of an HTML document that displays on the web page.
-
+displaying content of the webpage.   
+Body tag is for **Client reading** purpose.  
   It contains text content, paragraphs, headings, images, tables, links, videos, ...etc.
 
 ##### Element Syntax 
-Element consist of a start tag, content, and end tag.
+Element consist of a **start tag**, **content**, and **end tag**.
 
 ```HTML
 <tag>Content</tag>
@@ -86,27 +85,26 @@ Element consist of a start tag, content, and end tag.
 * **Structuring web pages**  
    we can define the headings, paragraphs, and other contents of a web page.
 * **Creating Hyperlinks**  
-   we can navigate within the HTML document, to other web pages.
+   we can navigate to within the HTML document or other web pages.
 * **Embedding images and videos**  
-   we can embed images and videos in the HTML document.
+   we can embed images, audios and videos in the HTML document.
 
 ##### Advantages & Disadvantages of **HTML** 
 * we can create only Static Web pages with HTML alone.
 * By Combining HTML with CSS, we can create Responsive web pages.
 * By Combining HTML with JavaScript, we can create dynamic web pages.
 
-
-##### Difference between HTML and HTML5
-HTML5 is more complete and easier than HTML4, it has lots of new tags like `<header>, <footer>, <navy>, <Audio>, <video>, <main>` ...etc.  
-It also supports graphics. In the following image, we have described all the essential terms related to HTML and HTML5
-
-
 ##### HTML version
 HTML5 is the latest version of HTML.
+
+HTML5 is more easier than HTML4.
+In HTML5 version, we have more new tags available.  
 
 In HTML5 version, they added new features,
 * audio and video elements
 * semantic elements like header, nav, aside, main, footer ...etc.
+
+`<header>, <footer>, <navy>, <Audio>, <video>, <main>`  
 
 **`HTML5`**  
 ```HTML
@@ -194,6 +192,39 @@ It means that the HTML element can be placed inside another HTML element.
 
 ### Elements Explanation
 
+
+##### Heading Elements
+HTML defines six levels of headings.  
+`h1, h2, h3, h4, h5, h6`
+* The HTML h1 element defines the most important heading of an HTML document.
+* The HTML h6 element defines the least important heading of an HTML document.
+```HTML 
+<h1>heading 1</h1>
+<h2>heading 2</h2>
+<h3>heading 3</h3>
+<h4>heading 4</h4>
+<h5>heading 5</h5>
+<h6>heading 6</h6>
+```
+
+##### Paragraph Element
+The HTML Paragraph Element defines the paragraph of an HTML document.
+```HTML
+<p>I am Paragraph</p>
+```
+
+##### Line Break
+The HTML `br` element is used to add a line break to an HTML paragraph element. It breaks the text and continue it in the next line.The HTML br element is a void element.
+
+```HTML
+<p>
+  Twinkle, twinkle, little star, <br />
+  How I wonder what you are! <br />
+  Up above the world so high, <br />
+  Like a diamond in the sky.
+</p>
+```
+
 ##### Block-Level Container Tags
 These are a Block-Level elements.  
 It can be used to wrap a group of elements and apply CSS styles to many elements at once.
@@ -247,45 +278,15 @@ understanding and applaying css easily.
 
 ##### In-Line Container Tags
 These are Inline elements
+
 ###### Span:
 
-apply some styles for a particular character , word , group of words.
+apply some styles for a particular character , word , group of words.  
 content comes side by side.  
 
+##### Media Elements
 
-##### Heading Elements
-HTML defines six levels of headings.  
-`h1, h2, h3, h4, h5, h6`
-* The HTML h1 element defines the most important heading of an HTML document.
-* The HTML h6 element defines the least important heading of an HTML document.
-```HTML 
-<h1>heading 1</h1>
-<h2>heading 2</h2>
-<h3>heading 3</h3>
-<h4>heading 4</h4>
-<h5>heading 5</h5>
-<h6>heading 6</h6>
-```
-
-##### Paragraph Element
-The HTML Paragraph Element defines the paragraph of an HTML document.
-```HTML
-<p>I am Paragraph</p>
-```
-
-##### Line Break
-The HTML `br` element is used to add a line break to an HTML paragraph element. It breaks the text and continue it in the next line.The HTML br element is a void element.
-
-```HTML
-<p>
-  Twinkle, twinkle, little star, <br />
-  How I wonder what you are! <br />
-  Up above the world so high, <br />
-  Like a diamond in the sky.
-</p>
-```
-
-##### Display Image
+###### Display Image
 We can display images on the web page using the HTML img element.
 
 src specifies the path to the image.
@@ -400,8 +401,67 @@ Some of the uses of HTML iframe element are:
 * We can embed HTML documents within the current HTML document
 * We can embed videos within the current HTML document, etc.
 
+##### HTML iframe element
+
+```HTML
+<iframe src="https://www.youtube.com/embed/y881t8ilMyc"></iframe>
+```
+The HTML src attribute specifies the URL/path of the video.
+
+To have the embed link of the YouTube video, follow these simple steps:
+
+##### video
+
+The HTML controls attribute is used to set controls in HTML video element. It is a boolean attribute. When this attribute is present, it specifies that video controls should be displayed.
+
+Video controls include:
+
+* Play
+* Pause
+* Seeking
+* Volume
+* Fullscreen toggle
+* Captions/Subtitles (when available)
+* Track (when available)
+
+
+We can insert a video to the HTML document using:
+```HTML
+<video>
+  <source src="movie.mp4" type="video/mp4" />
+</video>
+```
+
+The HTML source element defines the media resource for the HTML video element.
+
+The HTML src attribute specifies the URL/path of the media resource (e.g. video).
+The HTML type attribute specifies the type/format of the media resource(e.g. video/mp4)
+
+##### What are the HTML media elements?
+
+HTML media elements are used to present the audio and video.
+
+Some of the HTML media elements are:
+
+HTML audio element:
+The HTML audio element represents a sound or audio stream. It is used to play an audio file on an HTML document.
+
+```HTML
+<audio>
+  <source src="horse.ogg" type="audio/ogg" />
+  <source src="horse.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
+```
+The HTML source element specifies multiple alternative media resources for HTML img elements or for media elements (audio, video, etc.). 
+
+It is commonly used to give the same media content in multiple file formats for providing compatibility across different browsers.
+
+The HTML src attribute of the source element specifies the URL/path of the media resource.
 
 </details>
+
+---
 
 <details>
 <summary>Important Elements</summary>
@@ -473,6 +533,17 @@ We use the HTML link element to link the HTML and CSS files.
 ##### select
 we can choose any one option.
 
+The HTML select element is used to create a drop-down list of options. 
+
+The HTML option element should be inside the HTML select element for defining options in the drop-down list.
+
+```HTML
+<select>
+  <option>option1</option>
+  <option>option2</option>
+</select>
+```
+
 ```HTML
 <label for="color">Choose a color</label>
 <select name="cars" id="color">
@@ -500,9 +571,9 @@ we can choose any one option.
 </select>
 ```
 
-
-
 </details>
+
+---
 
 <details>
 <summary>Attributes</summary>
@@ -582,6 +653,8 @@ If present, it specifies that an input field must be filled out before submittin
 
 </details>
 
+---
+
 <details>
 <summary>Tricky Questions</summary>
 
@@ -616,41 +689,6 @@ Examples: `div` and `span`.
 * **Easy to Understand**  
    It makes our code more readable and easier to understand.  
 
-</details>
-
-<details>
-<summary>General Information</summary>
-
-### General Information
-
-##### Viewport
- The browser's **viewport** is the area of the window in which web content can be seen.
-</details>
-
----
----
----
----
----
----
----
----
----
----
----
-
-<details>
-<summary>HTML Forms & Tables</summary>
-
-##### What is checkbox and how to use checkbox?
-To define a Checkbox, We need to specify the HTML type attribute with the value checkbox for an HTML input element.
-
-```Javascript 
-<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike1" />
-<input type="checkbox" id="vehicle2" name="vehicle2" value="Bike2" />
-```
-
-##### What are the differences between the HTML checkbox and radio input elements?
 
 ##### HTML radio input element:
 
@@ -662,122 +700,17 @@ To define a Checkbox, We need to specify the HTML type attribute with the value 
 * It is used when more than one option to be selected out of several available options.  
 * It is also created by using the HTML input element with the type attribute value is set to checkbox.  
 
-
-##### What is an HTML checked attribute?
-
-The HTML checked attribute specifies that an input element should be pre-selected (checked) when the page loads.  
-
-```HTML
-<input type="radio" id="genderMale" value="Male" name="gender" checked />
-```
-
-##### How to create a combobox in HTML?
-The HTML select element is used to create a combobox or drop-down list of options. 
-
-The HTML option element should be inside the HTML select element for defining options in the drop-down list.
-
-```HTML
-<select>
-  <option>option1</option>
-  <option>option2</option>
-</select>
-```
 </details>
 
 ---
 
 <details>
-<summary>More Interview Questions</summary>
+<summary>General Information</summary>
 
+### General Information
 
-##### What are the HTML media elements?
-
-HTML media elements are used to present the audio and video.
-
-Some of the HTML media elements are:
-
-HTML audio element:
-The HTML audio element represents a sound or audio stream. It is used to play an audio file on an HTML document.
-
-```HTML
-<audio>
-  <source src="horse.ogg" type="audio/ogg" />
-  <source src="horse.mp3" type="audio/mpeg" />
-  Your browser does not support the audio element.
-</audio>
-```
-The HTML source element specifies multiple alternative media resources for HTML img elements or for media elements (audio, video, etc.). 
-
-It is commonly used to give the same media content in multiple file formats for providing compatibility across different browsers.
-
-The HTML src attribute of the source element specifies the URL/path of the media resource.
-
-##### HTML video element?
-The HTML video element represents a video. It is used to play audio files with captions, videos or movies.
-
-```HTML
-<video>
-  <source src="movie.mp4" type="video/mp4" />
-</video>
-```
-
-##### How to embed an HTML document into another HTML document?
-We can embed another HTML document within the current HTML document using the HTML iframe element.
-```HTML 
-<iframe src="https://learning.ccbp.in"></iframe>
-```
-
-The HTML src attribute specifies the URL/path of the HTML document to embed.
-
-
-##### How to insert a video into the HTML document?
-
-We can insert a video to the HTML document using:
-```HTML
-<video>
-  <source src="movie.mp4" type="video/mp4" />
-</video>
-```
-
-The HTML source element defines the media resource for the HTML video element.
-
-The HTML src attribute specifies the URL/path of the media resource (e.g. video).
-The HTML type attribute specifies the type/format of the media resource(e.g. video/mp4)
-
-
-##### HTML iframe element
-
-```HTML
-<iframe src="https://www.youtube.com/embed/y881t8ilMyc"></iframe>
-```
-The HTML src attribute specifies the URL/path of the video.
-
-To have the embed link of the YouTube video, follow these simple steps:
-
-Open the video on YouTube and click the share button.  
-Open the Embed code.  
-Copy the value of the src attribute and paste it into the value of the HTML src attribute of our HTML iframe element.  
-
-##### How to set controls in HTML video element?
-
-The HTML controls attribute is used to set controls in HTML video element. It is a boolean attribute. When this attribute is present, it specifies that video controls should be displayed.
-
-Video controls include:
-
-* Play
-* Pause
-* Seeking
-* Volume
-* Fullscreen toggle
-* Captions/Subtitles (when available)
-* Track (when available)
-
-```Javascript
-<video controls>
-  <source src="movie.mp4" type="video/mp4" />
-</video>
-```
-
+##### Viewport
+ The browser's **viewport** is the area of the window in which web content can be seen.
 </details>
 
 ---
