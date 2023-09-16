@@ -62,9 +62,9 @@ An **HTML** document consists of three parts :
   It describes the properties of the document such as title, character set, style sheets, scripts, ...etc.
 
 * **Body Part**  
-displaying content of the webpage.   
+Displaying content of the webpage.   
 Body tag is for **Client reading** purpose.  
-  It contains text content, paragraphs, headings, images, tables, links, videos, ...etc.
+  It contains text content,  headings, paragraphs, links, tables, images,  videos, ...etc.
 
 ##### Element Syntax 
 Element consist of a **start tag**, **content**, and **end tag**.
@@ -74,6 +74,7 @@ Element consist of a **start tag**, **content**, and **end tag**.
 ```
 
 ##### Attribute syntax
+Attributes are used to give extra information to the html element.
 ```HTML 
 <tag attributeName="attributeValue">Content</tag>
 ```
@@ -82,7 +83,7 @@ Element consist of a **start tag**, **content**, and **end tag**.
 * **Structuring web pages**  
    we can define the headings, paragraphs, and other contents of a web page.
 * **Creating Hyperlinks**  
-   we can navigate to within the HTML document or other web pages.
+   Hyperlink is used to navigate to other web resources or a specific element within the HTML document. 
 * **Embedding images , audio and videos**  
    we can embed images, audios and videos in the HTML document.
 
@@ -94,16 +95,16 @@ Element consist of a **start tag**, **content**, and **end tag**.
 ##### HTML version
 HTML5 is the latest version of HTML.
 
-HTML5 is more easier than HTML4.
+HTML5 is more easier than HTML4 or Older versions.  
 In HTML5 version, we have more new tags available.  
 
 In HTML5 version, they added new features,
 * audio and video elements
-* semantic elements like header, nav, aside, main, footer ...etc.
+* semantic elements
 
-`<header>, <footer>, <navy>, <Audio>, <video>, <main>`  
+`<header>, <footer>, <nav>, <Audio>, <video>, <main>, <aside>`  
 
-**`HTML5`**  
+**`HTML5` Declaration** :  
 ```HTML
 <!DOCTYPE html>
 ```
@@ -122,11 +123,11 @@ In HTML5 version, they added new features,
   1. **Container Tag** : It has start Tag & End Tag.
   2. **Empty Tag** : It does not have an End tag.
 
-In general, HTML elements can be divide into two categories.
+In general, HTML elements can be divided into two categories.
 1. Block-Level Elements
 2. Inline Elements
 
-##### Block-Level Elements
+##### **Block-Level Elements**
 * HTML Block-Level element always start in a new line. 
 * HTML Block-Level element occupies the entire horizontal space of its parent element.
 
@@ -145,10 +146,13 @@ In general, HTML elements can be divide into two categories.
    * `header, nav, aside, main, section, article, div, footer`
 
 
-##### In-Line Elements
-The HTML Inline elements do not start in a new line and take up the content width.
+##### **In-Line Elements**
+The HTML Inline elements do not start in a new line.  
+Inline element occupies content width only.
 ```HTML
 <p>I am <a href="http://www.google.com">Google</a> link</p>
+
+<p>I am <span class="my-style">Ande Praveen</span></p>
 ```
 
 ###### In-Line Tags
@@ -187,7 +191,7 @@ It means that the HTML element can be placed inside another HTML element.
 <details>
 <summary>Structuring</summary>
 
-### Structure
+### Structuring
 
 ##### Heading Elements
 HTML defines six levels of headings.  
@@ -232,12 +236,26 @@ The HTML `hr` element inserts a horizontal line and helps to separate the conten
 <p>I am Paragraph</p>
 ```
 
-##### Block-Level Container Tags
-These are a Block-Level elements.  
-It can be used to wrap a group of elements and apply CSS styles to many elements at once.
+##### Semantic Tags
+semantic elements have the meaning.    
+the HTML semantic elements describe the meaning of content in between the start and end tags.
+
+
+The Container Elements are used to wrap a group of elements and apply CSS styles to many elements at once.
 
 These container tags are used to divide smaller parts for
 understanding and applaying css easily.
+
+**uses of Semantic HTML :**  
+
+* **Accessibility**   
+  It makes web pages accessible for mobile devices and people with disabilities as well. This is because screen readers and browsers can understand the code better.
+
+* **Search Engine Optimization**  
+  It improves the website Search Engine Optimization Rankings which increases the number of people that visit our webpage.
+
+* **Easy to Understand**  
+   It makes our code more readable and easier to understand. 
 
 1. **header** container tag
 2. **nav** container tag => navbar
@@ -245,8 +263,7 @@ understanding and applaying css easily.
 4. **main** container tag => main content
 5. **section** container tag 
 6. **article** container tag
-7. **div** container tag =>divided & use css
-8. **footer** container tag 
+7. **footer** container tag 
 
 ```HTML 
   <header>
@@ -271,24 +288,33 @@ understanding and applaying css easily.
     </article>
   </section>
   
-  
-  <div>
-    <h2>css use</h2>
-  </div>
-  
-  
   <footer>
   <h2>footer</h2>
   </footer>
 ```
 
+##### Non-Semantic Tags
+non-semantic elements don't have the meaning.  
+They can contain anything.  
+Examples: `div` and `span`.
 
-##### In-Line Container Tags
-These are Inline elements
+* **div** container tag =>divided & use css
 
-  `Span`  
-apply some styles for a particular character , word , group of words.  
-content comes side by side. 
+ ```HTML 
+  <div>
+     <h2>css use</h2>
+  </div>
+```
+  
+* **span** 
+  `span` is a In-Line Element.
+  This span element used to apply some styles for a particular character , word , group of words.  
+  content comes side by side. 
+
+ ```HTML 
+  <p>I am <span class="my-style">Ande Praveen</span></p>
+```
+
 
 
 ##### details
@@ -299,16 +325,9 @@ It has two states:
 ```HTML
 <details>
   <summary>Details</summary>
-  Something small enough to escape casual notice.
+   show Hidden Content by click on Details Summary.
 </details>
 ```
-
-
-
-* The HTML srcset attribute specifies the alternative source/ path of the img element.
-* The HTML media attribute specifies the media query. CSS properties will be applied based on the device type and media features like min-width, etc.
-
-
 
 </details>
 
@@ -319,12 +338,8 @@ It has two states:
 
 ### Hyperlinks
 
-We can create hyperlinks to text as well as images, buttons, ...etc.
-
-##### Anchor Element
-hyperlink is used to navigate directly to other page or specific part of the given page.  
-We use the HTML anchor element to navigate to other web resources or a specific element within the HTML document.  
-They are also called as Hyperlinks/ Links.
+We can create hyperlinks to text as well as images, buttons, ...etc.  
+We use the HTML anchor element to navigate to other web resources or a specific element within the HTML document. 
 
 ```HTML
 <a href="link"> Link Text </a>
@@ -341,7 +356,12 @@ They are also called as Hyperlinks/ Links.
 
 ### Embeding
 
-###### Display Image
+
+#####  HTML media elements
+
+HTML media elements are used to present the audios and videos.
+
+##### Display Image
 We can display images on the web page using the HTML img element.
 
 `src` specifies the path to the image.
@@ -351,7 +371,7 @@ alt specifies an alternate text for the image.
 <img src="IMAGE_URL" alt="image" />
 ```
 
-##### picture 
+##### picture  
 
 The HTML picture element is a container to provide multiple alternative sources for the HTML img element. It is useful in different display/device scenarios.
 
@@ -377,20 +397,8 @@ It can contain zero or more source elements and one HTML img element.
 </picture>
 ```
 
-##### iframe
-Some of the uses of HTML iframe element are:
-
-* We can embed HTML documents within the current HTML document
-* We can embed videos within the current HTML document, etc.
-
-##### HTML iframe element
-
-```HTML
-<iframe src="https://www.youtube.com/embed/y881t8ilMyc"></iframe>
-```
-The HTML src attribute specifies the URL/path of the video.
-
-To have the embed link of the YouTube video, follow these simple steps:
+* The HTML srcset attribute specifies the alternative source/ path of the img element.
+* The HTML media attribute specifies the media query. CSS properties will be applied based on the device type and media features like min-width, etc.
 
 ##### video
 
@@ -400,7 +408,6 @@ Video controls include:
 
 * Play
 * Pause
-* Seeking
 * Volume
 * Fullscreen toggle
 * Captions/Subtitles (when available)
@@ -416,16 +423,11 @@ We can insert a video to the HTML document using:
 
 The HTML source element defines the media resource for the HTML video element.
 
-The HTML src attribute specifies the URL/path of the media resource (e.g. video).
-The HTML type attribute specifies the type/format of the media resource(e.g. video/mp4)
+* The HTML src attribute specifies the URL/path of the media resource (e.g. video).  
+* The HTML type attribute specifies the type/format of the media resource(e.g. video/mp4)
 
-##### What are the HTML media elements?
 
-HTML media elements are used to present the audio and video.
-
-Some of the HTML media elements are:
-
-HTML audio element:
+##### audio 
 The HTML audio element represents a sound or audio stream. It is used to play an audio file on an HTML document.
 
 ```HTML
@@ -440,6 +442,18 @@ The HTML source element specifies multiple alternative media resources for HTML 
 It is commonly used to give the same media content in multiple file formats for providing compatibility across different browsers.
 
 The HTML src attribute of the source element specifies the URL/path of the media resource.
+
+##### iframe
+Some of the uses of HTML iframe element are:
+
+* We can embed HTML documents within the current HTML document. 
+* We can embed videos within the current HTML document, etc.
+
+
+```HTML
+<iframe src="https://www.youtube.com/embed/y881t8ilMyc"></iframe>
+```
+The HTML src attribute specifies the URL/path of the video.
 
 
 </details>
@@ -503,6 +517,16 @@ tfoot => tr , td
 
 `table = table rows + table data`
 
+```HTML 
+<table>
+  <tr> <td colspan="4"> 1</td> </tr>
+  <tr> <td>1</td> <td>2</td> <td>3</td> <td>+</td> </tr>
+  <tr> <td>4</td> <td>5</td> <td>6</td> <td>-</td> </tr>
+  <tr> <td>7</td> <td>8</td> <td>9</td> <td>clear</td> </tr>
+  <tr> <td colspan="2">0</td> <td colspan="2">=</td> </tr>
+</table>
+```
+
 </details>
 
 ---
@@ -511,8 +535,6 @@ tfoot => tr , td
 <summary>Forms</summary>
 
 ### Form
-
-##### Form
 The HTML form element can be used to create HTML forms.  The form is used to collect the user inputs.
 It contains different types of form elements. 
 
@@ -542,9 +564,12 @@ It contains different types of form elements.
 Different types of inputs:  
 * text
 * password
+* textarea
 * radio
 * checkbox
-* date 
+* Dropdown
+
+
 
 `Textbox & Password`
 
@@ -553,37 +578,63 @@ Different types of inputs:
     <input type="password" placeholder="password box"/>
 ```
 
-`Radio Buttons`
-```HTML 
-<input type="radio" id="genderMale" value="Male" name="gender"> Male
-<input type="radio" id="genderFemale" value="Female" name="gender"> Female
-```
-
-`Dropdown`
-```HTML 
-<select>
-  <option value="one">One</option>
-  <option value="two">Two</option>
-  <option value="three">Three</option>
-  <option value="four">Four</option>
-  <option value="five">Five</option>
-</select>
-```
-
 `Textarea`
 ```HTML 
 <textarea rows="8" cols="55"></textarea>
 ```
 
+`Radio Buttons`
+* It is used when only one option to be selected out of several available options.  
+* It is created by using an HTML input element with the type attribute value is set to radio.
+```HTML 
+<input type="radio" id="genderMale" value="Male" name="gender"> Male
+<input type="radio" id="genderFemale" value="Female" name="gender"> Female
+```
+
+
 `Checkbox`
+* It is used when more than one option to be selected out of several available options.  
+* It is also created by using the HTML input element with the type attribute value is set to checkbox.
 ```HTML 
  <input id="myCheckbox" type="checkbox" placeholder="text box"/>
     <label for="myCheckbox">Checkbox</label>
 ```
 
+`Dropdown`  
+we can choose any one option.
+
+The HTML select element is used to create a drop-down list of options. 
+
+The HTML option element should be inside the HTML select element for defining options in the drop-down list. 
+
+```HTML
+<select>
+  <option value="option-1">option1</option>
+  <option value="option-2">option2</option>
+  <option value="option-3">option3</option>
+  <option value="option-4">option4</option>
+</select>
+```
+
+```HTML
+<select>
+  <option value="option-1">option1</option>
+  <option value="option-2">option2</option>
+  <option value="option-3" selected>option3</option>
+  <option value="option-4">option4</option>
+</select>
+```
+
+```HTML
+<select multiple>
+  <option value="option-1">option1</option>
+  <option value="option-2">option2</option>
+  <option value="option-3" selected>option3</option>
+  <option value="option-4">option4</option>
+</select>
+```
 
 </details>
-
 
 ---
 
@@ -648,51 +699,10 @@ The HTML **style** element contains style information for an HTML document. It c
 ```
 
 ##### HTML link element 
-We use the HTML link element to link the HTML and CSS files.
+We use the HTML link element to link the CSS fileto an HTML.
 
 ```HTML 
 <link rel="stylesheet" href="styles.css">
-```
-
-##### select
-we can choose any one option.
-
-The HTML select element is used to create a drop-down list of options. 
-
-The HTML option element should be inside the HTML select element for defining options in the drop-down list.
-
-```HTML
-<select>
-  <option>option1</option>
-  <option>option2</option>
-</select>
-```
-
-```HTML
-<label for="color">Choose a color</label>
-<select name="cars" id="color">
-  <option value="green">Green</option>
-  <option value="yellow">Yellow</option>
-  <option value="red">Red</option>
-</select>
-```
-
-```HTML
-<label for="color">Choose a color</label>
-<select name="cars" id="color">
-  <option value="green" selected>Green</option>
-  <option value="yellow">Yellow</option>
-  <option value="red">Red</option>
-</select>
-```
-
-```HTML
-<label for="color">Choose a color</label>
-<select name="cars" id="color" multiple>
-  <option value="green">Green</option>
-  <option value="yellow">Yellow</option>
-  <option value="red">Red</option>
-</select>
 ```
 
 </details>
@@ -708,17 +718,36 @@ The HTML attributes provide additional information about HTML elements.
 we always mention attributes in start tag only.
 syntax :  `attributeName="attributeValue"`  
 
-* target
+* id
+* class
+* style 
+* href
 * src
 * alt
-* class
-* id
-* width
-* height
-* for
-* style 
+* target
 * type
 * checked 
+
+##### id 
+The HTML id attribute specifies a unique id for an HTML element. The value of the id attribute must be unique within the HTML document.
+
+* It can be used for styling an HTML element using CSS.  
+* It is also used by JavaScript to access and manipulate the HTML elements with the specific id.
+
+```HTML 
+<h1 id="heading1">Heading 1</h1>
+<h1 id="heading2">Heading 2</h1>
+```
+
+##### class
+The HTML class attribute specifies a class name for an HTML element.  
+It is used to apply styles to multiple elements with the class name.  
+One or more HTML elements can have the same class name.
+
+```HTML 
+<h1 class="heading">Heading 1</h1>
+<h1 class="heading">Heading 2</h1>
+```
 
 
 ##### target
@@ -748,18 +777,10 @@ The value of the HTML href attribute is URL/path of the page where the link goes
 ```
 
 
-##### class
-The HTML class attribute specifies a class name for an HTML element.  
-It is used to apply styles to multiple elements with the class name.  
-One or more HTML elements can have the same class name.
-##### id 
-The HTML id attribute specifies a unique id for an HTML element. The value of the id attribute must be unique within the HTML document.
-
-* It can be used for styling an HTML element using CSS.  
-* It is also used by JavaScript to access and manipulate the HTML elements with the specific id.
-
-
 #### Boolean Attributes
+* required
+* selected
+* controls
 
 ##### required attribute
 
@@ -788,41 +809,7 @@ If present, it specifies that an input field must be filled out before submittin
 The HTML span element is an inline element, which should contain only other inline elements.
 
 So as span is an inline element and p is a block-level element, we can't use the p element inside a span element.
-
-##### differences between HTML semantic and non-semantic elements?
-
-###### semantic* 
-semantic elements have the meaning.  
-They describe the content they contain.   
-the HTML semantic elements describe the meaning of content in between the start and end tags.
-
-###### non-semantic
-non-semantic elements don't have the meaning.  
-They can contain anything.  
-Examples: `div` and `span`.
-
-
-##### What are the uses of Semantic HTML?
-
-* **Accessibility**   
-  It makes web pages accessible for mobile devices and people with disabilities as well. This is because screen readers and browsers can understand the code better.
-
-* **Search Engine Optimization**  
-  It improves the website Search Engine Optimization Rankings which increases the number of people that visit our webpage.
-
-* **Easy to Understand**  
-   It makes our code more readable and easier to understand.  
-
-
-##### HTML radio input element:
-
-* It is used when only one option to be selected out of several available options.  
-* It is created by using an HTML input element with the type attribute value is set to radio.
-
-##### HTML checkbox input element:
-
-* It is used when more than one option to be selected out of several available options.  
-* It is also created by using the HTML input element with the type attribute value is set to checkbox.  
+ 
 
 </details>
 

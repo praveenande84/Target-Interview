@@ -5,6 +5,8 @@
 <details>
 <summary>Index</summary>
 
+### Index
+
 - General
 - variables  
 - Scope
@@ -25,10 +27,10 @@
 <details>
 <summary>General</summary>
 
-##### What is Javascript?  
-The JavaScript was created by Brendan Eich at Netscape.
+##### What is **Javascript**?  
+The JavaScript was created by Brendan Eich at Netscape.  
 JavaScript is known as the Scripting Language for Web pages.
-JavaScript is a programming language used both on the client-side and server-side that allows you to make web pages interactive.
+JavaScript is a programming language used both on the client-side and server-side that allows you to make web pages interactive.  
 It improves the user experience of the web page by converting it from a static page into an interactive one (dynamic page).  
 JavaScript is a scripting language.  
 JavaScript code is run on a browser only
@@ -38,7 +40,7 @@ JavaScript code is run on a browser only
 
   ``` Javascript
 // console
-console.log("Hello World)
+console.log("Hello World");
 
 // textContent
 let displayEl = document.getElementById("display");
@@ -52,7 +54,7 @@ displayEl.innerHTML = <h1>Hello World</h1>;
 document.write("Hello World");
 
 // alert
-alert("Hello World")
+alert("Hello World");
   ```
 
 ##### Advantages
@@ -96,13 +98,12 @@ In Javascript we can define a variable in 3 ways,
 ### Rules of Define a Variable
 
 ##### syntax
-``` javascript
+```
 Definition = Initialization
 declarationKeyword variableName = value;
 ```
 
 #### var
-If a variable is declared inside a function, it is function-scoped. Else, it is global-scoped.  
 If a variable declare using var, then initialization is not mandatory. This variable can be re-assigned and re-declared.
 
 #### let 
@@ -130,10 +131,11 @@ Block Memory : __let, const__
 
 #### Types of Variables
 
----
+
 1. Local Variable
 2. Global Variable
----
+
+
 #### Local Variable
 If a variable is created inside a block, that type of variable is called Local Variable.  
 
@@ -150,11 +152,11 @@ These Global Variables available upto end of the program execution.
 The Global Variable memory is created in the global scope.
 These Global Variables can be accessed at any part of the code.
 
-#### Temporal Dead Zone
 
+##### Temporal Dead Zone
 From Hoisting to assigns some value to the variable is called temporal dead zone.
 
-##### Errors : 
+##### Errors
 
 ###### SyntaxError
  Missing initializer in const declaration because it is a constant type already mentioned and declared.   
@@ -172,7 +174,6 @@ Assignment to constant variable
 
 ---
 
-
 <details>
 <summary>Scope</summary>
 Memory storage location is called scope.  
@@ -182,7 +183,7 @@ we have 2 scopes in Javascript
 2. Block Scope
 3. Local Scope (Function Scope)
 
-In Global Level with declaration keywords let and const, It maintain seperate memory with script scope.
+In Global Level with declaration keywords let and const, It maintain seperate memory with script scope.  
 
 
 ##### what is Block ?
@@ -389,6 +390,10 @@ In Arrow functions, JavaScript sets the this lexically. This means that the arro
 ##### Functions
 Functions are heart ♥ of Javascript.
 
+A JavaScript Function is a block of code designed to perform a particular task. A JavaScript function is executed when calls it.
+
+We can define the code once, and use it many times. We can use the same code many times with different arguments, to produce different results (We can reuse code ).
+
 #### Types of Functions
 
 1. Function Declaration
@@ -494,6 +499,13 @@ we can send functions as arguments, we can use function as a values..etc
 
 DRY Principle => Don't Repeat Yoursely
 
+
+##### Over Ridding
+
+When we define the multiple functions with the same name, then the last defined one will be called. It is called Function Overriding.
+
+JavaScript supports Function Overriding.
+
 </details>
 
 ---
@@ -545,7 +557,7 @@ console.log(newArray); // [2, 4, 6, 8, 10]
 
 ```
 
-`filter`:
+`filter`:  
 Creates a new array containing elements from the original array that satisfy a provided testing function. It returns a new array with the filtered elements.
 
 ```javascript
@@ -679,6 +691,8 @@ Here Microtask Queue has more priority than the Callback Queue.
   References are mutable.  References are passed by reference
    -  Arrays
    - Objects
+   - Maps
+   - Sets
    - NaN
   
 
@@ -727,6 +741,26 @@ isNaN(undefined); // returns true
 
 #### String Methods
 
+- split
+- trim
+- replace
+
+* **split**  
+  The split method is used to split a string into an array of substrings and returns the new array.  
+  `string.split(separator)`
+
+* **trim**  
+* We use the trim method to remove whitespace from both ends of a string.
+
+* **replace**
+  `string.replace(searchValue, replaceValue)`
+
+```Javascript
+const greeting = "   Hello world!  ";
+console.log(greeting);
+console.log(greeting.trim()); // Output: Hello world!
+```
+
 </details>
 
 
@@ -736,7 +770,10 @@ isNaN(undefined); // returns true
 <details>
 <summary>Array Methods</summary>
 
-#### Array Methods
+##### Array
+An Array holds an ordered sequence of items. 
+
+##### Array Methods
 
   - push()
   - pop()
@@ -748,6 +785,53 @@ isNaN(undefined); // returns true
   - shift()
   - unshift()
   - sort()
+  - join
+
+
+* **join**
+  The join method returns the array as a string. The elements will be joined by a specified separator.  
+  `arr.join(separator)`
+
+* **push**
+  The push method adds new items to the end of the array.
+
+
+* **slice**
+  The slice method returns the selected elements in an array, as a new array.
+  `arr.slice(startIndex, endIndex)`  
+
+  ```Javascript
+  let fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+
+  let citrus = fruits.slice(1, 3);
+
+    console.log(citrus); // Output: ["Orange", "Lemon"]
+   console.log(fruits); // Output: ["Banana", "Orange", "Lemon", "Apple", "Mango"]
+  ```  
+
+</details>
+
+---
+
+<details>
+<summary>Object</summary>
+
+### Object
+
+##### Object Destructuring
+To unpack properties from Objects, we use Object Destructuring. The variable name should match with the key of an object.  
+
+```javascript
+let person = {
+  firstName: "Rahul",
+  lastName: "Attuluri",
+  age: 28,
+};
+
+let { age } = person;
+
+console.log(age); // Output: 28
+```
 
 </details>
 
@@ -765,6 +849,15 @@ It allows Javascript to manipulate, structure and style of our website.
 Real DOM is nothing but DOM. DOM stands for Document Object Model. It is a structured representation of the HTML elements that are present in a webpage.
 It represents the entire UI of your application.
 
+
+##### Access HTML Element
+* getElementsByClassName('classname'): Returns all the elements that have the specified class name. It returns an array-like object.
+
+* getElementById('id'): Returns the element that has the specified id.
+
+* getElementsByTagName('tagname'): Returns all the elements that have the specified tag name. It returns an array-like object.
+
+* querySelector(): Takes CSS style selector as argument and returns the first selected HTML element.
 
 ##### Javascript DOM properties
 
@@ -811,6 +904,24 @@ LocalStorage is limited to about 5MB and can contain only strings.
 The Local Storage allows web applications to store data locally within the user's browser. It is a Storage Object. Data can be stored in the form of key-value pairs.
 
 
+`localStorage.setItem("Key", "Value");`  
+`localStorage.getItem("Key");`  
+`localStorage.removeItem("Key");`  
+`localStorage.clear();`
+
+
+##### Cookies
+While using the js-cookie third-party package, we use Cookies.get method to access the cookie.
+
+We can know the Cookie has expired, if the Cookies.get methods returns undefined.  
+
+```Javascript 
+const token = Cookies.get("jwt_token"); // Assume that there is was a Cookie set with the key "jwt_token" with value the 1234
+ 
+if (token === undefined) {
+ console.log("Cookie is expired");
+}
+```
 
 </details>
 
@@ -841,6 +952,67 @@ class SubClass extends SuperClass {
 }
 let myObject = new SubClass(property1, property2);
 ```
+</details>
+
+---
+
+<details>
+<summary>Operators</summary>
+
+### Operators
+
+##### Loose Equal to ( == )
+Loose equality compares two values for equality but doesn't compare type of values.
+
+```Javascript
+console.log(2 == "2"); // Output: true
+
+```
+
+##### Strict Equal to ( === )
+Strict equality compares two values for equality including type of values.
+
+```Javascript
+console.log(2 === "2"); // Output: false
+```
+
+##### Spread Operator 
+The Spread Operator is used to unpack an iterable (e.g. an array, object, etc.) into individual elements.
+
+```Javascript
+let arr1 = [2, 3];
+let arr2 = [1, ...arr1, 4];
+
+console.log(arr2);  // Output: [1, 2, 3, 4]
+```
+
+##### Rest Parameter
+With Rest Parameter, we can pack multiple values into an array.
+
+```Javascript
+function numbers(...args) {
+console.log(args);  // Output: [1, 2, 3]
+}
+
+numbers(1, 2, 3);
+```
+
+</details>
+
+---
+
+<details>
+<summary>More</summary>
+
+### More 
+
+##### call
+**apply** is a method that allows you to call a function with a specific this value and pass an array as arguments.
+
+##### apply
+
+##### bind
+
 </details>
 
 ---
