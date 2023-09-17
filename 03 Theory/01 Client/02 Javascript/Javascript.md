@@ -27,28 +27,27 @@
 <details>
 <summary>General</summary>
 
-##### What is **Javascript**?  
-The JavaScript was created by Brendan Eich at Netscape.  
-JavaScript is known as the Scripting Language for Web pages.
-JavaScript is a programming language used both on the client-side and server-side that allows you to make web pages interactive.  
-It improves the user experience of the web page by converting it from a static page into an interactive one (dynamic page).  
-JavaScript is a scripting language.  
-JavaScript code is run on a browser only
+### General
 
+##### What is **Javascript**?  
+JavaScript is a scripting language for web pages.  
+we can use Javascript on server-side also as NodeJS.
+
+we can create Dynamic Webpages by combinning HTML & Javascript.
 
 #####  Display Output
 
-  ``` Javascript
+  ```Javascript
 // console
 console.log("Hello World");
 
 // textContent
-let displayEl = document.getElementById("display");
-displayEl.textContent = "Hello World";
+let myElement = document.getElementById("myElement");
+myElement.textContent = "Hello World";
 
 // innerHTML
-let displayEl = document.getElementById("display");
-displayEl.innerHTML = <h1>Hello World</h1>;
+let myElement = document.getElementById("myElement");
+myElement.innerHTML = <h1>Hello World</h1>;
 
 // write
 document.write("Hello World");
@@ -71,12 +70,9 @@ alert("Hello World");
 
 ### Variable
 
-Variables are like containers. we can use these containers to store data during program execution. we can mention a name for identify a particular container. So
-those named Containers are called variables. we can manipulate the data in the
-containers by reffering that variable name.
+Variables are like containers. we can use these containers to store data during program execution. we can mention a name for identify a particular container. So those named Containers are called variables. we can manipulate the data in the containers by reffering that variable name.
 
-we can store different types of data in the containers. In programming
-languages, we have some categories in data,
+we can store different types of data in the containers. In programming languages, we have some categories in data.
 
 Javascript supports various data types: 
 1. number 
@@ -95,7 +91,7 @@ In Javascript we can define a variable in 3 ways,
 3. const
 
 
-### Rules of Define a Variable
+#### Rules of Define a Variable
 
 ##### syntax
 ```
@@ -104,16 +100,20 @@ declarationKeyword variableName = value;
 ```
 
 #### var
-If a variable declare using var, then initialization is not mandatory. This variable can be re-assigned and re-declared.
+If a variable declare using var, then initialization is not mandatory. This variable can be re-assigned and re-declared.  
+
+Variables declared with var are either function-scoped or global-scoped.
+
+If a variable is declared inside a function, it is function-scoped. Else, it is global-scoped.
 
 #### let 
 If a variable is declared using let, then initialization is not mandatory. This variable can be re-assigned and it will have the block scope.
 we can't re-declare the same variable.
 
-const maintain constant values.
-
 #### const 
-If a variable is declared using const, then initialization is mandatory. Once the variable is initialized with a value, then it can't be re-assigned and it will have the block scope.
+If a variable is declared using const, then initialization is mandatory. Once the variable is initialized with a value, then it can't be re-assigned and it will have the block scope.  
+
+const variable maintain constant values.
 
 ##### Differences between __var__, __let__ and __const__
 
@@ -140,7 +140,7 @@ Block Memory : __let, const__
 If a variable is created inside a block, that type of variable is called Local Variable.  
 
 
-Example :
+*Example* :  
 variable is created inside a function, When a function is called, its local variables are created, and when the function finishes it's executing, automatically those local variables are destroyed.  
 
 Local variables are useful for temporary data storage within Block that should not interfere with other parts of the program. The Local Variable memory is created in the the Local Scope.
@@ -160,15 +160,20 @@ From Hoisting to assigns some value to the variable is called temporal dead zone
 
 ###### SyntaxError
  Missing initializer in const declaration because it is a constant type already mentioned and declared.   
- Identifier 'a' has already been declared.
+ Identifier 'a' has already been declared.  
+ A syntax error can be thrown when there is an error in the syntax (rules of language).
 
+
+#### Runtime Error
 ###### ReferenceError
 When Javascript Engine tries to findout a specific variable inside the memory space and you can't access it.  
 Cannot access 'a' before initialization  
-c is not defined
+c is not defined  
+A reference error can be thrown when a variable is used that does not exist or is not in the current scope.
 
 ###### TypeError 
-Assignment to constant variable
+Assignment to constant variable.  
+A Type error can be thrown when we try to make an operation on the incorrect data type.
 
 </details>
 
@@ -178,7 +183,7 @@ Assignment to constant variable
 <summary>Scope</summary>
 Memory storage location is called scope.  
 
-we have 2 scopes in Javascript  
+we have 3 scopes in Javascript  
 1. Global Scope (Global + Script)
 2. Block Scope
 3. Local Scope (Function Scope)
@@ -1002,6 +1007,102 @@ numbers(1, 2, 3);
 ---
 
 <details>
+<summary>JSON</summary>
+
+### JSON
+
+**JSON** stands for **JavaScript Object Notation**.
+
+It is a data representation format used for:
+
+* Storing data (Client/Server)
+* Exchanging data between Client and Server
+
+JSON Methods
+
+* stringify
+* parse
+
+```javascript
+let profile = {
+  name: "Rahul",
+  age: 29,
+  designation: "Web Developer"
+};
+```
+
+```JSON
+{
+  "name": "Rahul",
+  "age": 29,
+  "designation": "Web Developer"
+}
+```
+</details>
+
+---
+
+<details>
+<summary>Async and Await</summary>
+
+### Async and Await
+
+The async/await simply gives you a synchronous feel to asynchronous code. It's a very elegant form of syntactical sugar and is more readable.
+
+For simple queries and data manipulation, Promises can be preferred otherwise we will prefer async/await.
+
+##### Await 
+The await keyword in JavaScript is used within an async function to pause the execution of that function until a promise is resolved. 
+</details>
+
+---
+
+<details>
+<summary>Promise</summary>
+
+### Promise
+
+Promise Methods
+* The then method is called after the Promise is resolved.
+* The catch method is called after the Promise is rejected.
+</details>
+
+---
+
+<details>
+<summary>OOPs</summary>
+
+### OOPs
+
+##### Inheritance
+Inheritance is a mechanism by which a class inherits methods and properties from another class.
+
+```Javascript 
+class SuperClass {
+  constructor(property1) {
+    this.property1 = property1;
+  }
+  method1() {}
+}
+class SubClass extends SuperClass {
+  constructor(property1, property2) {
+    super(property1);
+    this.property2 = property2;
+  }
+  method1() {}
+}
+let myObject = new SubClass(property1, property2);
+```
+
+Here, SubClass inherits methods and properties from a SuperClass.
+
+* The extends keyword is used to inherit the methods and properties of the superclass.
+
+* Calling super() makes sure that SuperClass constructor() gets called and initializes the instance.
+</details>
+
+---
+<details>
 <summary>More</summary>
 
 ### More 
@@ -1013,6 +1114,83 @@ numbers(1, 2, 3);
 
 ##### bind
 
+
+##### Is JavaScript typed dynamically?
+Yes, JavaScript is a dynamically typed language. Because
+
+* We can declare a variable without specifying the data type
+* We can change the data type of the variable when it is reassigned
+
+##### What is the Static keyword in JavaScript?
+The static Keyword defines a static method or property for a class.
+
+Static methods or Static properties cannot be called on instances of the class. They are called on the class itself.
+
+```Javascript 
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+
+  static displayName = "Rectangle";
+  static print() {
+    return "Static method print() is called from Rectangle";
+  }
+}
+
+console.log(Rectangle.displayName); // Output: Rectangle
+console.log(Rectangle.print()); // Output: Static method print() is called from Rectangle
+
+let rectangle1 = new Rectangle(10, 8);
+
+console.log(rectangle1.displayName); // Output: undefined
+console.log(rectangle1.print()); // TypeError: rectangle1.print is not a function
+```
+
+From the above example,
+
+* Calling a Static property from a class instance will return undefined
+* Calling a Static method from a class instance will throw an error
+
+
+##### What is an ECMAScript?
+ECMAScript stands for European Computer Manufacturers Association Script.
+
+It is a Standard for scripting languages.
+Languages like Javascript are based on the ECMAScript standard.
+It specifies the core features that a scripting language should provide and how those features should be implemented.
+
+##### How to get all keys and values of a json object in JavaScript?
+Companies Asked: Algonox
+
+We can use the Object.keys() method to extract the keys of a given JSON object into a separate array. Similarly, we'll utilize the Object.values() method to extract the valuess of the same object into another separate array.
+
+* Object.keys():
+
+Object.keys() is a built-in JavaScript method that returns an array of a given object's property names. The array order reflects the sequence in which properties were defined in the object.
+
+Example: For an object { a: 5, b: 10 }, Object.keys() would return the array ['a', 'b'].
+
+* Object.values():
+
+Object.values() returns an array of a given object's property values, providing the values in the same sequence as properties were defined.
+
+Example: For an object { a: 5, b: 10 }, Object.values() would return the array [5, 10].
+
+```Javascript 
+let jsonObject = {
+    "name": "John",
+    "age": 25,
+    "city": "New York"
+};
+
+let keys = Object.keys(jsonObject);   // Produces: ["name", "age", "city"]
+let values = Object.values(jsonObject); // Yields: ["John", 25, "New York"]
+
+console.log(keys);   // Outputs: ["name", "age", "city"]
+console.log(values); // Outputs: ["John", 25, "New York"]
+```
 </details>
 
 ---
