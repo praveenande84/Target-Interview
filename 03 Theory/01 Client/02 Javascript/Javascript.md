@@ -30,12 +30,12 @@
 ### General
 
 ##### What is **Javascript**?  
-JavaScript is a scripting language for web pages.  
-we can use Javascript on server-side also as NodeJS.
+**JavaScript** is a scripting language for web pages.  
+we can also use Javascript on server-side as NodeJS.
 
 we can create Dynamic Webpages by combinning HTML & Javascript.
 
-#####  Display Output
+#####  Display Javascript Output
 
   ```Javascript
 // console
@@ -53,13 +53,12 @@ myElement.innerHTML = <h1>Hello World</h1>;
 document.write("Hello World");
 
 // alert
-alert("Hello World");
+window.alert("Hello World");
   ```
 
 ##### Advantages
   - Server interaction is less.
-  - Feedback to the visitors is immediate.
-  - Interactivity is high.
+  - Immediate response to the users.
 
 </details>
 
@@ -101,18 +100,14 @@ declarationKeyword variableName = value;
 
 #### var
 If a variable declare using var, then initialization is not mandatory. This variable can be re-assigned and re-declared.  
-
-Variables declared with var are either function-scoped or global-scoped.
-
 If a variable is declared inside a function, it is function-scoped. Else, it is global-scoped.
 
 #### let 
-If a variable is declared using let, then initialization is not mandatory. This variable can be re-assigned and it will have the block scope.
+If a variable is declared using let, then initialization is not mandatory. This variable can be re-assigned.  
 we can't re-declare the same variable.
 
 #### const 
-If a variable is declared using const, then initialization is mandatory. Once the variable is initialized with a value, then it can't be re-assigned and it will have the block scope.  
-
+If a variable is declared using const, then initialization is mandatory. Once the variable is initialized with a value, then it can't be re-assigned.  
 const variable maintain constant values.
 
 ##### Differences between __var__, __let__ and __const__
@@ -149,31 +144,50 @@ we can access these Local Variables only within that particular block of code.
 #### Global Variable
 If a variable is created outside of a block is called Global variable.
 These Global Variables available upto end of the program execution.
+These Global Variables can be accessed at any part of the code including Functions also.  
 The Global Variable memory is created in the global scope.
-These Global Variables can be accessed at any part of the code.
 
 
 ##### Temporal Dead Zone
-From Hoisting to assigns some value to the variable is called temporal dead zone.
+A block's temporal dead zone starts at the beginning of the block's local scope. It ends when the computer fully initializes your variable with a value.  
+From Hoisting to assigns some value to the variable is called temporal dead zone.  
 
-##### Errors
+we can't access the variables, when Variable in **TDZ**
 
-###### SyntaxError
- Missing initializer in const declaration because it is a constant type already mentioned and declared.   
+```Javascript 
+{
+  // myVar TDZ starts here (at the beginning of this block's local scope)
+  // myVar TDZ continues here
+  // myVar TDZ continues here
+  console.log(myVar); // returns ReferenceError because myVar continues here
+  // myVar TDZ continues here
+  // myVar TDZ continues here
+  let myVar = "Vegetable Fried Rice"; // bestFood's TDZ ends here
+  // myVar TDZ does not exist here
+  // myVar TDZ does not exist here
+}
+```
+
+#### Errors
+Errors are 2 types:
+1. syntaxError
+2. Runtime Error
+
+##### SyntaxError
+ Missing initializer in const declaration because it is a constant type already mentioned and declared.  
  Identifier 'a' has already been declared.  
- A syntax error can be thrown when there is an error in the syntax (rules of language).
+ If we are not folloing rules of language, then we got syntax error.
+
+##### Runtime Error
+* ###### ReferenceError
+   * When Javascript Engine tries to findout a specific variable    inside the memory space but that variable does not exist in the    memory space.
+   * Cannot access 'a' before initialization .   
+   * 'c' is not defined.  
 
 
-#### Runtime Error
-###### ReferenceError
-When Javascript Engine tries to findout a specific variable inside the memory space and you can't access it.  
-Cannot access 'a' before initialization  
-c is not defined  
-A reference error can be thrown when a variable is used that does not exist or is not in the current scope.
-
-###### TypeError 
-Assignment to constant variable.  
-A Type error can be thrown when we try to make an operation on the incorrect data type.
+* TypeError 
+   * Assignment to constant variable.  
+   * A Type error can be thrown when we try to make an operation on the incorrect data type.
 
 </details>
 
@@ -188,7 +202,7 @@ we have 3 scopes in Javascript
 2. Block Scope
 3. Local Scope (Function Scope)
 
-In Global Level with declaration keywords let and const, It maintain seperate memory with script scope.  
+In Global Level with declaration keywords **let** and **const**, It maintain seperate memory with script scope.  
 
 
 ##### what is Block ?
@@ -199,7 +213,6 @@ Block is { }
 Block memory will be deleted after Execution completed.  
 Each Block has it's own Lexical scope.
 
-`Example:`
 ```javascript
 
 // single statement, so we dont't use block.
@@ -214,19 +227,12 @@ if (true){
 ```
 #### Closure
 
-A function along with reference to its outer environment that together forms a Closure. 
+**Closure** is a combination of a function and its lexical scope bundle together forms a Closure.
 
-Closure is a combination of a function and its lexical scope bundle together forms a Closure.
-
-A closure gives the outer function's scope access to an inner function. 
-
-Each and Every function in Javascript has access to its outer Lexical Environment that means use the varaibles and functions of its parent environment.
+A closure gives the outer function's scope access to an inner function that means it can be used the varaibles and functions of its parent environment.. 
 
 `Closure => local Memory + Lexical Environment of Parent`
 
-**A closure is a function** that has access to its outer function scope even after the function has returned. Meaning, A closure can remember and access variables and arguments reference of its outer function even after the function has returned.
-
-A function along with reference to its outer environment together forms a closure. Or in other words, A Closure is a combination of a function and its lexical scope bundled together.
 
 ##### Lexical Environment
 
@@ -235,7 +241,6 @@ Its Parent Memory
 ##### Uses of Closures
 * Timer Functions
 * Events
-* Memoize 
 * ...etc
 
 
@@ -247,19 +252,18 @@ Its Parent Memory
 
 ##### Garbage Collector
 
-Garbage collector is like program in the browser of the javascript engine,
-It freez the un-utilized memory.
+Garbage collector is like program in the browser of the javascript engine.
+
 Garbage collector is do where the unused variables takes out of the memory.
 
 </details>
 
 ---
 
-
 <details>
 <summary>JS Environment</summary>
 
- #### Javascript Runtime Environment
+ ### Javascript Runtime Environment
 
  ##### Components
  1. Code
@@ -309,28 +313,25 @@ When the JavaScript engine allocates memory to a variable, it stores a special v
 
 ###### Code Component (Thread of Execution)
 
-In code Component, variables in memory component take exact values of Javascript.
-
 Code component is the place where code is executed one line at a time. It is also called the **Thread of Execution**.
 
-JS is a **synchronous**, **single-threaded** language, which means that it can only execute one line of code at a time in a specific order. It can only move to the next line when the execution of the current line is completed.
+In this phase, variables in memory component will be initialized.
 
-Code is executed one line at a time. 
+JavScript is a **synchronous**, **single-threaded** language, which means that it can only execute one line of code at a time in a specific order. It can only move to the next line when the execution of the current line is completed.
 
-single-threaded -> javascript can run single line (one command) at a time.
+single-threaded -> javascript only execute single line (one command) at a time.
 
-synchronous -> Javascript can only Execute next line once current line execution is finished.
-
+synchronous -> Javascript execute next line when once current line execution is finished.
 
 ##### Callstack
 
-Before you run Javascript code, the Global Execution context will be created.  
+Before execute the Javascript code, the Global Execution context will be created.  
 
 The execution context is created in two phases : 
   * Memory creation phase - JS will allocate memory to variables and functions.
   * Code execution phase
 
-callstack plays a critical role in managing the execution of a program.
+callstack plays an important role in managing the execution of a program.
 
 callstack handles, automatically create & delete operations of Execution Context.
 
@@ -339,7 +340,7 @@ When a function is invoked, a new execution context is added to the top of the c
 
 ##### Hoisting
 
-Hoisting is a JavaScript technique that moves variables and function declarations to the top of their scope before code execution begins.
+Hoisting is a JavaScript technique.
 
 Before Execution of the JS code, It create a Global Execution Context.
 
@@ -357,7 +358,7 @@ If it is a Function Declaraion, It will be stored entire function.
 <details>
 <summary>this Keyword</summary>
 
- #### this keyword
+ ### this keyword
 
 ##### Global space:
 
@@ -372,18 +373,88 @@ at the global level the window object is equal to __this__ object.
 `window === this`
 
 
-### this
+##### this
 
-In JavaScript, the this keyword always refers to an object.  
-In Arrow Function, They inherit the __this__ value from their surrounding context.
+In JavaScript, __this__ keyword always refers to an current object.  
 
-The this keyword refers to the current execution context.  
+In Arrow Function, They inherit the __this__ object from their surrounding context. 
 
-In the global scope, this refers to the global object (window object in a browser context). 
+In the global scope, this refers to the global object. 
+`window === this`  
 
 Inside a method of an object, this refers to the object itself.
 
-In Arrow functions, JavaScript sets the this lexically. This means that the arrow function doesn't create its own execution context but inherits the this from the outer function where the arrow function is defined.
+##### this methods
+
+we can manipulate the __this__ keyword with below methods.
+
+* call
+* apply 
+* methods
+
+###### call  
+With __call__ we can invoke a method passing an owner object as an argument.
+
+```Javascript 
+const person1 = {
+    name: 'Praveen',
+    surname: 'Ande',
+    sayName: function() {
+        return this.name + " " + this.surname;
+    }
+}
+
+const person2 = {
+    name: 'Brenden',
+    surname: 'Eich'
+}
+
+console.log(person1.sayName.call(person2));  // Brenden Eich
+```
+
+###### apply  
+The apply method works very similarly to call. The only difference between them is that call accepts parameters as a list separated by colons, and apply accepts them as an array.
+
+```Javascript 
+const person1 = {
+    name: 'Pedro',
+    surname: 'Sanchez',
+    sayName: function(city, country) {
+        return this.name + " " + this.surname + ", " + city + ", " + country;
+    }
+}
+
+const person2 = {
+    name: 'Jimena',
+    surname: 'Juarez'
+}
+
+console.log(person1.sayName.apply(person2, ["DF", "Mexico"]));
+```
+
+###### bind
+Same as call and apply , the bind method indicates the object to which the this keyword will refer when a given method executes.
+
+But the difference with bind is that it will return a new function, without executing it. While with call and apply the function executed right away, using bind we must execute it separately.
+
+```Javascript 
+const person1 = {
+    name: 'Pedro',
+    surname: 'Sanchez',
+    sayName: function() {
+        return this.name + " " + this.surname
+    }
+}
+
+const person2 = {
+    name: 'Jimena',
+    surname: 'Juarez'
+}
+
+const sayPerson2Name = person1.sayName.bind(person2)
+
+console.log(sayPerson2Name())
+```
 
 </details>
 
@@ -425,7 +496,7 @@ a();
 // Function Expression
 
 // function acts like a value.
-var a = function () {
+let a = function () {
 	console.log('Function Expression');
 };
 a();
@@ -473,13 +544,11 @@ a();
 
 ```
 
-
 ###### Difference between __Parameter__ and __Argument__
 
 ```javascript
 
-// 04 Difference between Parameters and Arguments
-
+// we run the function with parameters
 function a(parameter1, parameter2){
     console.log(parameter1, parameter2);
 }
@@ -488,7 +557,7 @@ function a(parameter1, parameter2){
 var argument1 = 10;
 var argument2 = 20;
 
-// The values which we pass to inside a function are known as arguments.
+// we call the function with arguments
 a(argument1, argument2);
 ```
 
@@ -501,8 +570,8 @@ pass a function as a parameter is called callback function.
 we can send functions as arguments, we can use function as a values..etc
 
 ###### Higher Order Functions
-
-DRY Principle => Don't Repeat Yoursely
+These Functions follows DRY Principle..  
+DRY Principle => Don't Repeat Yourself
 
 
 ##### Over Ridding
@@ -518,13 +587,14 @@ JavaScript supports Function Overriding.
 <details>
 <summary>Built-in Higher-Order Array Methods</summary>
 
+
+### Built-in Higher-Order Array Methods
  - map
  - forEach
  - filter
  - reduce
- - ...etc
 
-`map`:
+##### map
 
 It creates a new array by applying a provided function to each element of an existing array and returns the results in a new array.
 
@@ -541,7 +611,7 @@ console.log(output);  // [2, 4, 6, 8, 10]
 
 ```
 
-`forEach`:
+##### forEach
 
 The forEach method in JavaScript is used to iterate over the elements of an array and apply a provided function to each element. Its primary purpose is to perform an operation on each item in the array without creating a new array or modifying the original array
 
@@ -556,13 +626,13 @@ function double(num) {
 	newArray.push(addValue);
 }
 
-arr.map((eachItem) => double(eachItem));
+arr.forEach((eachItem) => double(eachItem));
 console.log(newArray); // [2, 4, 6, 8, 10]
 
 
 ```
 
-`filter`:  
+##### filter  
 Creates a new array containing elements from the original array that satisfy a provided testing function. It returns a new array with the filtered elements.
 
 ```javascript
@@ -576,7 +646,7 @@ const output = arr.filter((eachItem) => even(eachItem));
 console.log(output);  // [2, 4]
 ```
 
-`reduce`:
+##### reduce
 
 The reduce method applies a provided function to reduce the elements of an array to a single value. It iterates through the array and accumulates a result by applying the provided function to each element and the current accumulator value.
 
@@ -598,17 +668,22 @@ console.log(output); // 15
 
 <details>
 <summary>Asynchronous</summary>
+
+### Asynchronous  
+
 Javascript cannot wait for anyone.
 
-Some Javascript tasks may take time to complete, such as  fetching data from External database,  perform tasks with timer, responding to user input.
+Some Javascript tasks may take time to complete, such as  
+* fetch -> fetching data from External database,  
+* timer -> perform tasks with timer
+* Events -> responding to user input.
 
 JavaScript doesn't wait for these Operations to finish and instead moves on to execute other code.
-
 
 1. Callback Queue
 2. Microtask Queue
 
-###### Callback Queue
+##### Callback Queue
 The purpose of the Callback Queue is to manage and execute functions (callbacks) in a specific order, typically after some asynchronous operation has completed.
 
 - setInterval
@@ -620,10 +695,8 @@ Timer Events takes callback function attach the timer and when the timer expires
 
 ###### Microtask Queue
 fetch always return a Promise.  
+A Promise is an object representing the eventual completion or failure of an asynchronous operation.  
 we don't know how much of time take to __resolve__ or __reject__ the Promise. 
-
-Q) what is a promise in Javascript?  
-A) A Promise is an object representing the eventual completion or failure of an asynchronous operation.
 
 - fetch
 - Promise Object
@@ -631,7 +704,6 @@ A) A Promise is an object representing the eventual completion or failure of an 
 
 ```javascript
 // create Own Promise
-
 
 function createOrder(){
     const ownPromise = new Promise((resolve, reject) => {
@@ -661,16 +733,11 @@ promise
 
 ```
 
+##### Event Loop
 
-
-###### Event Loop
-Eventloop has just one job to keep checking callback queue and if found something push it to call stack and delete from callback queue.  
-
-Event Loop continuosly monitoring the callstack,  
-if callstack is empty then checks the Microtask Queue & callback Queue,  
-if there is any Microtask functions or callback functions , it automatically push to the callstack.
-
-Event Loop continuosly check wheter callstack is empty or not.
+Event Loop continuosly monitoring whether callstack is empty or not.  
+if callstack is empty then checks the Microtask Queue & callback Queue. 
+if there is any Microtask functions or callback functions , it automatically push it to the callstack delete from queue.  
 
 Here Microtask Queue has more priority than the Callback Queue.
 
@@ -699,14 +766,9 @@ Here Microtask Queue has more priority than the Callback Queue.
    - Maps
    - Sets
    - NaN
-  
-
-
-
 
 ##### undefined
-If a value is not assigned to the variable, then it takes undefined as its value.  
-undefined means a variable is declared but value is not assigned to that variable.  
+If a variable already is already declared, but value is not assigned to that variable, then it takes undefined as its value.
 
 variable is defined but It is using before Initialization.  
 
@@ -721,8 +783,9 @@ we didn't declare a variable.
 so memory is not allocated for that particular variable.
 
 ##### null
-null can be assigned to a variable as a representation of no value. It is used
-when we intentionally want a variable but don't need a value to it. The datatype of null is object. 
+null can be assigned to a variable as a representation of no value. 
+It is used when we intentionally want a variable but don't need a value to it.   
+The datatype of null is object. 
 
 ##### Data Structures
 
@@ -851,9 +914,8 @@ Document Object Model (DOM) is the structured representation of the HTML documen
 It allows Javascript to manipulate, structure and style of our website.
 
 ##### Real DOM
-Real DOM is nothing but DOM. DOM stands for Document Object Model. It is a structured representation of the HTML elements that are present in a webpage.
+Real DOM is nothing but DOM. __DOM__ stands for __Document Object Model__. It is a structured representation of the HTML elements that are present in a webpage.
 It represents the entire UI of your application.
-
 
 ##### Access HTML Element
 * getElementsByClassName('classname'): Returns all the elements that have the specified class name. It returns an array-like object.
@@ -1106,14 +1168,6 @@ Here, SubClass inherits methods and properties from a SuperClass.
 <summary>More</summary>
 
 ### More 
-
-##### call
-**apply** is a method that allows you to call a function with a specific this value and pass an array as arguments.
-
-##### apply
-
-##### bind
-
 
 ##### Is JavaScript typed dynamically?
 Yes, JavaScript is a dynamically typed language. Because

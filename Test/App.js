@@ -1,5 +1,7 @@
-if (false) {
-	var a = 10;
-	let b = 20;
-	const c = 30;
-}
+const myObj = {
+	name: 'Ande',
+	place: 'Hyderabad',
+};
+
+const currentObject = Object.getOwnPropertyNames(myObj);
+console.log(currentObject);
