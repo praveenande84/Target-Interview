@@ -27,6 +27,7 @@
 <details>
 <summary>General</summary>
 
+
 ### General
 
 ##### What is **Javascript**?  
@@ -34,6 +35,18 @@
 we can also use Javascript on server-side as NodeJS.
 
 we can create Dynamic Webpages by combinning HTML & Javascript.
+
+##### Javascript Advantages
+  - Server interaction is less.
+  - Immediate response to the users.
+
+##### Is JavaScript typed dynamically?
+Yes, JavaScript is a dynamically typed language. Because
+
+* We can declare a variable without specifying the data type
+* We can change the data type of the variable when it is reassigned
+
+
 
 #####  Display Javascript Output
 
@@ -54,11 +67,19 @@ document.write("Hello World");
 
 // alert
 window.alert("Hello World");
+
+//prompt
+window.promt("Hello World");
   ```
 
-##### Advantages
-  - Server interaction is less.
-  - Immediate response to the users.
+
+##### What is an ECMAScript?
+ECMAScript stands for __European Computer Manufacturers Association Script__.
+
+It is a Standard for scripting languages.
+Languages like Javascript are based on the ECMAScript standard.
+It specifies the core features that a scripting language should provide and how those features should be implemented.
+
 
 </details>
 
@@ -80,23 +101,25 @@ Javascript supports various data types:
 4. null
 5. undefined
 
+we can assign a value to the variable with the help of assignment Operator( = ).
 
-#### Define a Variable
+##### __Define a Variable__
+we can create variables using __Variable Declaration__ keywords .
 In Javascript we can define a variable in 3 ways,
 
-###### Declaration Keywords
+##### Declaration Keywords
 1. var
 2. let
 3. const
 
 
-#### Rules of Define a Variable
+##### Rules of Define a Variable
 
 ##### syntax
-```
-Definition = Initialization
-declarationKeyword variableName = value;
-```
+
+`Definition = Initialization`  
+`declarationKeyword variableName = value;`
+
 
 #### var
 If a variable declare using var, then initialization is not mandatory. This variable can be re-assigned and re-declared.  
@@ -114,9 +137,10 @@ const variable maintain constant values.
 
 | Declaration Keyword | Possible                                       | Not-Possible                  |
 | ------------------- | ---------------------------------------------- | ----------------------------- |
-| var                 | Initialization , Re-Assignment, Re-Declaration |                               |
-| let                 | Initialization , Re-Assignment                 | Re-Declaration                |
-| const               | Initialization                                 | Re-Assignment, Re-Declaration |
+| __var__                 | Initialization , Re-Assignment, Re-Declaration |                               |
+| __let__                 | Initialization , Re-Assignment                 | Re-Declaration                |
+| __const__               | Initialization                                 | Re-Assignment, Re-Declaration |
+
 
 ##### Memory Storage
 
@@ -149,10 +173,10 @@ The Global Variable memory is created in the global scope.
 
 
 ##### Temporal Dead Zone
-A block's temporal dead zone starts at the beginning of the block's local scope. It ends when the computer fully initializes your variable with a value.  
+A block's __temporal dead zone__ starts at the beginning of the block's local scope. It ends when the computer fully initializes your variable with a value.  
 From Hoisting to assigns some value to the variable is called temporal dead zone.  
 
-we can't access the variables, when Variable in **TDZ**
+we can't access the variables, when Variable in __TDZ__
 
 ```Javascript 
 {
@@ -179,13 +203,14 @@ Errors are 2 types:
  If we are not folloing rules of language, then we got syntax error.
 
 ##### Runtime Error
-* ###### ReferenceError
-   * When Javascript Engine tries to findout a specific variable    inside the memory space but that variable does not exist in the    memory space.
-   * Cannot access 'a' before initialization .   
-   * 'c' is not defined.  
+*  __ReferenceError__
+   - When Javascript Engine tries to findout a specific variable inside the memory space but that variable does not exist in the memory space.
+   - Cannot access 'a' before initialization .   
+   - 'c' is not defined.  
+   - If a variable in the __TDZ__, we cannot access that particular variable.
 
 
-* TypeError 
+* __TypeError__ 
    * Assignment to constant variable.  
    * A Type error can be thrown when we try to make an operation on the incorrect data type.
 
@@ -195,6 +220,8 @@ Errors are 2 types:
 
 <details>
 <summary>Scope</summary>
+
+### Scope
 Memory storage location is called scope.  
 
 we have 3 scopes in Javascript  
@@ -225,9 +252,9 @@ if (true){
 }
 
 ```
-#### Closure
+##### Closure
 
-**Closure** is a combination of a function and its lexical scope bundle together forms a Closure.
+**Closure** is a combination of a __function__ and its __lexical scope__ bundle together forms a Closure.
 
 A closure gives the outer function's scope access to an inner function that means it can be used the varaibles and functions of its parent environment.. 
 
@@ -254,7 +281,7 @@ Its Parent Memory
 
 Garbage collector is like program in the browser of the javascript engine.
 
-Garbage collector is do where the unused variables takes out of the memory.
+In JavaScript, the garbage collector automatically __identifies__ and __removes__ unreferenced objects, freeing up memory to improve performance and prevent memory leaks in the application.
 
 </details>
 
@@ -300,18 +327,18 @@ Execution Contex contains two components.
 `Execution Context => Creation Phase + Execution Phase`
 
 
-###### Phases of Execution Context
+##### Phases of Execution Context
 
 1. Memory phase
 2. Code Phase
 
 
-###### Memory Component (Variable Environment) 
+##### __Memory Component__ (Variable Environment) 
 In Memory Component all the variables and functions are stored as key-value pairs.
-When the JavaScript engine allocates memory to a variable, it stores a special value `undefined` in it. In the case of functions, it stores the entire function inside the memory space.
+When the JavaScript engine allocates memory to a variable, it stores a special value `undefined` in it. In the case of functions, it stores the entire function inside the memory space.  
 `pair = key : value`
 
-###### Code Component (Thread of Execution)
+##### __Code Component__ (Thread of Execution)
 
 Code component is the place where code is executed one line at a time. It is also called the **Thread of Execution**.
 
@@ -340,13 +367,15 @@ When a function is invoked, a new execution context is added to the top of the c
 
 ##### Hoisting
 
+Hoisting is a javascript mechanism where __function declarations__ are moved to the top of their scope before code execution.
+
 Hoisting is a JavaScript technique.
 
 Before Execution of the JS code, It create a Global Execution Context.
 
 var keyword variables and function declarations are stored in Global Execution Context.
 
-var keyword variable takes undefined as a default value.
+var keyword variable takes __undefined__ as a default value.
 
 If it is a Function Declaraion, It will be stored entire function.
 
@@ -358,7 +387,7 @@ If it is a Function Declaraion, It will be stored entire function.
 <details>
 <summary>this Keyword</summary>
 
- ### this keyword
+ ### __this__ keyword
 
 ##### Global space:
 
@@ -375,22 +404,76 @@ at the global level the window object is equal to __this__ object.
 
 ##### this
 
-In JavaScript, __this__ keyword always refers to an current object.  
+In JavaScript, __this__ keyword always refers to an object.  
 
-In Arrow Function, They inherit the __this__ object from their surrounding context. 
+* Function Declaration creates its own Execution Context.  
+  `Function Declaration : Where the function called.`
+* Arrow Functions can't create its own Execution context, but it takes from Lexical environment. So Arrow Function, They inherit the __this__ object from their surrounding context.
+  `Arrow Function : Where the Function Declared.`
 
 In the global scope, this refers to the global object. 
 `window === this`  
 
-Inside a method of an object, this refers to the object itself.
+
+```Javascript 
+// this
+
+// this refers to the Object on which we call our function.
+
+// This function declaration is stored in window object.
+function displayName(){
+    console.log(this.name, this);
+}
+
+const myObject = {
+    name:"Ande Praveen",
+    displayName:displayName
+};
+
+var name = "Brendan Eich";
+
+
+myObject.displayName();  // Ande Praveen
+window.displayName();  // Brendan Eich
+```
+
+```Javascript 
+
+// this
+
+// Arrow Function
+// where was the Function defined.
+
+const myObject1 = {
+    sayHello:function(){
+        var hello = function(){
+            console.log("Hello", this);
+        }
+        hello();
+    }
+};
+
+const myObject2 = {
+    sayBye:function(){
+        var bye = () => {
+            console.log("Bye", this);
+        }
+        bye()
+
+    }
+};
+
+myObject1.sayHello();  // window
+myObject2.sayBye();  // myObject2
+```
 
 ##### this methods
 
-we can manipulate the __this__ keyword with below methods.
+we can manipulate the __this__ object with below methods.
 
 * call
 * apply 
-* methods
+* bind
 
 ###### call  
 With __call__ we can invoke a method passing an owner object as an argument.
@@ -412,49 +495,6 @@ const person2 = {
 console.log(person1.sayName.call(person2));  // Brenden Eich
 ```
 
-###### apply  
-The apply method works very similarly to call. The only difference between them is that call accepts parameters as a list separated by colons, and apply accepts them as an array.
-
-```Javascript 
-const person1 = {
-    name: 'Pedro',
-    surname: 'Sanchez',
-    sayName: function(city, country) {
-        return this.name + " " + this.surname + ", " + city + ", " + country;
-    }
-}
-
-const person2 = {
-    name: 'Jimena',
-    surname: 'Juarez'
-}
-
-console.log(person1.sayName.apply(person2, ["DF", "Mexico"]));
-```
-
-###### bind
-Same as call and apply , the bind method indicates the object to which the this keyword will refer when a given method executes.
-
-But the difference with bind is that it will return a new function, without executing it. While with call and apply the function executed right away, using bind we must execute it separately.
-
-```Javascript 
-const person1 = {
-    name: 'Pedro',
-    surname: 'Sanchez',
-    sayName: function() {
-        return this.name + " " + this.surname
-    }
-}
-
-const person2 = {
-    name: 'Jimena',
-    surname: 'Juarez'
-}
-
-const sayPerson2Name = person1.sayName.bind(person2)
-
-console.log(sayPerson2Name())
-```
 
 </details>
 
@@ -544,11 +584,11 @@ a();
 
 ```
 
-###### Difference between __Parameter__ and __Argument__
+##### Difference between __Parameter__ and __Argument__
 
 ```javascript
 
-// we run the function with parameters
+// we create function with parameters
 function a(parameter1, parameter2){
     console.log(parameter1, parameter2);
 }
@@ -557,21 +597,19 @@ function a(parameter1, parameter2){
 var argument1 = 10;
 var argument2 = 20;
 
-// we call the function with arguments
+// we execute the function with arguments
 a(argument1, argument2);
 ```
 
-###### Callback Function
-
+##### Callback Function
 pass a function as a parameter is called callback function.
 
-###### First class Functions
-
+##### First class Functions
 we can send functions as arguments, we can use function as a values..etc
 
-###### Higher Order Functions
+##### Higher Order Functions
 These Functions follows DRY Principle..  
-DRY Principle => Don't Repeat Yourself
+__DRY__ Principle => Don't Repeat Yourself
 
 
 ##### Over Ridding
@@ -585,86 +623,84 @@ JavaScript supports Function Overriding.
 ---
 
 <details>
-<summary>Built-in Higher-Order Array Methods</summary>
+<summary>Operators</summary>
+
+### Operators
+
+1. Assignment
+   * `=`
+2. Arithmetic
+   * `+ - * /`
+3. Shorthand Math
+   * `+=   -=  *=   /=`
+4. Unary
+   * `++   --`
+5. Conditional 
+   * `==   ===   !=   !===   <   >   <=   >=`
+6. Logical
+   * `&& || !`
+7. Spread
+   * `...` three dots
+   * spread operator used to unpack the items in an Object or Array.
+8.  Rest
+   * we can pack multiple values into an array.
+9.  Ternary
+    * `let variable = condition ? if-block : else-block;`
 
 
-### Built-in Higher-Order Array Methods
- - map
- - forEach
- - filter
- - reduce
-
-##### map
-
-It creates a new array by applying a provided function to each element of an existing array and returns the results in a new array.
-
-```javascript
-
-let arr = [1, 2, 3, 4, 5];
-
-function double(num){
-    return num*2;
-}
-
-const output = arr.map((eachItem) => double(eachItem));
-console.log(output);  // [2, 4, 6, 8, 10]
-
-```
-
-##### forEach
-
-The forEach method in JavaScript is used to iterate over the elements of an array and apply a provided function to each element. Its primary purpose is to perform an operation on each item in the array without creating a new array or modifying the original array
+##### Loose Equal to ( == )
+Loose equality compares two values for equality but doesn't compare type of values.
 
 ```Javascript
-
-let arr = [1, 2, 3, 4, 5];
-
-let newArray = [];
-
-function double(num) {
-	addValue = num * 2;
-	newArray.push(addValue);
-}
-
-arr.forEach((eachItem) => double(eachItem));
-console.log(newArray); // [2, 4, 6, 8, 10]
-
+console.log(2 == "2"); // Output: true
 
 ```
+##### Strict Equal to ( === )
+Strict equality compares two values for equality including type of values.
 
-##### filter  
-Creates a new array containing elements from the original array that satisfy a provided testing function. It returns a new array with the filtered elements.
-
-```javascript
-let arr = [1, 2, 3, 4, 5];
-
-function even(num){
-    return num % 2 === 0;
-}
-
-const output = arr.filter((eachItem) => even(eachItem));
-console.log(output);  // [2, 4]
+```Javascript
+console.log(2 === "2"); // Output: false
 ```
 
-##### reduce
+##### Spread Operator 
+The Spread Operator is used to unpack an iterable (e.g. an array, object, etc.) into individual elements.
 
-The reduce method applies a provided function to reduce the elements of an array to a single value. It iterates through the array and accumulates a result by applying the provided function to each element and the current accumulator value.
+```Javascript
+let arr1 = [2, 3];
+let arr2 = [1, ...arr1, 4];
 
-```javascript
-let arr = [1, 2, 3, 4, 5];
-
-function sum(acc, curr){
-    return acc + curr;
-}
-
-const output = arr.reduce((accumulator, currentValue) => sum(accumulator, currentValue), 0);
-console.log(output); // 15 
+console.log(arr2);  // Output: [1, 2, 3, 4]
 ```
 
+##### Rest Parameter
+With Rest Parameter, we can pack multiple values into an array.
+
+```Javascript
+function numbers(...args) {
+console.log(args);  // Output: [1, 2, 3]
+}
+
+numbers(1, 2, 3);
+```
 </details>
 
 ---
 
+<details>
+<summary>Data Structures</summary>
+
+### Data Structures
+Data Structure allow us to store and organize data efficiently.
+This makes us access and performs operations on the data smoothly.  
+In javascript, we have built-in Data structures like,
+1. Arrays
+2. Objects
+3. Maps
+4. Sets
+
+</details>
+
+---
 
 <details>
 <summary>Asynchronous</summary>
@@ -693,7 +729,7 @@ The purpose of the Callback Queue is to manage and execute functions (callbacks)
 Timer Events takes callback function attach the timer and when the timer expires then push into the Callback Queue.
 
 
-###### Microtask Queue
+##### Microtask Queue
 fetch always return a Promise.  
 A Promise is an object representing the eventual completion or failure of an asynchronous operation.  
 we don't know how much of time take to __resolve__ or __reject__ the Promise. 
@@ -729,12 +765,9 @@ promise
     console.log(error.message);
 });
 
-
-
 ```
 
 ##### Event Loop
-
 Event Loop continuosly monitoring whether callstack is empty or not.  
 if callstack is empty then checks the Microtask Queue & callback Queue. 
 if there is any Microtask functions or callback functions , it automatically push it to the callstack delete from queue.  
@@ -750,6 +783,8 @@ Here Microtask Queue has more priority than the Callback Queue.
 
 ##### Datatypes
 
+The `typeof()` operator is used to find the type of value.
+
 1. __Primitive Datatypes__  
   Primitives are immutable.  Primitives are passed by value.
    - number
@@ -759,8 +794,8 @@ Here Microtask Queue has more priority than the Callback Queue.
    - null
    
 
-1. __Reference Datatype__   
-  References are mutable.  References are passed by reference
+1. __Reference Datatypes__   
+  References are mutable.  References are passed by reference.
    -  Arrays
    - Objects
    - Maps
@@ -807,75 +842,152 @@ isNaN(undefined); // returns true
 
 <summary>String Methods</summary>
 
-#### String Methods
+#### String Manipulation Methods
 
-- split
-- trim
-- replace
-
-* **split**  
-  The split method is used to split a string into an array of substrings and returns the new array.  
-  `string.split(separator)`
-
-* **trim**  
-* We use the trim method to remove whitespace from both ends of a string.
-
-* **replace**
-  `string.replace(searchValue, replaceValue)`
-
-```Javascript
-const greeting = "   Hello world!  ";
-console.log(greeting);
-console.log(greeting.trim()); // Output: Hello world!
-```
+* Conversion
+  - `let output = myString.toUpperCase();`
+  - `let output = myString.toLowerCase();`
+  - `let output = myNumber.toString();`
+* Checking
+  -  `let output = myString.includes(part);`
+  -  `let output = myString.startsWith(part);`
+  -  `let output = myString.endsWith(part);`
+* Cutting
+  - `let listItems = myString.split(separator);`
+  - `let slicedPart = myString.slice(startIndex, endIndex);`
+  - `let subString = myString.substring(startIndex, endIndex);`
+* Combinning
+  - `combinedString = myString1.concat(myString2);`
+* Updating 
+  - `let trimmedString = myString.trim();`
+  - `let output = myString.replace(searchValue, replaceValue);`
+* Finding 
+  - `let partStartIndex = myString.indexOf("part")`;
 
 </details>
-
-
 
 ---
 
 <details>
 <summary>Array Methods</summary>
 
-##### Array
+### Array Methods
 An Array holds an ordered sequence of items. 
 
-##### Array Methods
+##### Normal Array Methods
 
-  - push()
-  - pop()
-  - forEach()
-  - map()
-  - filter()
-  - splice()
-  - slice()
-  - shift()
-  - unshift()
-  - sort()
-  - join
+* Finding
+  - `let result = myArray.includes(item);`
+  - `let result = myArray.indexOf(item);`
+  - `let result = myArray.lastIndexOf(item);`
+  - `let firstItem = Array.find(Testing Function);`
+  - `let firstItemIndex = Array.findIndex(Testing Function);` 
+  - `let arrayLength = myArray.length;` 
+* Adding
+  -  `myArray.push(lastItem);`
+  -  `myArray.unshift(firstItem);`
+  -  `myArray.splice(start, deleteCount, item1, item2...);`
+* Removing
+  - `let lastItem = myArray.pop();`
+  - `let firstItem = myArray.shift();`
+* Combining
+  - `let newArray = myArray1.concat(myArray2);`
+  - `let joinedString = myArray.join(separator);`
+* Cutting
+  - ` let arrayPart = myArray.slice(startIndex, endIndex);`
+* Sorting
+  - `myArray.sort();`
 
 
-* **join**
-  The join method returns the array as a string. The elements will be joined by a specified separator.  
-  `arr.join(separator)`
+##### Higher Order Array Methods
+These Methods are Iterate over each item of the Array and do some operations.
 
-* **push**
-  The push method adds new items to the end of the array.
+* __map__ 
+  -  `let newArray = myArray.map(callback(currentValue, index, arr));`
+  - Here index and arr are optional arguments.
+ ```Javascript 
+const myArray = [1, 2, 3, 4];
+const output = myArray.map((eachItem) => eachItem * eachItem);
+  console.log(output); // [ 1, 4, 9, 16 ] 
+```
+
+* __filter__
+  -  `let newArray = myArray.filter(callback(currentValue, index, arr))`;
+  - Here index and arr are optional arguments.
+  - 
+  ```Javascript 
+  const myArray = [1,2,3,4,-5,-7,12];
+  const filteredArray = myArray.filter((eachItem) =>   eachItem > 0);
+  console.log(filteredArray); // [ 1, 2, 3, 4, 12 ]
+  ```
+
+* __reduce__
+-  `let finalValue = myArray.reduce(callback(accumulator, currentValue, index, arr));`
+  - Here accumulator is the initialValue or the previously returned value of the function and currentValue is the value of the current element, index and arr are optional arguments.
+  ```Javascript 
+     const myArray = [1,2,3,4];
+     const output = myArray.reduce((accumulator,eachItem) =>  (accumulator + eachItem));
+    console.log(output); // 10  
+  ```
+
+* __forEach__ 
+  -  myArray.forEach(callback(currentValue, index, arr));
+  - Here index and arr are optional arguments.
+```Javascript 
+const myArray = [1, 2, 3, 4];
+
+let squaresList = [];
+let output = myArray.forEach((eachItem) => squaresList.push(eachItem * eachItem));
+console.log(output); // undefined
+
+console.log(squaresList);  // [ 1, 4, 9, 16 ]
+```
+
+* __every__
+* The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
+  -  `let finalBool = myArray.every(function(currentValue, index, arr));`
+  - Here index and arr are optional arguments
+```Javascript 
+let myArray = [1, 2, 3, 4, 5];
+const isAllPositive = myArray.every((eachItem) => eachItem > 0);
+console.log(isAllPositive);  // true
+```
+
+* __some__
+  - The some() method tests whether at least one element in the array passes the test implemented by the provided function.  
+  - `let finalBool = myrray.some(function(currentValue, index, arr));`
+  - Here index and arr are optional arguments.
+
+```Javascript 
+let myArray = [1, 2, 3, 4, 5, -6, -7, -8];
+const isAnyOnePositive = myArray.some((eachItem) => eachItem > 0);
+console.log(isAnyOnePositive);  // true
+```
+
+* __reverse__
+  - The reverse() method reverses the order of the elements in an array. The first array element becomes the last, and the last array element becomes the first.
+  - `let reversedArray = myArray.reverse();`
+
+```Javascript
+let myArray = [1, 2, 3, 4, 5];
+console.log(myArray);  // [ 1, 2, 3, 4, 5 ]
+
+let reversedArray = myArray.reverse();
+console.log(reversedArray);  // [ 5, 4, 3, 2, 1 ]
+```
+
+* __flat__
+- The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+- `let newArray = myArray.flat(depth);`
 
 
-* **slice**
-  The slice method returns the selected elements in an array, as a new array.
-  `arr.slice(startIndex, endIndex)`  
+```Javascript 
+let myArray = [[1, [2, [[3, 4]], 5]]];
+console.log(myArray);  // [[1, [2, [[3, 4]], 5]]]
 
-  ```Javascript
-  let fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
-
-  let citrus = fruits.slice(1, 3);
-
-    console.log(citrus); // Output: ["Orange", "Lemon"]
-   console.log(fruits); // Output: ["Banana", "Orange", "Lemon", "Apple", "Mango"]
-  ```  
+let flatArray = myArray.flat(4);
+console.log(flatArray);  // [ 1, 2, 3, 4, 5 ]
+```
 
 </details>
 
@@ -887,6 +999,7 @@ An Array holds an ordered sequence of items.
 ### Object
 
 ##### Object Destructuring
+we make object key to a variable.  
 To unpack properties from Objects, we use Object Destructuring. The variable name should match with the key of an object.  
 
 ```javascript
@@ -926,29 +1039,121 @@ It represents the entire UI of your application.
 
 * querySelector(): Takes CSS style selector as argument and returns the first selected HTML element.
 
+```Javascript 
+// Old Format
+let element = document.getElementByTagName("div");  // <div>
+let element = document.getElementById("test");  // <div id="test">
+let element = document.getElementByClass("test");  // <div class="test"> 
+
+// New Format
+let element = document.querySelector("div");  //  <div>
+let element = document.querySelector("#test"); // <div id="test">
+let element = document.querySelector(".test");   // <div class="test">
+let element = document.querySelectorAll(".test");   // <div class="test">
+let childElement = document.querySelector('div .parent #child');
+```
+
 ##### Javascript DOM properties
 
-   - classList
-   - textContent
-   - style
+   
+   * Value
+     - textContent
+   * CSS
+     - style
+   * Attribute
+     - htmlFor, src, checked
+     - `element.setAttribute(attribute, value);`
+   * classList
+   
 
 ##### DOM manipulation
 DOM manipulation is interacting with the DOM to modify the HTML document that is to be rendered on the web browser.
 
-##### Events
-  **Mouse Events** : mousedown, mouseup, click, dblclick, mousemove, mouseover, mousewheel, mouseout, contextmenu  
-  **Touch Events** : touchstart, touchmove, touchend, touchcancel  
-  **Keyboard Events** : keydown, keypress, keyup  
-  **Form Events** : focus, blur, change, submit  
-  **window Events** : scroll, resize, hashchange, load, unload  
+javascript offers 3 ways to add an Event Listener to a DOM element.
 
+1. Inline event Listener
+
+```Javascript 
+// inline event Listener => onclick used in html
+
+function greeting(){
+    console.log("Inline Event Listener worked");
+}
+```
+2. onevent listener
+
+```Javascript 
+// onevent
+
+// onEvent Listener used in javascript with html element id.
+
+let greetBtn = document.getElementById("greetBtn");
+
+greetBtn.onclick = function(){
+    console.log("onEvent Listener is working");
+};
+```
+3. addEventListener
+
+```Javascript 
+// addEventListener()
+
+/*
+	It is a modern approach to add an event listener.
+	element.addEventListener(event, function);
+	element => HTML element
+	event => event name
+	function => callback function
+*/
+
+// htmlElement.addEventListener(eventName, callbackFunction);
+let greetBtn = document.getElementById("greetBtn");
+
+greetBtn.addEventListener("click", function(){
+    console.log("addEventListener is working");
+});
+```
+
+
+
+##### Events
+  * Mouse Events 
+     - mousedown, mouseup, click, dblclick, mousemove, mouseover, mousewheel, mouseout   
+  * Keyboard Events
+     - keydown, keypress, keyup  
+  * Form Events 
+     - focus, blur, change, submit  
+  * window Events 
+     - scroll, resize, load, unload  
 
   ##### preventDefault()
-  ```Javascript
+```Javascript
 // Here in the form, it prevents the default behaviour of the submit event.
-   event.preventDefault();
-  ```
+    event.preventDefault();
+```
  
+##### Element Manipulation
+```Javascript 
+/// DOM Manipulations
+
+
+// Element selection through id
+let myContainer = document.getElementById("myContainer");
+
+// creating an HTML element
+let headingElement = document.createElement('h1');
+headingElement.textContent = "Hello World";
+console.log(headingElement);
+
+// adding an Element at End.
+// Appending to Existing myContainer Element
+myContainer.appendChild(headingElement);
+
+// Removing the Element
+myContainer.removeChild(headingElement);
+
+```
+
 
 </details>
 
@@ -957,15 +1162,20 @@ DOM manipulation is interacting with the DOM to modify the HTML document that is
 <details>
 <summary>Storage</summary>
 
-#### Storage
+### Storage
 
-Client-Side Data Storage is storing the data on the client (user's machine).
+Storage Mechanism:
+1. client-side Data storage:
+client-side Data storage is storing the data on the client (user's machine).
 
-  - Local Storage
-  - Session Storage
-  - Cookies
-  - IndexedDB
+1. Local Storage
+2. Session Storage
+3. Cookies
+4. IndexedDB and many more.
 
+2. server-side Data storage:
+
+Server-side Data Storage is storing the data on the server.
 ##### localStorage
 LocalStorage is limited to about 5MB and can contain only strings.
 The Local Storage allows web applications to store data locally within the user's browser. It is a Storage Object. Data can be stored in the form of key-value pairs.
@@ -992,18 +1202,18 @@ if (token === undefined) {
 
 </details>
 
-
 ---
 
 <details>
 <summary>class</summary>
 
-#### class
+### class
 
 ##### Inheritance
 Inheritance is a mechanism by which a class inherits methods and properties from another class.
 
-```javascript
+
+```Javascript 
 class SuperClass {
   constructor(property1) {
     this.property1 = property1;
@@ -1017,52 +1227,47 @@ class SubClass extends SuperClass {
   }
   method1() {}
 }
-let myObject = new SubClass(property1, property2);
-```
-</details>
-
----
-
-<details>
-<summary>Operators</summary>
-
-### Operators
-
-##### Loose Equal to ( == )
-Loose equality compares two values for equality but doesn't compare type of values.
-
-```Javascript
-console.log(2 == "2"); // Output: true
-
+let myObject = new SubClass(argument1, argument2);
 ```
 
-##### Strict Equal to ( === )
-Strict equality compares two values for equality including type of values.
+Here, SubClass inherits methods and properties from a SuperClass.
 
-```Javascript
-console.log(2 === "2"); // Output: false
-```
+* The extends keyword is used to inherit the methods and properties of the superclass.
 
-##### Spread Operator 
-The Spread Operator is used to unpack an iterable (e.g. an array, object, etc.) into individual elements.
+* Calling super() makes sure that SuperClass constructor() gets called and initializes the instance.
 
-```Javascript
-let arr1 = [2, 3];
-let arr2 = [1, ...arr1, 4];
+##### What is the Static keyword in JavaScript?
+The static Keyword defines a static method or property for a class.
 
-console.log(arr2);  // Output: [1, 2, 3, 4]
-```
+Static methods or Static properties cannot be called on instances of the class. They are called on the class itself.
 
-##### Rest Parameter
-With Rest Parameter, we can pack multiple values into an array.
+```Javascript 
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
 
-```Javascript
-function numbers(...args) {
-console.log(args);  // Output: [1, 2, 3]
+  static displayName = "Rectangle";
+  static print() {
+    return "Static method print() is called from Rectangle";
+  }
 }
 
-numbers(1, 2, 3);
+console.log(Rectangle.displayName); // Output: Rectangle
+console.log(Rectangle.print()); // Output: Static method print() is called from Rectangle
+
+let rectangle1 = new Rectangle(10, 8);
+
+console.log(rectangle1.displayName); // Output: undefined
+console.log(rectangle1.print()); // TypeError: rectangle1.print is not a function
 ```
+
+From the above example,
+
+* Calling a Static property from a class instance will return undefined
+* Calling a Static method from a class instance will throw an error
+
 
 </details>
 
@@ -1105,21 +1310,6 @@ let profile = {
 ---
 
 <details>
-<summary>Async and Await</summary>
-
-### Async and Await
-
-The async/await simply gives you a synchronous feel to asynchronous code. It's a very elegant form of syntactical sugar and is more readable.
-
-For simple queries and data manipulation, Promises can be preferred otherwise we will prefer async/await.
-
-##### Await 
-The await keyword in JavaScript is used within an async function to pause the execution of that function until a promise is resolved. 
-</details>
-
----
-
-<details>
 <summary>Promise</summary>
 
 ### Promise
@@ -1127,110 +1317,58 @@ The await keyword in JavaScript is used within an async function to pause the ex
 Promise Methods
 * The then method is called after the Promise is resolved.
 * The catch method is called after the Promise is rejected.
+
+
+ A Promise will be in any one of the three states
+
+1. Pending : Neither fulfilled nor rejected.
+2. Fulfilled : Operation completed successfully.
+3. Rejected : Operation failed.
+
+### Async and Await
+
+The async/await simply gives you a synchronous feel to asynchronous code.   
+The await keyword in JavaScript is used within an async function to pause the execution of that function until a promise is resolved. 
+
+```Javascript 
+
+// Asynchronous Execution
+
+const url = "https://apis.ccbp.in/jokes/random";
+
+fetch(url)
+    .then((response) => {
+        return response.json();
+    })
+    .then((jsonData) => {
+        // statement 1
+        console.log(jsonData)
+    });
+
+
+// statement 2
+console.log("fetching done");
+
+
+// The second statement won't wait until the first statement execution.
+// In JS fetch() works asynchronously.
+```
 </details>
 
 ---
-
 <details>
-<summary>OOPs</summary>
+<summary>Object Methods</summary>
 
-### OOPs
-
-##### Inheritance
-Inheritance is a mechanism by which a class inherits methods and properties from another class.
-
-```Javascript 
-class SuperClass {
-  constructor(property1) {
-    this.property1 = property1;
-  }
-  method1() {}
-}
-class SubClass extends SuperClass {
-  constructor(property1, property2) {
-    super(property1);
-    this.property2 = property2;
-  }
-  method1() {}
-}
-let myObject = new SubClass(property1, property2);
-```
-
-Here, SubClass inherits methods and properties from a SuperClass.
-
-* The extends keyword is used to inherit the methods and properties of the superclass.
-
-* Calling super() makes sure that SuperClass constructor() gets called and initializes the instance.
-</details>
-
----
-<details>
-<summary>More</summary>
-
-### More 
-
-##### Is JavaScript typed dynamically?
-Yes, JavaScript is a dynamically typed language. Because
-
-* We can declare a variable without specifying the data type
-* We can change the data type of the variable when it is reassigned
-
-##### What is the Static keyword in JavaScript?
-The static Keyword defines a static method or property for a class.
-
-Static methods or Static properties cannot be called on instances of the class. They are called on the class itself.
-
-```Javascript 
-class Rectangle {
-  constructor(height, width) {
-    this.height = height;
-    this.width = width;
-  }
-
-  static displayName = "Rectangle";
-  static print() {
-    return "Static method print() is called from Rectangle";
-  }
-}
-
-console.log(Rectangle.displayName); // Output: Rectangle
-console.log(Rectangle.print()); // Output: Static method print() is called from Rectangle
-
-let rectangle1 = new Rectangle(10, 8);
-
-console.log(rectangle1.displayName); // Output: undefined
-console.log(rectangle1.print()); // TypeError: rectangle1.print is not a function
-```
-
-From the above example,
-
-* Calling a Static property from a class instance will return undefined
-* Calling a Static method from a class instance will throw an error
-
-
-##### What is an ECMAScript?
-ECMAScript stands for European Computer Manufacturers Association Script.
-
-It is a Standard for scripting languages.
-Languages like Javascript are based on the ECMAScript standard.
-It specifies the core features that a scripting language should provide and how those features should be implemented.
-
-##### How to get all keys and values of a json object in JavaScript?
-Companies Asked: Algonox
-
-We can use the Object.keys() method to extract the keys of a given JSON object into a separate array. Similarly, we'll utilize the Object.values() method to extract the valuess of the same object into another separate array.
+### Object Methods 
 
 * Object.keys():
 
 Object.keys() is a built-in JavaScript method that returns an array of a given object's property names. The array order reflects the sequence in which properties were defined in the object.
 
-Example: For an object { a: 5, b: 10 }, Object.keys() would return the array ['a', 'b'].
 
 * Object.values():
 
 Object.values() returns an array of a given object's property values, providing the values in the same sequence as properties were defined.
-
-Example: For an object { a: 5, b: 10 }, Object.values() would return the array [5, 10].
 
 ```Javascript 
 let jsonObject = {
@@ -1239,11 +1377,103 @@ let jsonObject = {
     "city": "New York"
 };
 
-let keys = Object.keys(jsonObject);   // Produces: ["name", "age", "city"]
-let values = Object.values(jsonObject); // Yields: ["John", 25, "New York"]
+let keys = Object.keys(jsonObject);   
+let values = Object.values(jsonObject); 
 
 console.log(keys);   // Outputs: ["name", "age", "city"]
 console.log(values); // Outputs: ["John", 25, "New York"]
+```
+</details>
+
+---
+
+
+<details>
+<summary>Control Statements</summary>
+
+### Control Statements
+#####  Conditional Statements
+The conditional statement allows you to execute a block of code only when a specific condition true.
+
+```javascript
+let age = 30;
+
+if (age > 30){
+    console.log("Yes, His age is above 30 years");
+}
+else if(age === 30){
+    console.log("His age is exactly 30 years");  // His age is exactly 30 years
+}
+else{
+    console.log("Yes, His age is below 30 years");
+}
+
+```
+
+##### Looping Stataments
+Loops allow us to execute a block of code several times.
+
+###### for loop
+1. for-of
+   - It gives values
+2. for-in  
+   - It gives Indexes of values
+3. for loop
+
+
+###### while loop
+1. while loop
+2. do-while loop
+
+
+##### Jumping Statements
+
+```Javascript 
+let day = 4;
+
+switch (day){
+    case 0:
+        console.log("Sunday");
+        break;
+
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    case 4:
+        console.log("Thursday");  // Thursday
+        break;
+    case 5:
+        console.log("Friday"); 
+        break;
+    case 6:
+        console.log("Saturday");  
+        break;
+    default:
+        console.log("Invalid"); 
+}
+```
+
+</details>
+
+---
+
+<details>
+<summary>Template Literals</summary>
+
+### Template Literals (Template Strings)
+* The Template Literals are enclosed by the backticks. => ` `
+ * we can include the variable or expressions using a dollar sign with curly braces. => ${}
+
+```Javascript 
+let myName = "Ande Praveen";
+let output = `Hello ${myName}`;
+console.log(output);  // Hello Ande Praveen
 ```
 </details>
 
