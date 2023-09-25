@@ -1177,9 +1177,9 @@ client-side Data storage is storing the data on the client (user's machine).
 
 Server-side Data Storage is storing the data on the server.
 ##### localStorage
-LocalStorage is limited to about 5MB and can contain only strings.
-The Local Storage allows web applications to store data locally within the user's browser. It is a Storage Object. Data can be stored in the form of key-value pairs.
-
+- The Local Storage allows web applications to store data locally within the user's browser. It is a Storage Object. Data can be stored in the form of key-value pairs.
+- Local storage data never expires
+- Local Storage can store up to 5 to 10 MB of data
 
 `localStorage.setItem("Key", "Value");`  
 `localStorage.getItem("Key");`  
@@ -1188,9 +1188,11 @@ The Local Storage allows web applications to store data locally within the user'
 
 
 ##### Cookies
-While using the js-cookie third-party package, we use Cookies.get method to access the cookie.
-
-We can know the Cookie has expired, if the Cookies.get methods returns undefined.  
+- `js-cookie` is the third-party package
+- We can set an expiration for Cookies
+- Cookies can store up to 4KB of data
+- we can get undefined, when cookies is expired
+ 
 
 ```Javascript 
 const token = Cookies.get("jwt_token"); // Assume that there is was a Cookie set with the key "jwt_token" with value the 1234

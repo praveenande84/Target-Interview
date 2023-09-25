@@ -119,7 +119,6 @@ with my strenghts, I think I can fulfill my responsibilities as a employee in yo
 #### Weakness 
 
 I get sad when my plans don't work. It takes some time for me to get back to normal.  
-
 Spending more time paying too much attention to details.
 
 </details>
@@ -136,18 +135,6 @@ I want to become an expert in my role at your company.
 
 ##### Long-term
 I want to contribute to the company's growth.
-
-</details>
-
----
-
-
-<details>
-<summary>Low CGPA</summary>
-
-#### Low CGPA
-
-I got 63% in my B.tech
 
 </details>
 

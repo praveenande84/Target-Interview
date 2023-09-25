@@ -40,7 +40,7 @@ It is generally used to instruct a computer to perform certain actions on an inp
 
 ReactJS is a JavaScript library. 
 React JS used for building User Interfaces.
-React uses virtual DOM whereas Angular uses HTML DOM. 
+React uses __virtual DOM__ whereas Angular uses __HTML DOM__. 
 React beats Angular in terms of performance as React updates only what is necessary without rewriting the whole HTML DOM.
 </details>
 
@@ -52,6 +52,7 @@ React beats Angular in terms of performance as React updates only what is necess
 ### Angular
 
 Angular uses HTML DOM.
+React has larger community than Angular.
 <details>
 
 ---
@@ -62,6 +63,30 @@ Angular uses HTML DOM.
 ### React Native
 
 React Native is a mobile framework that compiles native app components, allowing you to build native mobile applications (iOS, Android, and Windows) in JavaScript that allows you to use ReactJS to build your components, and implements ReactJS under the hood.
+</details>
+
+---
+
+<details>
+<summary>Node JS</summary>
+
+### Node JS
+Node JS is a JavaScript environment that executes JavaScript code outside a web browser.
+
+</details>
+
+---
+
+
+<details>
+<summary>REST APIs</summary>
+
+### REST APIs
+The __REST__ stands for __Representational State Transfer__.
+
+It is a set of principles that define how Web standards, such as HTTP and URLs, are supposed to be used.
+
+Using Rest Principles improves application in various aspects like scalability, reliability etc.
 </details>
 
 ---
