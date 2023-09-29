@@ -50,7 +50,6 @@ __React JS__ is an open-source JavaScript library. It was developed by Facebook.
  * Reusability of components
  * Virtual DOM
 
-
   ##### React Version
   react@17.0.0
 

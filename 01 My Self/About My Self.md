@@ -54,33 +54,19 @@ Thank you sir.
 
 ---
 
-
-
 <details>
 <summary>Hobbies</summary>
 
 #### Hobbies
 
-I am playing Chess.
+* I am playing Chess.
 
-I try to learn something new.
+* I spent time with my sister's kids.
+* I try to learn something new.
 I follow many technology-related channels on youtube.
-My Favorite channel is Akshay Saini.
+My Favorite channel is Akshay Saini youtube channel.
 
 </details>
-
----
-
-<details>
-<summary>Achievements</summary>
-
-#### Achievements
-
-One of my biggest achievements is completing a 100-days code challenge successfully. As part of that, I participated coding consistently every day for 100 days.
-
-</details>
-
-
 
 ---
 
@@ -94,9 +80,7 @@ Instead of spending time worrying about the problem, I try to understand the roo
 
 In my previous company I solved many problems.
 
-I am hard-working. I can work for long hours. For the last 12 months, I spent 6 to 7 hours learning every day.
 I am friendly and can mingle with people easily. I can collaborate with people and be a good team player.
-
 
 </details>
 
@@ -117,9 +101,18 @@ with my strenghts, I think I can fulfill my responsibilities as a employee in yo
 <summary>Weakness</summary>
 
 #### Weakness 
+I get sad sometimes when my plans don't work. 
 
-I get sad when my plans don't work. It takes some time for me to get back to normal.  
-Spending more time paying too much attention to details.
+</details>
+
+---
+
+<details>
+<summary>Achievements</summary>
+
+#### Achievements
+
+One of my biggest achievements is completing a 100-days code challenge successfully. As part of that, I participated coding consistently every day for 100 days.
 
 </details>
 
@@ -144,9 +137,7 @@ I want to contribute to the company's growth.
 <summary>Career Switch</summary>
 
 #### Career Switch
-
 There is scope for more growth in IT.
-I want to do more challenging work.
 There are more Job opportunities in IT.
 
 I joined CCBP to learn tech skills. I improved my logical thinking & problem solving skills through Python. I got hands-on experience with various technologies like HTML, CSS, Javascript and React..etc
@@ -177,7 +168,6 @@ I have two siblings, My both elder sisters are married.
 
 #### Work Experience
 
-
 Do you have any work Experience ?
 
 I worked an Mechanical Industry nearly 2 1/2 years.
@@ -188,7 +178,3 @@ like static, responsive and Dynamic websites.
 </details>
 
 ---
-
-
-
-
