@@ -17,7 +17,7 @@ I am from Dr. B. R. Ambedkar Konaseema district in Andhra Pradesh state, current
 I have completed my B.Tech in the stream of **Mechanical Engineering** from *SRINIVASA INSTITUTE OF ENGINEERING & TECHNOLOGY* Amalapuram.
 
 ##### `My Journey`
-After My Graduation, I worked at JAY ENGINEERING WORKS company in Chennai as a Quality Control Engineer & CNC Programmer.   
+After My Graduation, I worked at __JAY ENGINEERING WORKS__ company in Chennai as a Quality Control Engineer & CNC Programmer.   
 
 * In this role, I handled CNC machines and Control the dimensions of machining parts by modifying the CNC programs.
 
@@ -32,11 +32,9 @@ On the **frontend** side, I learned HTML, CSS, Bootstrap, JavaScript, and React.
 
 On the **backend** side, I acquired knowledge in Node.js, Express.js, SQLite, and Python.
 
-I also gained experience in using Git and GitHub for version control.
-
+I also gained some experience in using Git and GitHub for version control.
 
 So I have hands-on experience on Mern stack technologies,
-
 
 ##### `Projects`
 
@@ -57,11 +55,10 @@ Thank you sir.
 <details>
 <summary>Hobbies</summary>
 
-#### Hobbies
-
-* I am playing Chess.
+### Hobbies
 
 * I spent time with my sister's kids.
+ 
 * I try to learn something new.
 I follow many technology-related channels on youtube.
 My Favorite channel is Akshay Saini youtube channel.
@@ -73,14 +70,14 @@ My Favorite channel is Akshay Saini youtube channel.
 <details>
 <summary>Strengths</summary>
 
-#### Strengths 
+### Strengths 
 
 I have good Problem-solving skills.  
 Instead of spending time worrying about the problem, I try to understand the root cause of the problem and then try to solve it.
 
 In my previous company I solved many problems.
 
-I am friendly and can mingle with people easily. I can collaborate with people and be a good team player.
+I am very friendly and mingle with people easily. I can collaborate with people and be a good team player.
 
 </details>
 
@@ -89,7 +86,7 @@ I am friendly and can mingle with people easily. I can collaborate with people a
 <details>
 <summary>Why Should I hire You?</summary>
 
-#### Hire 
+### Hire 
 
 with my strenghts, I think I can fulfill my responsibilities as a employee in your company.
 
@@ -110,9 +107,12 @@ I get sad sometimes when my plans don't work.
 <details>
 <summary>Achievements</summary>
 
-#### Achievements
+### Achievements
+Recently I participated in 100-days code challenge and I completed successfully that challenge.
 
-One of my biggest achievements is completing a 100-days code challenge successfully. As part of that, I participated coding consistently every day for 100 days.
+In that challenge, I updated my learning progress of coding consistently every day for 100 days in __LinkedIn__.
+
+So I got cerificate from __Nxtwave__.
 
 </details>
 
@@ -121,7 +121,7 @@ One of my biggest achievements is completing a 100-days code challenge successfu
 <details>
 <summary>Feature Goals</summary>
 
-#### Feature Goals 
+### Feature Goals 
 
 ##### Short-term goal
 I want to become an expert in my role at your company.
@@ -137,13 +137,15 @@ I want to contribute to the company's growth.
 <summary>Career Switch</summary>
 
 #### Career Switch
-There is scope for more growth in IT.
-There are more Job opportunities in IT.
+Actually, There is  more growth in IT field.
+So, I took full-stack trainning from __Nxtwave__.
+I improved my logical thinking & problem solving skills through Python.
 
-I joined CCBP to learn tech skills. I improved my logical thinking & problem solving skills through Python. I got hands-on experience with various technologies like HTML, CSS, Javascript and React..etc
+During my full-stack training, I really enjoyed learning these technologies and developing websites and projects. 
 
-I really enjoyed learning these technologies and developing website and projects.  
-That's why I think IT is the right field for me.
+This experience gave a lot of confidence and 
+I fixed that IT field is the right field for me.
+That's why I want to switch my career to IT field.
 
 </details>
 
@@ -166,14 +168,14 @@ I have two siblings, My both elder sisters are married.
 <details>
 <summary>Work Experience</summary>
 
-#### Work Experience
+### Work Experience
 
-Do you have any work Experience ?
+##### Non-IT
+I worked in Mechanical Industry nearly 2 1/2 years.
 
-I worked an Mechanical Industry nearly 2 1/2 years.
-
+##### IT
 I did many projects in CCBP.
-like static, responsive and Dynamic websites.
+like __static__, __responsive__ and __Dynamic__ websites.
 
 </details>
 
