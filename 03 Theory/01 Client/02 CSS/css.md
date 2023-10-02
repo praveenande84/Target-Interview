@@ -1,6 +1,5 @@
 # CSS
 
-
 <details>
 <summary>Introduction</summary>
 
@@ -8,27 +7,31 @@
 __CSS__ stands for __Cascading Style Sheets__  
 * CSS used in web development to apply styles to the html document.
 * We can create Responsive webpages by combining HTML & CSS.
-* Once we create style sheet with .css file, we can use it for multiple .html files.
+* Once we create a style sheet with .css file, we can use it for multiple .html files.
 
-
-##### syntax
+##### Syntax
 ```CSS 
 selector{
-  property1:value1;
-  property2:value2;
+   property1:value1;
+   property2:value2;
+
 }
 ```
 
 ##### apply CSS
+We can apply __CSS__ in 3 ways,  
 
 1. **Inline**  
-by using the HTML `style` attribute in the HTML elements.
+we can use `style` attribute to apply css styles to a particular element.
+
 ```HTML
 <tag style="property1: value1; property2: value2; ...">Content</tag>
 ```
 
 2. **Internal**  
-by using the HTML `style` element in the HTML head element.
+we can use `style` element to write `css code` for a particular HTML document.  
+we use `style` element in head part.
+
 ```HTML 
 <!DOCTYPE html>
 <html>
@@ -45,9 +48,10 @@ by using the HTML `style` element in the HTML head element.
   </body>
 </html>
 ```
+
 3. **External**  
-   by using the HTML `link` element to link an external CSS file.  
-   In External Style Sheet, CSS property-values are defined in a separate .css file.
+   we can create External CSS Style Sheet with `.css` file extension.  
+   by using the HTML `link` element to link the CSS file.  
 
 ```HTML 
 <!DOCTYPE html>
@@ -69,11 +73,8 @@ by using the HTML `style` element in the HTML head element.
 ```
 * The HTML __rel__ attribute stands for a relationship of the linked document to the current document. In this case, it is a stylesheet.
 * The HTML __href__ attribute stands for the URL/path of the CSS file.
-* 
-
 
 ##### Fundamental Concepts
-
 * Inheritance
 * Specificity
 * Cascade
@@ -88,7 +89,9 @@ Children Inherits the Parent Property is called Inheritance.
 ```
 
 ##### Specificity
-Specificity is how browsers decide which CSS property values are the most relevant to an HTML element.
+CSS Specificity is how browsers decide which CSS property values are the most relevant to an HTML element and apply those CSS property values to the HTML element.   
+
+Browser gives priority to select the CSS property.
 
 1. !important
 2. Inline
@@ -97,8 +100,10 @@ Specificity is how browsers decide which CSS property values are the most releva
 5. Tag
 6. Universal
 
+
 ##### Cascade
-The source order of CSS Rulesets matters. when two CSS Rulesets have equal specificity, the one that comes last in the CSS is applied.
+The source order of CSS Rulesets matters.  
+when two CSS Rulesets have equal specificity, the one that comes last in the CSS is applied.
 
 </details>
 
@@ -111,8 +116,8 @@ The source order of CSS Rulesets matters. when two CSS Rulesets have equal speci
 The CSS Selectors are used to select the HTML elements that we want to style.
 
 1. Tag selector = same kind of tags selection
-2. Id selector = only one particular element  selection
-3. Class selector = group of elements selection
+2. Class selector = group of elements selection
+3. Id selector = only one particular element selection
 4. Attribute selector
 5. Pseudo selector
 6. Mixed selector 
@@ -123,7 +128,6 @@ The CSS Selectors are used to select the HTML elements that we want to style.
 CSS Specificity is how browsers decide which CSS property values are the most relevant to an HTML element and apply those CSS property values to the HTML element.  
 
 selector priority from High to Low:  
-
 1. !important
 2. inline styles
 3. id selector
@@ -133,6 +137,7 @@ selector priority from High to Low:
 
 
 ##### Tag Selector
+
 ```HTML 
  <p>I am Tag Selector</p>
  <p>I am Tag Selector</p>
@@ -181,12 +186,10 @@ We can provide multiple class names separated by space as a value to the HTML cl
 
 ```HTML 
 <input type="text" placeholder="textbox">
-
 <input type="password" placeholder="password">
 ```
 
 ```CSS 
-
 input[type]{
     padding:10px;
     border-radius: 10px;
@@ -202,8 +205,7 @@ psedo selector is a dynamic selector
 `selector:event`
 
 ```HTML 
- <h1 class="heading-element">Please put cursor on me</h1>
-
+    <h1 class="heading-element">Please put cursor on me</h1>
     <input class="textbox" type="text" placeholder="please focus on me"/>
 ```
 
@@ -221,14 +223,14 @@ psedo selector is a dynamic selector
 ##### Mixed Selector
 
 ```HTML 
-  <div class="parent">
-        <h1 class="child">I am First Child</h1>
+   <div class="parent">
+        <h1 id="#child">I am First Child</h1>
         <h1>I am Second Child</h1>
-    </div>
+   </div>
 ```
 
 ```CSS 
-.parent .child{
+.parent #child{
     padding:10px;
     color:orange;
     background-color: green;
@@ -239,12 +241,12 @@ psedo selector is a dynamic selector
 ##### Group Selection
 
 ```HTML 
-  <h1 class="class-heading">Class Selection</h1>
-  <h1 id="id-heading">Id Selection</h1>
+   <h1 class="my-heading">Class Selection</h1>
+   <h1 id="myHeading">Id Selection</h1>
 ```
 
 ```CSS 
-.class-heading, #id-heading{
+.my-heading, #myHeading{
     padding: 10px;
     background-color: green;
     border-radius: 10px;
@@ -263,7 +265,7 @@ The universal selector selects all the HTML elements in an HTML document.
 
 ```CSS 
 * {
-    color: orange;
+    margin: 20px;
 }
 ```
 
@@ -275,7 +277,6 @@ The universal selector selects all the HTML elements in an HTML document.
 <summary>Properties</summary>
 
 ### Properties
-
 1. Alignment
 2. Text Properties
 3. Background Properties
@@ -338,9 +339,7 @@ The universal selector selects all the HTML elements in an HTML document.
 <details>
 <summary>Background Properties</summary>
 
-
 ### Background Properties
-
 1. background-color
 2. background-image
 3. background-repeat
@@ -355,9 +354,9 @@ The universal selector selects all the HTML elements in an HTML document.
 
 ##### background-image
   * `background-image: url("source/bg-image.jpg");`
-  * `linear-gradient(45deg,black,red,green);` 
-  * `linear-gradient(to left,black,red,green);` 
-  * `radial-gradient(black,red,green);`
+  * `background-image:linear-gradient(45deg,black,red,green);` 
+  * `background-image:linear-gradient(to left,black,red,green);` 
+  * `background-image:radial-gradient(black,red,green);`
 
 ##### background-repeat
    * `background-repeat:repeat;`
@@ -381,7 +380,6 @@ background:color image repeat attachment position;
 ```
   * `background:red url("./source/lion.jpg") no-repeat scroll center center;`
  
-
 ##### background-size
   `background-size:cover;`
 
@@ -404,9 +402,9 @@ background:color image repeat attachment position;
 ### CSS Box Model
 
 * __Content__ - The content of the box, where text and images appear.
-* __Padding__ - A transparent space between the content and the border.
+* __Padding__ - The space between the content and the border.
 * __Border__ - A borderline that goes around the padding and content. 
-* __Margin__ - A transparent space outside the border.
+* __Margin__ - The space outside the border.
 
 ##### Intrinsic vs Extrinsic
 * some elements have a natural size set by default, we call it Intrinsic size.
@@ -447,7 +445,7 @@ The space between border and content.
 
 ##### margin
 The space between border and outline
- * `margin:auto;`
+ * `margin:auto;`  It adjust automatically center of horizontal.
  * `margin:50px;`(TRBL)
  * `margin-top: 50px;`
  * `margin-right:50px;`
@@ -475,8 +473,7 @@ Box-Sizing property has the following values:
 1. content-box (default)
 2. border-box
 
-
-* __content-box__: (Default) The width and height properties include only content, but they do not include the padding, border, or margin.
+* __content-box__(Default) :
 
 ```CSS 
 .container {
@@ -490,10 +487,11 @@ Box-Sizing property has the following values:
   /* Total width: 160px + (2 * 20px) + (2 * 8px) = 216px
      Total height: 80px + (2 * 20px) + (2 * 8px) = 136px
      Content box width: 160px
-     Content box height: 80px */
+     Content box height: 80px 
+  */
 }
 ```
-* __border-box__: The width and height properties include the content, padding, and border, but they do not include the margin.
+* __border-box__:
 
 ```CSS 
 .container {
@@ -502,12 +500,13 @@ Box-Sizing property has the following values:
   padding: 20px;
   margin: 10px;
   border: 8px solid red;
-  box-sizing: content-box;
+  box-sizing: border-box;
 
   /* Total width: 160px
      Total height: 80px
      Content box width: 160px - (2 * 20px) - (2 * 8px) = 104px
-     Content box height: 80px - (2 * 20px) - (2 * 8px) = 24px */
+     Content box height: 80px - (2 * 20px) - (2 * 8px) = 24px 
+  */
 }
 ```
 
@@ -523,9 +522,8 @@ Box-Sizing property has the following values:
 <summary>Handling Overflow</summary>
 
 ### Handling Overflow
-
-content overflow can be handled using the CSS overflow property.
-overflow : child element is not overflowed on parent element.
+content overflow can be handled using the CSS overflow property.  
+__overflow__ : child element is not overflowed on parent element.
 
 1. visible (default)=> CSS tries to avoid data loss. Hence, the `overflow:visible;` is the default value for it.
    * `overflow:visible;`
@@ -553,38 +551,43 @@ Methods to Design a Layout:
 Mainly, there are two methods that help design the webpage layout.
 
 1. Flexbox(stable)
-2. CSS Grid(Advanced & Fast growing but not stable)
+2. CSS Grid
 
 
 ##### Flexbox
 Flexbox is a layout method that helps to arrange the HTML elements in rows(harizontally) or columns(vertically).  
 A responsive website will automatically adjust for different screen sizes and viewports.
+
 Flexbox Layout with CSS Properties:
 * display
-  - flex
-  - inline-flex
-  - grid
-  - none
-* flex-direction
+  - define the flexbox 
+    - flex
+    - inline-flex
+    - grid
+    - none
+     
+* flex-direction  
   - The Flex Direction specifies the direction of the flex items in the Flexbox Container.
-  - row
-  - column
+    - row
+    - column
+     
 * justify-content
   - The justify-content property specifies the alignment of flex items along the main axis.
   - justify content property can have the following values:
-    - flex-start (default)=> All the elements will arrange to the start of the container.
-    - center => All the elements will arrange to the center of the    container.
-    - flex-end => All the elements will arrage to the end of the    container.
-    - space-between => Left over space will be arrange in between the  flex items.
-    - space-around => Every flex item will get space around them.
+     - flex-start (default)=> All the elements will arrange to the start of the container.
+     - center => All the elements will arrange to the center of the container.
+     - flex-end => All the elements will arrage to the end of the container.
+     - space-between => Left over space will be arrange in between the flex items.
+     - space-around => Every flex item will get space around them.
+      
 * align-items
   - The align-items property specifies the alignment of flex items along the cross-axis.
   - Align items property can have the following values:
-
      - stretch (default)=> will stretch its available height.
      - flex-start => will be at the starting of the flex container.
      - center => will be at the center of the available height.
      - flex-end => will be at the ending point of the available height.
+      
 * flex-wrap
   - The flex-wrap property arranges the flex items in multiple lines.
   - Flex wrap property can have the following values:
@@ -595,7 +598,6 @@ Flexbox Layout with CSS Properties:
 * align-self
    - The align self property specifies the alignment of individual flex items along the cross axis.
    - Align self property can have following values:
-
       - flex-start
       - center 
       - flex-end
@@ -606,20 +608,68 @@ If the value of align-self is auto, then the align-items value of its Flex conta
 
 * order
   - The order property specifies the order of flex items in the Flex container.
-
   - order property has the following values:
-
     - 0 (default)
     - +ve values
     - -ve values
 
+```HTML 
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+
+    .item1 {
+      order: 3;
+      align-self: flex-start;
+    }
+
+    .item2 {
+      order: 1;
+      align-self: center;
+    }
+
+    .item3 {
+      order: 2;
+      align-self: flex-end;
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+  </div>
+</body>
+</html>
+
+```
+
+##### Grid
+This is used to create the Layout.
+
+```CSS 
+.grid-container {
+   display: grid;
+}
+```
 
 ##### Block vs Inline
 * The block-level element always starts on a new line.
-It always takes up the full width available
+It occupies entire horizontal space of its Parent.
 
 * The inline element does not start on a new line.
-It only takes up as much width as necessary.
+It occupy only its content width.
+
 </details>
 
 ---
@@ -647,7 +697,7 @@ Using Media queries, we can conditionally apply styles based on the device type 
 }
 ```
 
-* __Media Type__: Media type describes the general category of devices. Possible types of media are screen, print, tv, all, etc.  
+* __Media Type__: Media type describes the general category of devices. Possible types of media are screen, print, tv, all, ...etc.  
 * __Media Feature__: Using Media Features, we can write Media Query for a specific feature. Examples: width, height, orientation, etc.
 
 ##### Media Types 
@@ -678,14 +728,14 @@ possible types of media are:
 }
 ```
 
-##### Logica Operators
+##### Logical Operators
 * and
 * not
 * comma
 
 ###### and
 
-using and operator can combine mutiple Media Features.  
+using `and` operator can combine mutiple Media Features.  
 syntax:
 
 ```CSS
@@ -704,7 +754,7 @@ syntax:
 ```
 
 ##### not
-The not operator is a Media Query Modifier. It negates the entire Media Query result.
+The `not` operator is a Media Query Modifier. It negates the entire Media Query result.
 If you use the not operator, you must also specify a media type.
 
 syntax:
@@ -765,6 +815,7 @@ portrait => The height of the device is greater than the width.
 <summary>Positions</summary>
 
 ### Positions
+The position property in CSS is used to control the positioning of an element within its containing element.
 
 ##### position properties 
 1. `position:static;`
@@ -776,7 +827,7 @@ portrait => The height of the device is greater than the width.
 ---
 
 * __static__ => default position of any html element 
-* __relative__ => this positioned relative to its own
+* __relative__ => It is used to set the element relative to its normal position.
 * __absolute__ => this is positioned relative to its parent
 * __fixed__ => this is to fix an element in the given position
 * __sticky__ => this is to stick an element in the given position
@@ -808,7 +859,7 @@ z-index =>  layers position
 
 * pixel : pixels are fixed size
   - `width:100px;`
-* viewport : view port is depended on device size
+* viewport : view port is depended on device screen size
   -  `width:100vw;`
   -  `width:100vh;`
 * percentage : percentage is depended on parent container
@@ -822,7 +873,7 @@ z-index =>  layers position
 <summary>CSS Custom Property</summary>
 
 ### CSS Custom Property
-A CSS custom property is most commonly thought of as a variable in CSS.
+A CSS custom property is a variable in CSS.
 
 * variable creation : --variable
 * use variable : var(--variable)
@@ -876,9 +927,6 @@ animation:name duration iteration-count timing-function delay;
 step1 => define your element
 step2 => apply animation rules
 
-
-First, define your animation using @keyframes:
-
 ```CSS 
 .myAnimation:hover{
     animation:animationEffects 2s infinite linear 1s;
@@ -888,18 +936,15 @@ First, define your animation using @keyframes:
 ```CSS 
 @keyframes animationEffects {
     0%{
-        transform:rotate(0deg);
-        border:solid 8px green;
+        background-color:green;
     }
 
     50%{
-        transform:rotate(180deg);
-        border:solid 8px red;
+        background-color:red;
     }
 
     100%{
-        transform:rotate(360deg);
-        border:solid 8px blue;
+        background-color:blue;
     }
 }
 ```
