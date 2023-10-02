@@ -13,13 +13,22 @@
 - JS Environment
 - this Keyword
 - Functions
-- Built-in Higher-Order Array Methods
+- Operators
+- Data Structures
 - Asynchronous
 - Datatypes
-- Code Working
 - String Methods
 - Array Methods
+- Object
 - DOM
+- Storage
+- Class
+- JSON
+- Promise
+- Object Methods
+- Control Statements
+- Template Literals
+
 </details>
 
 ---
@@ -31,7 +40,7 @@
 ### General
 
 ##### What is **Javascript**?  
-**JavaScript** is a scripting language for web pages.  
+__JavaScript__ is a scripting language for web pages.  
 we can also use Javascript on server-side as NodeJS.
 
 we can create Dynamic Webpages by combinning HTML & Javascript.
@@ -41,12 +50,10 @@ we can create Dynamic Webpages by combinning HTML & Javascript.
   - Immediate response to the users.
 
 ##### Is JavaScript typed dynamically?
-Yes, JavaScript is a dynamically typed language. Because
+Yes, JavaScript is a dynamically typed language.
 
-* We can declare a variable without specifying the data type
+* We can declare a variable without specifying the data type.
 * We can change the data type of the variable when it is reassigned
-
-
 
 #####  Display Javascript Output
 
@@ -72,14 +79,13 @@ window.alert("Hello World");
 window.promt("Hello World");
   ```
 
+##### What is an ECMA Script?
+__ECMA Script__ stands for __European Computer Manufacturers Association Script__.
 
-##### What is an ECMAScript?
-ECMAScript stands for __European Computer Manufacturers Association Script__.
-
-It is a Standard for scripting languages.
-Languages like Javascript are based on the ECMAScript standard.
 It specifies the core features that a scripting language should provide and how those features should be implemented.
 
+##### Javascript version
+I know ES6 version
 
 </details>
 
@@ -122,7 +128,7 @@ In Javascript we can define a variable in 3 ways,
 
 
 #### var
-If a variable declare using var, then initialization is not mandatory. This variable can be re-assigned and re-declared.  
+If a variable declare using `var`, then initialization is not mandatory. This variable can be re-assigned and re-declared.  
 If a variable is declared inside a function, it is function-scoped. Else, it is global-scoped.
 
 #### let 
@@ -141,21 +147,17 @@ const variable maintain constant values.
 | __let__                 | Initialization , Re-Assignment                 | Re-Declaration                |
 | __const__               | Initialization                                 | Re-Assignment, Re-Declaration |
 
-
 ##### Memory Storage
 
-Global Memory : __var__
-
+Global Memory : __var__  
 Block Memory : __let, const__
 
-#### Types of Variables
-
-
+##### Types of Variables
 1. Local Variable
 2. Global Variable
 
 
-#### Local Variable
+##### Local Variable
 If a variable is created inside a block, that type of variable is called Local Variable.  
 
 
@@ -165,7 +167,7 @@ variable is created inside a function, When a function is called, its local vari
 Local variables are useful for temporary data storage within Block that should not interfere with other parts of the program. The Local Variable memory is created in the the Local Scope.
 we can access these Local Variables only within that particular block of code.
 
-#### Global Variable
+##### Global Variable
 If a variable is created outside of a block is called Global variable.
 These Global Variables available upto end of the program execution.
 These Global Variables can be accessed at any part of the code including Functions also.  
@@ -198,9 +200,9 @@ Errors are 2 types:
 2. Runtime Error
 
 ##### SyntaxError
- Missing initializer in const declaration because it is a constant type already mentioned and declared.  
- Identifier 'a' has already been declared.  
- If we are not folloing rules of language, then we got syntax error.
+ * Missing initializer in const declaration because it is a constant type already mentioned and declared.  
+ * Identifier 'a' has already been declared.  
+ * If we are not folloing rules of language, then we got syntax error.
 
 ##### Runtime Error
 *  __ReferenceError__
@@ -209,11 +211,10 @@ Errors are 2 types:
    - 'c' is not defined.  
    - If a variable in the __TDZ__, we cannot access that particular variable.
 
-
 * __TypeError__ 
    * Assignment to constant variable.  
    * A Type error can be thrown when we try to make an operation on the incorrect data type.
-
+  
 </details>
 
 ---
@@ -229,19 +230,17 @@ we have 3 scopes in Javascript
 2. Block Scope
 3. Local Scope (Function Scope)
 
-In Global Level with declaration keywords **let** and **const**, It maintain seperate memory with script scope.  
-
+In Global Level with declaration keywords **let** and **const**, It maintain seperate memory with __script__ scope.  
 
 ##### what is Block ?
 Block is used to combine multiple Javascript statements into one group.  
 
-Block is { }
+`Block is { }`
 
 Block memory will be deleted after Execution completed.  
 Each Block has it's own Lexical scope.
 
 ```javascript
-
 // single statement, so we dont't use block.
 if (true) console.log("Hello world");
 
@@ -250,26 +249,21 @@ if (true){
     var a = 10;
     console.log(a);
 }
-
 ```
 ##### Closure
 
-**Closure** is a combination of a __function__ and its __lexical scope__ bundle together forms a Closure.
+A **Closure** is a combination of a __function__ and its __lexical scope__ bundle together forms a Closure.
 
-A closure gives the outer function's scope access to an inner function that means it can be used the varaibles and functions of its parent environment.. 
+A closure gives the outer function's scope access to an inner function that means it can be used the varaibles and functions of its parent environment.
 
 `Closure => local Memory + Lexical Environment of Parent`
 
-
 ##### Lexical Environment
-
 Its Parent Memory
-
 ##### Uses of Closures
 * Timer Functions
 * Events
 * ...etc
-
 
 ##### Disadvantages of Closures
   * Over consumption of memory
@@ -278,7 +272,6 @@ Its Parent Memory
 
 
 ##### Garbage Collector
-
 Garbage collector is like program in the browser of the javascript engine.
 
 In JavaScript, the garbage collector automatically __identifies__ and __removes__ unreferenced objects, freeing up memory to improve performance and prevent memory leaks in the application.
@@ -351,7 +344,6 @@ single-threaded -> javascript only execute single line (one command) at a time.
 synchronous -> Javascript execute next line when once current line execution is finished.
 
 ##### Callstack
-
 Before execute the Javascript code, the Global Execution context will be created.  
 
 The execution context is created in two phases : 
@@ -364,21 +356,18 @@ callstack handles, automatically create & delete operations of Execution Context
 
 When a function is invoked, a new execution context is added to the top of the call stack. Once the function execution is completed, its execution context is removed from the top of the call stack.
 
-
 ##### Hoisting
-
 Hoisting is a javascript mechanism where __function declarations__ are moved to the top of their scope before code execution.
 
 Hoisting is a JavaScript technique.
 
-Before Execution of the JS code, It create a Global Execution Context.
+Before Execution of the JS code, It creates a Global Execution Context.
 
 var keyword variables and function declarations are stored in Global Execution Context.
 
 var keyword variable takes __undefined__ as a default value.
 
 If it is a Function Declaraion, It will be stored entire function.
-
 
 </details>
 
@@ -390,7 +379,6 @@ If it is a Function Declaraion, It will be stored entire function.
  ### __this__ keyword
 
 ##### Global space:
-
 Any code write in javascript which is not inside a  function is called global space.
 
 ### window:
@@ -401,13 +389,12 @@ at the global level the window object is equal to __this__ object.
 
 `window === this`
 
-
 ##### this
-
 In JavaScript, __this__ keyword always refers to an object.  
 
-* Function Declaration creates its own Execution Context.  
+* Function Declaration creates its own Execution Context So Function Declaration creates its own `this` object.  
   `Function Declaration : Where the function called.`
+
 * Arrow Functions can't create its own Execution context, but it takes from Lexical environment. So Arrow Function, They inherit the __this__ object from their surrounding context.
   `Arrow Function : Where the Function Declared.`
 
@@ -449,7 +436,7 @@ const myObject1 = {
         var hello = function(){
             console.log("Hello", this);
         }
-        hello();
+        hello();  //  the value of this is determined by how the function is called.
     }
 };
 
@@ -459,7 +446,6 @@ const myObject2 = {
             console.log("Bye", this);
         }
         bye()
-
     }
 };
 
@@ -470,7 +456,6 @@ myObject2.sayBye();  // myObject2
 ##### this methods
 
 we can manipulate the __this__ object with below methods.
-
 * call
 * apply 
 * bind
@@ -479,22 +464,30 @@ we can manipulate the __this__ object with below methods.
 With __call__ we can invoke a method passing an owner object as an argument.
 
 ```Javascript 
+// Define the first person object
 const person1 = {
     name: 'Praveen',
     surname: 'Ande',
+    
+    // Define a method to concatenate the name and surname
     sayName: function() {
         return this.name + " " + this.surname;
     }
 }
 
+// Define the second person object
 const person2 = {
     name: 'Brenden',
     surname: 'Eich'
 }
 
-console.log(person1.sayName.call(person2));  // Brenden Eich
-```
+// Call the sayName method of person1 with the context of person2 using .call()
+const fullName = person1.sayName.call(person2);
 
+// Output the result, which will be "Brenden Eich"
+console.log(fullName);
+
+```
 
 </details>
 
@@ -542,7 +535,6 @@ let a = function () {
 a();
 
 ```
-
 
 ```javascript
 
@@ -593,7 +585,6 @@ function a(parameter1, parameter2){
     console.log(parameter1, parameter2);
 }
 
-
 var argument1 = 10;
 var argument2 = 20;
 
@@ -611,9 +602,7 @@ we can send functions as arguments, we can use function as a values..etc
 These Functions follows DRY Principle..  
 __DRY__ Principle => Don't Repeat Yourself
 
-
 ##### Over Ridding
-
 When we define the multiple functions with the same name, then the last defined one will be called. It is called Function Overriding.
 
 JavaScript supports Function Overriding.
@@ -641,7 +630,7 @@ JavaScript supports Function Overriding.
    * `&& || !`
 7. Spread
    * `...` three dots
-   * spread operator used to unpack the items in an Object or Array.
+   * spread operator used to unpack the items in an Object or Array into individual elements.
 8.  Rest
    * we can pack multiple values into an array.
 9.  Ternary
@@ -716,24 +705,22 @@ Some Javascript tasks may take time to complete, such as
 
 JavaScript doesn't wait for these Operations to finish and instead moves on to execute other code.
 
+##### Queues
 1. Callback Queue
 2. Microtask Queue
 
 ##### Callback Queue
 The purpose of the Callback Queue is to manage and execute functions (callbacks) in a specific order, typically after some asynchronous operation has completed.
-
 - setInterval
 - setTimeout
 - Events
 
 Timer Events takes callback function attach the timer and when the timer expires then push into the Callback Queue.
 
-
 ##### Microtask Queue
-fetch always return a Promise.  
+fetch always returns a Promise.  
 A Promise is an object representing the eventual completion or failure of an asynchronous operation.  
 we don't know how much of time take to __resolve__ or __reject__ the Promise. 
-
 - fetch
 - Promise Object
 
@@ -757,7 +744,7 @@ function createOrder(){
 }
 
 const promise = createOrder()
-console.log(promise);
+console.log(promise);  // Promise
 
 promise
 .then((orderId) => console.log(orderId))
@@ -770,7 +757,7 @@ promise
 ##### Event Loop
 Event Loop continuosly monitoring whether callstack is empty or not.  
 if callstack is empty then checks the Microtask Queue & callback Queue. 
-if there is any Microtask functions or callback functions , it automatically push it to the callstack delete from queue.  
+if there is any Microtask functions or callback functions , it automatically push it into the callstack delete from queue.  
 
 Here Microtask Queue has more priority than the Callback Queue.
 
@@ -796,22 +783,18 @@ The `typeof()` operator is used to find the type of value.
 
 1. __Reference Datatypes__   
   References are mutable.  References are passed by reference.
-   -  Arrays
+   - Arrays
    - Objects
    - Maps
    - Sets
    - NaN
 
 ##### undefined
-If a variable already is already declared, but value is not assigned to that variable, then it takes undefined as its value.
-
-variable is defined but It is using before Initialization.  
-
-The datatype of undefined is undefined itself.
-
-undefined is special keyword using for placeholder.
-Variable is already initialized but javascript in the memory phase assigned a default value __undefined__.
-
+* If a variable is already declared, but value is not assigned to that variable, then it takes `undefined` as its value.
+* variable is defined but It is using before Initialization.  
+* The datatype of `undefined` is `undefined` itself.
+* `undefined` is special keyword using for placeholder.
+* Variable is already initialized but javascript in the memory phase assigned a default value __undefined__.
 
 ##### not defined
 we didn't declare a variable.
@@ -823,11 +806,10 @@ It is used when we intentionally want a variable but don't need a value to it.
 The datatype of null is object. 
 
 ##### Data Structures
-
 Data Structures allow us to store and organize data efficiently. This makes us access and performs operations on the data smoothly.
 
 ##### NaN
-The NaN property represents Not-a-Number value. The typeof of a NaN returns a Number.
+The NaN property represents __Not-a-Number__ value. The typeof of a NaN returns a Number.
 
 ```Javascript 
 isNaN(345); // returns false
@@ -914,7 +896,7 @@ const output = myArray.map((eachItem) => eachItem * eachItem);
 * __filter__
   -  `let newArray = myArray.filter(callback(currentValue, index, arr))`;
   - Here index and arr are optional arguments.
-  - 
+  
   ```Javascript 
   const myArray = [1,2,3,4,-5,-7,12];
   const filteredArray = myArray.filter((eachItem) =>   eachItem > 0);
@@ -924,6 +906,7 @@ const output = myArray.map((eachItem) => eachItem * eachItem);
 * __reduce__
 -  `let finalValue = myArray.reduce(callback(accumulator, currentValue, index, arr));`
   - Here accumulator is the initialValue or the previously returned value of the function and currentValue is the value of the current element, index and arr are optional arguments.
+   
   ```Javascript 
      const myArray = [1,2,3,4];
      const output = myArray.reduce((accumulator,eachItem) =>  (accumulator + eachItem));
@@ -937,8 +920,7 @@ const output = myArray.map((eachItem) => eachItem * eachItem);
 const myArray = [1, 2, 3, 4];
 
 let squaresList = [];
-let output = myArray.forEach((eachItem) => squaresList.push(eachItem * eachItem));
-console.log(output); // undefined
+myArray.forEach((eachItem) => squaresList.push(eachItem * eachItem));
 
 console.log(squaresList);  // [ 1, 4, 9, 16 ]
 ```
@@ -999,7 +981,7 @@ console.log(flatArray);  // [ 1, 2, 3, 4, 5 ]
 ### Object
 
 ##### Object Destructuring
-we make object key to a variable.  
+we can make object key to a variable.  
 To unpack properties from Objects, we use Object Destructuring. The variable name should match with the key of an object.  
 
 ```javascript
@@ -1022,7 +1004,6 @@ console.log(age); // Output: 28
 <summary>DOM</summary>
 
 #### DOM 
-
 Document Object Model (DOM) is the structured representation of the HTML document created by the browser.  
 It allows Javascript to manipulate, structure and style of our website.
 
@@ -1054,8 +1035,6 @@ let childElement = document.querySelector('div .parent #child');
 ```
 
 ##### Javascript DOM properties
-
-   
    * Value
      - textContent
    * CSS
@@ -1074,7 +1053,7 @@ javascript offers 3 ways to add an Event Listener to a DOM element.
 1. Inline event Listener
 
 ```Javascript 
-// inline event Listener => onclick used in html
+// inline event Listener => onclick attribute used in html
 
 function greeting(){
     console.log("Inline Event Listener worked");
@@ -1114,8 +1093,6 @@ greetBtn.addEventListener("click", function(){
 });
 ```
 
-
-
 ##### Events
   * Mouse Events 
      - mousedown, mouseup, click, dblclick, mousemove, mouseover, mousewheel, mouseout   
@@ -1136,7 +1113,6 @@ greetBtn.addEventListener("click", function(){
 ```Javascript 
 /// DOM Manipulations
 
-
 // Element selection through id
 let myContainer = document.getElementById("myContainer");
 
@@ -1154,7 +1130,6 @@ myContainer.removeChild(headingElement);
 
 ```
 
-
 </details>
 
 ---
@@ -1163,7 +1138,6 @@ myContainer.removeChild(headingElement);
 <summary>Storage</summary>
 
 ### Storage
-
 Storage Mechanism:
 1. client-side Data storage:
 client-side Data storage is storing the data on the client (user's machine).
@@ -1174,8 +1148,8 @@ client-side Data storage is storing the data on the client (user's machine).
 4. IndexedDB and many more.
 
 2. server-side Data storage:
-
 Server-side Data Storage is storing the data on the server.
+
 ##### localStorage
 - The Local Storage allows web applications to store data locally within the user's browser. It is a Storage Object. Data can be stored in the form of key-value pairs.
 - Local storage data never expires
@@ -1193,7 +1167,6 @@ Server-side Data Storage is storing the data on the server.
 - Cookies can store up to 4KB of data
 - we can get undefined, when cookies is expired
  
-
 ```Javascript 
 const token = Cookies.get("jwt_token"); // Assume that there is was a Cookie set with the key "jwt_token" with value the 1234
  
@@ -1213,7 +1186,6 @@ if (token === undefined) {
 
 ##### Inheritance
 Inheritance is a mechanism by which a class inherits methods and properties from another class.
-
 
 ```Javascript 
 class SuperClass {
@@ -1288,7 +1260,6 @@ It is a data representation format used for:
 * Exchanging data between Client and Server
 
 JSON Methods
-
 * stringify
 * parse
 
@@ -1315,11 +1286,9 @@ let profile = {
 <summary>Promise</summary>
 
 ### Promise
-
 Promise Methods
 * The then method is called after the Promise is resolved.
 * The catch method is called after the Promise is rejected.
-
 
  A Promise will be in any one of the three states
 
@@ -1328,9 +1297,27 @@ Promise Methods
 3. Rejected : Operation failed.
 
 ### Async and Await
-
 The async/await simply gives you a synchronous feel to asynchronous code.   
 The await keyword in JavaScript is used within an async function to pause the execution of that function until a promise is resolved. 
+
+```Javascript 
+
+// Asynchronous Execution
+
+const myFunction = async () => {
+    const url = "https://apis.ccbp.in/jokes/random";
+    const response = await fetch(url);
+    const data = await response.json(); // Use await here
+    console.log(data);
+}
+
+// Call the async function
+myFunction();
+
+// Statement 2
+console.log("fetching done");
+
+```
 
 ```Javascript 
 
@@ -1388,7 +1375,6 @@ console.log(values); // Outputs: ["John", 25, "New York"]
 </details>
 
 ---
-
 
 <details>
 <summary>Control Statements</summary>
@@ -1469,8 +1455,8 @@ switch (day){
 <summary>Template Literals</summary>
 
 ### Template Literals (Template Strings)
-* The Template Literals are enclosed by the backticks. => ` `
- * we can include the variable or expressions using a dollar sign with curly braces. => ${}
+  * The Template Literals are enclosed by the backticks. => ` `
+  * we can include the variable or expressions using a dollar sign with curly braces. => ${}
 
 ```Javascript 
 let myName = "Ande Praveen";

@@ -12,16 +12,17 @@ Bootstrap is a large collection of predefined reusable Code Snippets written in 
 * ...etc.
 
 It is created by Twitter. The Bootstrap is developed by Mark Otto at Twitter.
-
 we can say Bootstrap is a css library.
 
 ##### Advantages
-* __Time Saving__: Bootstrap provides predefined reusable code snippets which makes us not build everything from scratch.
+* __Time Saving__: We cannot build everything from scratch. We just use Bootstrap predefined reusable code snippets classNames.
 * __Customizable__: Bootstrap themes and templates can be customized as per our project requirement.
 * __Easy to Use__: Bootstrap is very simple to use. The setup process doesn't take too long and is relatively easy, even for beginners.
 
 ##### apply Bootstrap
 To use the Code Snippets provided by Bootstrap, we need to add a piece of code within the HTML head element. We call it Bootstrap CDN.
+
+CDN : Content Delivery Network
 
 ```HTML 
 <!doctype html>
@@ -54,12 +55,10 @@ To use the Code Snippets provided by Bootstrap, we need to add a piece of code w
 <summary>Components</summary>
 
 ### Bootstrap Components
-
 * Buttons
 * Carousel
 * Navbar
 * Modal
-
 
 ##### button
 * btn-primary
@@ -113,7 +112,6 @@ To use the Code Snippets provided by Bootstrap, we need to add a piece of code w
 
 ##### Responsive
 We can make a page responsive by using the Bootstrap Grid System which helps us to create columns and rows to build a responsive layout of the page.
-
 
 ##### Bootstrap Grid System
 Bootstrap Grid System is a collection of reusable code snippets to create responsive layouts. It is made up of __containers__, __rows__, and __columns__.
