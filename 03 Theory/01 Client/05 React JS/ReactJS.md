@@ -60,6 +60,7 @@ __React JS__ is an open-source JavaScript library. It was developed by Facebook.
 
 ##### React with CDN Links
 
+CDN : Content Delivery Network
 ###### React Element
 `React.createElement()` 
 
@@ -152,7 +153,6 @@ __DOM__ stands for __Document Object Model__ .
 * It is the structured representation of the HTML document created by the browser. 
 * It allows JavaScript to manipulate, structure, and style your website.
 
-
 ##### Types Of DOMs
   * Real DOM
   * Virtual DOM
@@ -240,7 +240,7 @@ const Welcome = () => <h1 className="message">Hello, User</h1>;
 * If function name starts with Capital letter then only react treats as Component otherwise react treats as HTML Element.
 * The component name should always be in the pascal case.
 * Class Component we can call as stateful Component.
- * A class component requires you to extend from React Component and create a render method that returns a JSX element.
+ * A class component requires you to extend from React `Component` and create a `render` method that returns a JSX element.
 ```Javascript
 import { Component } from "react";
 
@@ -287,9 +287,8 @@ this.state = {key:"value"}
 
 3. __componentDidMount()__
 The componentDidMount method is used to do operations on the components after the initial render that means the component already placed in the DOM.  
-In General we make API Calls inside componentDidMount() so that it doesn't block render().
+In General we make __API__ Calls inside componentDidMount() so that it doesn't block render().
 __Example__: Setting timers, initiating API calls, ...etc.
-
 
 ##### Updating Phase
 In this phase, the component is updated whenever there is a change in the component's state.
@@ -299,8 +298,8 @@ In this phase, the component is updated whenever there is a change in the compon
 ##### Unmounting Phase
 In this phase, the component instance is removed from the DOM.
 1. __componentWillUnmount()__
- - The `componentWillUnmount()` is invoked immediately before a component is unmounted and destroyed. All the cleanup activities are performed in this method. 
- - __Examples__: Canceling network requests, cleaning up any subscriptions, etc.
+ - The `componentWillUnmount()` is invoked immediately before a component is unmounted or destroyed. All the cleanup activities are performed in this method. 
+ - __Examples__: Canceling network requests, ... etc.
 
 </details>
 
@@ -317,6 +316,8 @@ In this phase, the component instance is removed from the DOM.
 
 ```Javascript 
 const App = () => {
+  
+  // Return JSX
   return (
     <div>App Component</div>
   )
@@ -384,8 +385,8 @@ export default App;
 * State is created and managed within the component, similar to a variable declared within the function.
 * State is used to store the component's data that changes over time.
 * We can update state 
-  - `setState` method
-  - `useState` hook
+  - `setState` method in class Component
+  - `useState` hook in Functional Component
 * when the state changes, automatically the component re-renders.
 * If we try to update the state directly then it won't re-render the component.
 * state should be immutable
@@ -431,8 +432,8 @@ this.setState({key1:value1}, callback)
 * We can pass information from __Parent Component__ to __Children Component__ by using props.
 * we can pass information throung attributes.
 * The children component accept props as parameters and can be accessed directly.
-*  Child Component can't change the props.
-*  * props are immutable. A component cannot change the props.
+* Child Component can't change the props.
+* props are immutable. A component cannot change the props.
 
 
 ##### Parent Component
@@ -479,7 +480,7 @@ import Child from './components/Child'
 const App = () => (
 <div>
     <Child greeting="Hello" name="Praveen Ande"/>
-     <Child greeting="Hello" name="Brenden Eich"/>
+    <Child greeting="Hello" name="Brenden Eich"/>
 </div>
  
 )
@@ -515,7 +516,7 @@ export default Child;
 Keys help React identify which items have changed, are added or are removed. Keys should be given to the elements inside the array to give the elements a stable identity.
 
 ##### children prop
-Children is a prop  that allow you to pass components as data to other components. Component tree put between component's opening and closing tag will be passed to that component as children prop.  
+Children is a prop that allow you to pass components as data to other components. Component tree put between component's opening and closing tag will be passed to that component as children prop.  
 The best way to pick a key is to use a string that uniquely identifies a list item among its siblings.
 Most often, we would use IDs (uniqueNo) from our data as keys.
 
@@ -552,8 +553,6 @@ export default Message
 ##### Prop Drilling
 Prop Drilling is a process in which Props are passed from one Component to another Component that does not need the data but only helps in passing it through the tree.
 
-
-
 ##### Default Properties
 When a component is rendered through the __route__, some of the additional props are passed.
 
@@ -561,7 +560,6 @@ They are:
 * __match__: The match object contains the information about the path from which the component is rendered.
 * __history__: The history object has some methods to control the navigation in the browser. It also maintains the history of the routes we navigated. Some of the methods to control the navigation are history.push, history.replace, etc.
 * __location__: The location object contains the information about the current URL.
-
 
 ##### defaultProps
 defaultProps is a property in React Component used to set default values for the props.
@@ -611,20 +609,21 @@ export default Welcome;
 ### Routing
 * Routing in __React JS__ is a mechanism that allows you to navigate and display different views or components in a single-page web application.
 
-* 
-It enables users to move between different parts of the application without the need of a full page reload. `react-router-dom` is a popular library used for implementing routing in React applications.
+* It enables users to move between different parts of the application without the need of a full page reload. `react-router-dom` is a popular library used for implementing routing in React applications.
 
 * In React, we build single-page applications using __React Router__.
 
 * To implement routing, React Router provides various components.
    - BrowserRouter
-   - Link
-   - Route
    - Switch
-
-
+   - Route
+   - Link
+   - withRouter
+   - Redirect
+   
 ##### BrowserRouter
  To add routing wrapping all the components with BrowserRouter.
+
 ##### Switch 
  The Switch Component will only render's the first route that matches the path. If no path matches, it renders the NotFound component.
 
@@ -634,15 +633,14 @@ It enables users to move between different parts of the application without the 
 
 ##### Link
 The Link Component creates hyperlinks that allows to navigate around in application.
-The to prop specifies absolute path.
+The `to` prop specifies absolute path.
 
 ##### Redirect
 Redirect Component is used to redirect to another path
 
 ##### withRouter 
-To provide history prop to other components, we can wrap it with the withRouter function while exporting it.
+To provide __Routing default properties__ prop to other components, we can wrap it with the withRouter function while exporting it.
 `export default withRouter(Header)`
-
 
 ```Javascript 
 // ----->> src/components/Header/index.js <<-----
@@ -670,14 +668,11 @@ export default Header;
 // ---------------------------->> src/App.js <<-----------------------------------
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import { Home } from "./components/Home";
 import Header from "./components/Header";
 
 const Greeting = () => <h1>Welcome to React Routing</h1>;
-
-const NotFound = () => <h1>Not Found</h1>;
-
 const Home = () => <h1>Home Route</h1>;
+const NotFound = () => <h1>Not Found</h1>;
 
 const App = () => {
   return (
@@ -695,13 +690,11 @@ const App = () => {
 export default App;
 ```
 
-
 ##### Route Props
 when a component is rendered by the Route, some additional props are passed.
 * match
 * location
 * history
-
 
 ##### Wrapper Component
  Redirection Logic can be reused by separating out into a React Component called Wrapper Component. Each route will be wrapped with it.
@@ -740,8 +733,6 @@ export default ProtectedRoute;
 React Context is a mechanism to avoid prop drilling.
 
 Prop Drilling means passing data from one Component to another Component that does not need the data but only helps in passing it through the tree.
-
-
 
 ```Javascript
 import { createContext } from 'react';
@@ -809,7 +800,6 @@ export default Child;
 
 ```
 
-
 </details>
 
 ---
@@ -841,7 +831,6 @@ React Hooks helps to lifecycle methods, context and other react features in the 
 * less lines of code
 * No need of switching between class & Function Components
 * Developers and Companies are gradually adapting to React Hooks
-
 
 ##### State Hooks
 
@@ -898,6 +887,8 @@ Add state to Function Component. Handling complex state.
 ```Javascript 
 const [currentState, dispatch] = useReducer(reducerFunction, initialState)
 ```
+
+**reducerFunction has 2 parameters => prevState, action**
 
 ```Javascript 
 import{ useReducer } from 'react';
@@ -975,7 +966,7 @@ export default Clock
 
 ##### React Context Hook
 ##### __useContext()__
-we can access React Context Object with `useContext()` hook.
+we can access __React Context__ Object with `useContext()` hook.
 
 ```Javascript
 import { createContext } from 'react';
@@ -1041,12 +1032,11 @@ export default Child;
 
 ```
 
-
 ##### Memory Hooks
 ##### __useMemo()__
 `let value = useMemo(callback, dependencyArray)`
 
-when re-render,  the function only will call when dependency array values changes.
+when re-render, the function only will be called when dependency array values changes.
 stop the function call when same arguments of re-render.
 
 ```Javascript 
@@ -1189,7 +1179,7 @@ export default App;
 ##### Reference Hooks
 ##### __useRef()__
 
-Certainly, here's a small example of how you can use useRef to persist a value across renders without causing re-renders.
+we can interact with HTML DOM without re-render.
 
 ```Javascript 
 import { useRef } from 'react';
@@ -1227,7 +1217,6 @@ const App = () => {
 export default App;
 
 ```
-
 
 </details>
 
@@ -1478,15 +1467,14 @@ const element = React.createElement("h1", elementProps);
 ```
 
 We can write a React component without using JSX.
-anything you can do with JSX can also be done with just JavaScript.
-
+anything you can do with JSX can also be done with JavaScript also.
 
 ##### Babel
 * Babel Javascript code compiler.
 * Babel converts JSX into regular JavaScript.
 
 ##### React Fragment
-The __Fragment__ is an alternate way to return a single JSX element. It groups a list of children without adding extra nodes to the DOM.
+The __Fragment__ is an alternate way to return a single JSX element. It groups a list of children without adding extra node to the DOM.
 
 ```javascript
 const Welcome = () => (
@@ -1501,18 +1489,18 @@ export default Welcome;
 
 ##### __controlled__ and __uncontrolled__
 * Controlled Input :  
-  If the Input Element value is handled by a React State then it is called Controlled Input
+  - If the Input Element value is handled by a React State then it is called Controlled Input
 
 * Uncontrolled Input :  
-  If the Input Element value is handled by the browser itself then it is called Uncontrolled Input.
-Its value can only be set by a user, but not programmatically.
+  - If the Input Element value is handled by the browser itself then it is called Uncontrolled Input.
+  - Its value can only be set by a user, but not programmatically.
 
 
 ##### SPA
 __SPA__ stands for __single page application__
 * In a single page application, all URLs are associated with a single HTML page.
 * React is mainly used to build single-page applications.
-* * On navigating we only get the additional content(Component => HTML, CSS, JS).
+* On navigating we only get the additional content(Component => HTML, CSS, JS).
 * Single Page Application helps in faster page loading since they load only necessary Component (HTML, CSS, JS) resources on subsequent requests.
 
 ##### MPA 
@@ -1525,7 +1513,7 @@ Every URL is associated with corresponding resources (HTML, CSS, JS).
 __npm__ stands for __node package manager__
 
 ##### package.json
-All npm packages contain a file, usually in the project root, called package.json
+All npm packages contain a file, usually in the project root, called `package.json`
 
 This file holds various metadata relevant to the project.
 This file is used to give information to npm that allows it to identify the project as well as handle the project's dependencies.
@@ -1547,15 +1535,13 @@ It can also contain other metadata such as a project description, the version of
 ### API
 __API__ stands for __Application Programming Interface__
 
-
 ##### API integration
-The API integration can be defined as the process of   creating a means for two or more APIs to share data and communicate with each other without human interruption.
-
+The API integration can be defined as the process of  creating a means for two or more APIs to share data and communicate with each other without human interruption.
 
 ##### axios
 Axios is a third-party package for making HTTP requests.
 
-It is similar to the fetch method.
+It is similar to the `fetch` method.
 
 * Installation Command
   `npm install axios`
@@ -1604,7 +1590,7 @@ Actually __react__ is a JavaScript library, SO React is as fast as javascript.
 ##### `js-cookies`
 storing data on client-side with expiry duration.
 * `Cookies.set('CookieName', 'CookieValue', {expires: DAYS})`
-* ` const token = Cookies.get('CookieName');`
+* `const token = Cookies.get('CookieName');`
 * `Cookies.remove("CookieName")`
 </details>
 
@@ -1629,8 +1615,8 @@ storing data on client-side with expiry duration.
 ##### Reconciliation
 * Virtual DOM 
    - A virtual DOM is a JS object, which is the virtual representation of an HTML DOM.
-   - whenever new elements are added to the UI, a virtual DOM is created.
-   - React compares new virtual DOM with current virtual DOM, and the difference will be efficiently updated to HTML DOM. So, the virtual DOM helps to render the UI more performantly.
+   - whenever new elements are added to the UI, a new virtual DOM is created.
+   - React compares new virtual DOM with current virtual DOM, and the  difference will be efficiently updated to HTML DOM. So, the virtual DOM helps to render the UI more performantly.
 * React only updates what's necessary. This process is known as __Reconciliation__.
 
 
