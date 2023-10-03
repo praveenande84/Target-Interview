@@ -8,7 +8,9 @@
 ### Self Introduction
 
 First of all,  
-Thank you sir, for giving this wonderful opportunity to introduce my self,  
+Thank you sir, for giving this wonderful opportunity to introduce my self, 
+
+well,
 ##### `Bio`
 I'm Praveen Ande.
 
@@ -57,11 +59,11 @@ Thank you sir.
 
 ### Hobbies
 
-* I spent time with my sister's kids.
+* I spent my free time with my sister's kids.
  
 * I try to learn something new.
-I follow many technology-related channels on youtube.
-My Favorite channel is Akshay Saini youtube channel.
+I follow many technology related channels on youtube.  
+My Favorite youtube channel is __Akshay Saini__ youtube channel.
 
 </details>
 
@@ -119,7 +121,7 @@ So I got cerificate from __Nxtwave__.
 ---
 
 <details>
-<summary>Feature Goals</summary>
+<summary>Future Goals</summary>
 
 ### Feature Goals 
 
@@ -143,8 +145,7 @@ I improved my logical thinking & problem solving skills through Python.
 
 During my full-stack training, I really enjoyed learning these technologies and developing websites and projects. 
 
-This experience gave a lot of confidence and 
-I fixed that IT field is the right field for me.
+This experience gave a lot of confidence then I fixed that IT field is the right field for me.
 That's why I want to switch my career to IT field.
 
 </details>
