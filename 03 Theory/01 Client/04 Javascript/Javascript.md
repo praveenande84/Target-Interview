@@ -1466,3 +1466,39 @@ console.log(output);  // Hello Ande Praveen
 </details>
 
 ---
+
+<details>
+<summary>Code Working</summary>
+
+### Code Working
+
+##### Hoisting
+![Hoisting](./Assets/Code_Working/01_Hoisting/01_Hoisting.png)
+![Function Storage](./Assets/Code_Working/01_Hoisting/02_Function_Storage.gif)
+![Variable Storage](./Assets/Code_Working/01_Hoisting/03_Variable_Storage.gif)
+![var Keyword Storage](./Assets/Code_Working/01_Hoisting/04_var_keyword_Storage.gif)
+![Execution Phase](./Assets/Code_Working/01_Hoisting/05_Execution_Phase.gif)
+![undefined](./Assets/Code_Working/01_Hoisting/06_undefined.gif)
+![Reference Error](./Assets/Code_Working/01_Hoisting/07_Reference_Error.gif)
+![Assign Original Values](./Assets/Code_Working/01_Hoisting/08_Assign_Original_Values.gif)
+
+##### Event Loop
+![JS Runtime Environment](./Assets/Code_Working/02_Event_Loop/01_JS%20Runtime_Environment.png)
+![Callstack](./Assets/Code_Working/02_Event_Loop/02_Callstack.gif)
+![Timer](./Assets/Code_Working/02_Event_Loop/03_Timer.gif)
+![Callback Queue](./Assets/Code_Working/02_Event_Loop/04_Callback_Queue.gif)
+![Event Loop](./Assets/Code_Working/02_Event_Loop/05_Event_Loop.gif)
+![output](./Assets/Code_Working/02_Event_Loop/06_Output.gif)
+![Timer Example](./Assets/Code_Working/02_Event_Loop/07_Timer_Example.gif)
+
+##### Microtask Queue
+![Microtask](./Assets/Code_Working/03_Microtask_Queue/microtask1.gif)
+![Microtask](./Assets/Code_Working/03_Microtask_Queue/microtask2.gif)
+![Microtask](./Assets/Code_Working/03_Microtask_Queue/microtask3.gif)
+![Microtask](./Assets/Code_Working/03_Microtask_Queue/microtask4.gif)
+![Microtask](./Assets/Code_Working/03_Microtask_Queue/microtask5.gif)
+![Microtask](./Assets/Code_Working/03_Microtask_Queue/microtask6.gif)
+
+</details>
+
+---
